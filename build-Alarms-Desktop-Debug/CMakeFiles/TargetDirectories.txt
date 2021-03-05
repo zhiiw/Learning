@@ -1,0 +1,4 @@
+/home/zhiiw/QT/build-Alarms-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/zhiiw/QT/build-Alarms-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/zhiiw/QT/build-Alarms-Desktop-Debug/CMakeFiles/Alarms.dir
+/home/zhiiw/QT/build-Alarms-Desktop-Debug/CMakeFiles/Alarms_autogen.dir

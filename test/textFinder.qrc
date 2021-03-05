@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/test"/>
+    <qresource prefix="/">
+        <file>input.txt</file>
+    </qresource>
+</RCC>

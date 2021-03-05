@@ -1,0 +1,19 @@
+{
+	"BUILD_DIR" : "/home/zhiiw/QT/build-Alarms-Desktop-Debug/Alarms_autogen",
+	"CMAKE_BINARY_DIR" : "/home/zhiiw/QT/build-Alarms-Desktop-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/zhiiw/QT/build-Alarms-Desktop-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/zhiiw/QT/Alarms",
+	"CMAKE_SOURCE_DIR" : "/home/zhiiw/QT/Alarms",
+	"INCLUDE_DIR" : "/home/zhiiw/QT/build-Alarms-Desktop-Debug/Alarms_autogen/include",
+	"INPUTS" : [ "/home/zhiiw/QT/Alarms/main.qml" ],
+	"LOCK_FILE" : "/home/zhiiw/QT/build-Alarms-Desktop-Debug/CMakeFiles/Alarms_autogen.dir/AutoRcc_qml_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "qml" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_qml.cpp",
+	"RCC_EXECUTABLE" : "/usr/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/zhiiw/QT/build-Alarms-Desktop-Debug/CMakeFiles/Alarms_autogen.dir/AutoRcc_qml_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/zhiiw/QT/Alarms/qml.qrc",
+	"VERBOSITY" : 0
+}

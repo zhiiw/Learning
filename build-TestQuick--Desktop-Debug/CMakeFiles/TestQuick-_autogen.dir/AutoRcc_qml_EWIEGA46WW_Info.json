@@ -1,0 +1,19 @@
+{
+	"BUILD_DIR" : "/home/zhiiw/QT/build-TestQuick--Desktop-Debug/TestQuick-_autogen",
+	"CMAKE_BINARY_DIR" : "/home/zhiiw/QT/build-TestQuick--Desktop-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/zhiiw/QT/build-TestQuick--Desktop-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/zhiiw/QT/TestQuick-",
+	"CMAKE_SOURCE_DIR" : "/home/zhiiw/QT/TestQuick-",
+	"INCLUDE_DIR" : "/home/zhiiw/QT/build-TestQuick--Desktop-Debug/TestQuick-_autogen/include",
+	"INPUTS" : [ "/home/zhiiw/QT/TestQuick-/main.qml" ],
+	"LOCK_FILE" : "/home/zhiiw/QT/build-TestQuick--Desktop-Debug/CMakeFiles/TestQuick-_autogen.dir/AutoRcc_qml_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "qml" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_qml.cpp",
+	"RCC_EXECUTABLE" : "/usr/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/zhiiw/QT/build-TestQuick--Desktop-Debug/CMakeFiles/TestQuick-_autogen.dir/AutoRcc_qml_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/zhiiw/QT/TestQuick-/qml.qrc",
+	"VERBOSITY" : 0
+}

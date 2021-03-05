@@ -1,0 +1,4 @@
+/home/zhiiw/QT/build-TestQuick--Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/zhiiw/QT/build-TestQuick--Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/zhiiw/QT/build-TestQuick--Desktop-Debug/CMakeFiles/TestQuick-.dir
+/home/zhiiw/QT/build-TestQuick--Desktop-Debug/CMakeFiles/TestQuick-_autogen.dir
