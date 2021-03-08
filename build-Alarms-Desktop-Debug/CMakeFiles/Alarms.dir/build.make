@@ -78,6 +78,10 @@ include CMakeFiles/Alarms.dir/flags.make
 
 Alarms_autogen/EWIEGA46WW/qrc_qml.cpp: /home/zhiiw/QT/Alarms/qml.qrc
 Alarms_autogen/EWIEGA46WW/qrc_qml.cpp: CMakeFiles/Alarms_autogen.dir/AutoRcc_qml_EWIEGA46WW_Info.json
+Alarms_autogen/EWIEGA46WW/qrc_qml.cpp: /home/zhiiw/QT/Alarms/TumblerDelegate.qml
+Alarms_autogen/EWIEGA46WW/qrc_qml.cpp: /home/zhiiw/QT/Alarms/AlarmDelegate.qml
+Alarms_autogen/EWIEGA46WW/qrc_qml.cpp: /home/zhiiw/QT/Alarms/AlarmDialog.qml
+Alarms_autogen/EWIEGA46WW/qrc_qml.cpp: /home/zhiiw/QT/Alarms/AlarmModel.qml
 Alarms_autogen/EWIEGA46WW/qrc_qml.cpp: /home/zhiiw/QT/Alarms/main.qml
 Alarms_autogen/EWIEGA46WW/qrc_qml.cpp: /usr/bin/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zhiiw/QT/build-Alarms-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for qml.qrc"

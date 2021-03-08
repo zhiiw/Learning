@@ -5,7 +5,14 @@
 	"CMAKE_CURRENT_SOURCE_DIR" : "/home/zhiiw/QT/Alarms",
 	"CMAKE_SOURCE_DIR" : "/home/zhiiw/QT/Alarms",
 	"INCLUDE_DIR" : "/home/zhiiw/QT/build-Alarms-Desktop-Debug/Alarms_autogen/include",
-	"INPUTS" : [ "/home/zhiiw/QT/Alarms/main.qml" ],
+	"INPUTS" : 
+	[
+		"/home/zhiiw/QT/Alarms/TumblerDelegate.qml",
+		"/home/zhiiw/QT/Alarms/AlarmDelegate.qml",
+		"/home/zhiiw/QT/Alarms/AlarmDialog.qml",
+		"/home/zhiiw/QT/Alarms/AlarmModel.qml",
+		"/home/zhiiw/QT/Alarms/main.qml"
+	],
 	"LOCK_FILE" : "/home/zhiiw/QT/build-Alarms-Desktop-Debug/CMakeFiles/Alarms_autogen.dir/AutoRcc_qml_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,
 	"OPTIONS" : [ "-name", "qml" ],

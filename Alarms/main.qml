@@ -1,40 +1,32 @@
-import QtQuick 2.12
-import QtQuick.Window 2.12
-import QtQuick.VirtualKeyboard 2.4
-
-Window {
+import QtQuick 2.11
+import QtQuick.Controls 2.4
+import QtQuick.Controls.Material 2.4
+import QtQuick.Layouts 1.11
+import QtQuick.Window 2.11
+import Qt.labs.calendar 1.0
+ApplicationWindow {
     id: window
-    width: 640
-    height: 480
+    width: 400
+    height: 600
     visible: true
-    title: qsTr("Hello World")
-
-    InputPanel {
-        id: inputPanel
-        z: 99
-        x: 0
-        y: window.height
-        width: window.width
-
-        states: State {
-            name: "visible"
-            when: inputPanel.active
-            PropertyChanges {
-                target: inputPanel
-                y: window.height - inputPanel.height
-            }
-        }
-        transitions: Transition {
-            from: ""
-            to: "visible"
-            reversible: true
-            ParallelAnimation {
-                NumberAnimation {
-                    properties: "y"
-                    duration: 250
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        }
+    ListView {
+        id: alarmListView
+        anchors.fill: parent
+        model: AlarmModel {}
+        delegate: AlarmDelegate {}
+    }
+    RoundButton {
+        id: addAlarmButton
+        text: "+"
+        anchors.bottom: alarmListView.bottom
+        anchors.bottomMargin: 8
+        anchors.horizontalCenter: parent.horizontalCenter
+        onClicked: alarmDialog.open()
+    }
+    AlarmDialog {
+        id: alarmDialog
+        x: Math.round((parent.width - width) / 2)
+        y: Math.round((parent.height - height) / 2)
+        alarmModel: alarmListView.model
     }
 }

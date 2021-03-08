@@ -13,6 +13,8 @@ SOURCES += \
     textfinder.cpp
 
 HEADERS += \
+    CirrcularLinkedList.h \
+    Node.h \
     textfinder.h
 
 FORMS += \

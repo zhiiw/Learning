@@ -19,7 +19,7 @@
      <item>
       <widget class="QLabel" name="keyWord">
        <property name="text">
-        <string>KeyWord</string>
+        <string>猴子总数</string>
        </property>
       </widget>
      </item>
@@ -27,9 +27,19 @@
       <widget class="QLineEdit" name="lineEdit"/>
      </item>
      <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>编号</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_2"/>
+     </item>
+     <item>
       <widget class="QPushButton" name="findButton">
        <property name="text">
-        <string>Find</string>
+        <string>开始游戏</string>
        </property>
       </widget>
      </item>
@@ -37,6 +47,9 @@
    </item>
    <item>
     <widget class="QTextEdit" name="textEdit"/>
+   </item>
+   <item alignment="Qt::AlignBottom">
+    <widget class="QTextEdit" name="textEdit_2"/>
    </item>
   </layout>
  </widget>

@@ -28,8 +28,11 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *keyWord;
     QLineEdit *lineEdit;
+    QLabel *label;
+    QLineEdit *lineEdit_2;
     QPushButton *findButton;
     QTextEdit *textEdit;
+    QTextEdit *textEdit_2;
 
     void setupUi(QWidget *TextFinder)
     {
@@ -50,6 +53,16 @@ public:
 
         horizontalLayout->addWidget(lineEdit);
 
+        label = new QLabel(TextFinder);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        horizontalLayout->addWidget(label);
+
+        lineEdit_2 = new QLineEdit(TextFinder);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+
+        horizontalLayout->addWidget(lineEdit_2);
+
         findButton = new QPushButton(TextFinder);
         findButton->setObjectName(QString::fromUtf8("findButton"));
 
@@ -63,6 +76,11 @@ public:
 
         verticalLayout->addWidget(textEdit);
 
+        textEdit_2 = new QTextEdit(TextFinder);
+        textEdit_2->setObjectName(QString::fromUtf8("textEdit_2"));
+
+        verticalLayout->addWidget(textEdit_2, 0, Qt::AlignBottom);
+
 
         retranslateUi(TextFinder);
 
@@ -72,8 +90,9 @@ public:
     void retranslateUi(QWidget *TextFinder)
     {
         TextFinder->setWindowTitle(QCoreApplication::translate("TextFinder", "TextFinder", nullptr));
-        keyWord->setText(QCoreApplication::translate("TextFinder", "KeyWord", nullptr));
-        findButton->setText(QCoreApplication::translate("TextFinder", "Find", nullptr));
+        keyWord->setText(QCoreApplication::translate("TextFinder", "\347\214\264\345\255\220\346\200\273\346\225\260", nullptr));
+        label->setText(QCoreApplication::translate("TextFinder", "\347\274\226\345\217\267", nullptr));
+        findButton->setText(QCoreApplication::translate("TextFinder", "\345\274\200\345\247\213\346\270\270\346\210\217", nullptr));
     } // retranslateUi
 
 };
