@@ -2,30 +2,6 @@
 	"entries" : 
 	[
 		{
-			"name" : "Alarms_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/zhiiw/QT/build-Alarms-Desktop-Debug"
-		},
-		{
-			"name" : "Alarms_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/zhiiw/QT/Alarms"
-		},
-		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -79,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/zhiiw/QT/build-Alarms-Desktop-Debug"
+			"value" : "/home/zhiiw/QT/build-MonkeyChooseBoss-Desktop-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -115,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "5"
+			"value" : "6"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -515,7 +491,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/zhiiw/QT/Alarms"
+			"value" : "/home/zhiiw/QT/MonkeyChooseBoss"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -771,7 +747,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Alarms"
+			"value" : "MonkeyChooseBoss"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1052,6 +1028,30 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
+		},
+		{
+			"name" : "MonkeyChooseBoss_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/zhiiw/QT/build-MonkeyChooseBoss-Desktop-Debug"
+		},
+		{
+			"name" : "MonkeyChooseBoss_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/zhiiw/QT/MonkeyChooseBoss"
 		},
 		{
 			"name" : "QT_DIR",

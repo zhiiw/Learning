@@ -1,0 +1,4 @@
+/home/zhiiw/QT/build-MonkeyChooseBoss-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/zhiiw/QT/build-MonkeyChooseBoss-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/zhiiw/QT/build-MonkeyChooseBoss-Desktop-Debug/CMakeFiles/MonkeyChooseBoss.dir
+/home/zhiiw/QT/build-MonkeyChooseBoss-Desktop-Debug/CMakeFiles/MonkeyChooseBoss_autogen.dir

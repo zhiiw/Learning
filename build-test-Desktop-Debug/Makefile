@@ -332,6 +332,7 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/features/yacc.prf \
 		/usr/lib/qt/mkspecs/features/lex.prf \
 		../test/test.pro ../test/CirrcularLinkedList.h \
+		../test/Node.h \
 		../test/textfinder.h ../test/main.cpp \
 		../test/textfinder.cpp
 QMAKE_TARGET  = test
@@ -910,7 +911,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../test/textFinder.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../test/CirrcularLinkedList.h ../test/textfinder.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../test/CirrcularLinkedList.h ../test/Node.h ../test/textfinder.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../test/main.cpp ../test/textfinder.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../test/textfinder.ui $(DISTDIR)/
 
