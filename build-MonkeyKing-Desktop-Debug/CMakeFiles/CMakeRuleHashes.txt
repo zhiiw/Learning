@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+70c636bc6e3db60da6095d042867c3d5 CMakeFiles/MonkeyKing_autogen

@@ -3,7 +3,6 @@
 template <class T>
 struct Node{
     Node *next;
-    Node *before;
-    T val;
+    int val;
 };
 #endif // NODE_H

@@ -2,5 +2,7 @@
     <qresource prefix="/test"/>
     <qresource prefix="/">
         <file>input.txt</file>
+        <file>../../Desktop/qrarrrrqhx.jpeg</file>
+        <file>../../Desktop/ddlkgkclpv.jpeg</file>
     </qresource>
 </RCC>

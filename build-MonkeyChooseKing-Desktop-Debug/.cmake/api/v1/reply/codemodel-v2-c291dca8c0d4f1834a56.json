@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MonkeyChooseKing",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "MonkeyChooseKing::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MonkeyChooseKing-Debug-d52dcf4d8837a71294c1.json",
+					"name" : "MonkeyChooseKing",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MonkeyChooseKing_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MonkeyChooseKing_autogen-Debug-efc0de0bc92712ce4852.json",
+					"name" : "MonkeyChooseKing_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/zhiiw/QT/build-MonkeyChooseKing-Desktop-Debug",
+		"source" : "/home/zhiiw/QT/MonkeyChooseKing"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

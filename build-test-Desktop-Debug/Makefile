@@ -52,13 +52,13 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../test/main.cpp \
-		../test/textfinder.cpp qrc_textFinder.cpp \
-		moc_textfinder.cpp
-OBJECTS       = main.o \
-		textfinder.o \
+SOURCES       = ../test/TextFinder.cpp \
+		../test/main.cpp qrc_textFinder.cpp \
+		moc_TextFinder.cpp
+OBJECTS       = TextFinder.o \
+		main.o \
 		qrc_textFinder.o \
-		moc_textfinder.o
+		moc_TextFinder.o
 DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/common/unix.conf \
 		/usr/lib/qt/mkspecs/common/linux.conf \
@@ -310,7 +310,6 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/features/qt_config.prf \
 		/usr/lib/qt/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/qt/mkspecs/features/spec_post.prf \
-		../test/.qmake.stash \
 		/usr/lib/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/qt/mkspecs/features/toolchain.prf \
 		/usr/lib/qt/mkspecs/features/default_pre.prf \
@@ -333,8 +332,8 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/features/lex.prf \
 		../test/test.pro ../test/CirrcularLinkedList.h \
 		../test/Node.h \
-		../test/textfinder.h ../test/main.cpp \
-		../test/textfinder.cpp
+		../test/TextFinder.h ../test/TextFinder.cpp \
+		../test/main.cpp
 QMAKE_TARGET  = test
 DESTDIR       = 
 TARGET        = test
@@ -343,7 +342,7 @@ TARGET        = test
 first: all
 ####### Build rules
 
-test: ui_textfinder.h $(OBJECTS)  
+test: ui_TextFinder.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../test/test.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/lib/qt/mkspecs/features/spec_pre.prf \
@@ -597,7 +596,6 @@ Makefile: ../test/test.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/lib/qt/
 		/usr/lib/qt/mkspecs/features/qt_config.prf \
 		/usr/lib/qt/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/qt/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/usr/lib/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/qt/mkspecs/features/toolchain.prf \
 		/usr/lib/qt/mkspecs/features/default_pre.prf \
@@ -872,7 +870,6 @@ Makefile: ../test/test.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/lib/qt/
 /usr/lib/qt/mkspecs/features/qt_config.prf:
 /usr/lib/qt/mkspecs/linux-g++/qmake.conf:
 /usr/lib/qt/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /usr/lib/qt/mkspecs/features/exclusive_builds.prf:
 /usr/lib/qt/mkspecs/features/toolchain.prf:
 /usr/lib/qt/mkspecs/features/default_pre.prf:
@@ -911,9 +908,9 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../test/textFinder.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../test/CirrcularLinkedList.h ../test/Node.h ../test/textfinder.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../test/main.cpp ../test/textfinder.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../test/textfinder.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../test/CirrcularLinkedList.h ../test/Node.h ../test/TextFinder.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../test/TextFinder.cpp ../test/main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../test/TextFinder.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -942,7 +939,9 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_textFinder.cpp
 qrc_textFinder.cpp: ../test/textFinder.qrc \
 		/usr/bin/rcc \
-		../test/input.txt
+		../test/input.txt \
+		../../Desktop/qrarrrrqhx.jpeg \
+		../../Desktop/ddlkgkclpv.jpeg
 	/usr/bin/rcc -name textFinder ../test/textFinder.qrc -o qrc_textFinder.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
@@ -951,24 +950,24 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/qt/mkspecs/features/data/dummy.cpp
 	g++ -pipe -g -std=gnu++11 -Wall -Wextra -dM -E -o moc_predefs.h /usr/lib/qt/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_textfinder.cpp
+compiler_moc_header_make_all: moc_TextFinder.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_textfinder.cpp
-moc_textfinder.cpp: ../test/textfinder.h \
+	-$(DEL_FILE) moc_TextFinder.cpp
+moc_TextFinder.cpp: ../test/TextFinder.h \
 		moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include /home/zhiiw/QT/build-test-Desktop-Debug/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/zhiiw/QT/test -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include ../test/textfinder.h -o moc_textfinder.cpp
+	/usr/bin/moc $(DEFINES) --include /home/zhiiw/QT/build-test-Desktop-Debug/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/zhiiw/QT/test -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include ../test/TextFinder.h -o moc_TextFinder.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_textfinder.h
+compiler_uic_make_all: ui_TextFinder.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_textfinder.h
-ui_textfinder.h: ../test/textfinder.ui \
+	-$(DEL_FILE) ui_TextFinder.h
+ui_TextFinder.h: ../test/TextFinder.ui \
 		/usr/bin/uic
-	/usr/bin/uic ../test/textfinder.ui -o ui_textfinder.h
+	/usr/bin/uic ../test/TextFinder.ui -o ui_TextFinder.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -980,18 +979,19 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 ####### Compile
 
-main.o: ../test/main.cpp ../test/textfinder.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../test/main.cpp
+TextFinder.o: ../test/TextFinder.cpp ../test/TextFinder.h \
+		../test/CirrcularLinkedList.h \
+		../test/Node.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o TextFinder.o ../test/TextFinder.cpp
 
-textfinder.o: ../test/textfinder.cpp ../test/textfinder.h \
-		ui_textfinder.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o textfinder.o ../test/textfinder.cpp
+main.o: ../test/main.cpp ../test/TextFinder.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../test/main.cpp
 
 qrc_textFinder.o: qrc_textFinder.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_textFinder.o qrc_textFinder.cpp
 
-moc_textfinder.o: moc_textfinder.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_textfinder.o moc_textfinder.cpp
+moc_TextFinder.o: moc_TextFinder.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_TextFinder.o moc_TextFinder.cpp
 
 ####### Install
 

@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/MonkeyKing.dir/MonkeyKing_autogen/mocs_compilation.cpp.o CMakeFiles/MonkeyKing.dir/main.cpp.o CMakeFiles/MonkeyKing.dir/mainwindow.cpp.o CMakeFiles/MonkeyKing.dir/itemdef.cpp.o CMakeFiles/MonkeyKing.dir/itemdelegate.cpp.o -o MonkeyKing  /usr/lib/libQt5Widgets.so.5.15.2 /usr/lib/libQt5Gui.so.5.15.2 /usr/lib/libQt5Core.so.5.15.2 

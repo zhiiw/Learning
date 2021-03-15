@@ -1,0 +1,4 @@
+/home/zhiiw/QT/build-MonkeyKing-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/zhiiw/QT/build-MonkeyKing-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/zhiiw/QT/build-MonkeyKing-Desktop-Debug/CMakeFiles/MonkeyKing.dir
+/home/zhiiw/QT/build-MonkeyKing-Desktop-Debug/CMakeFiles/MonkeyKing_autogen.dir

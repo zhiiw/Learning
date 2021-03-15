@@ -1,4 +1,4 @@
-#include "textfinder.h"
+#include "TextFinder.h"
 
 #include <QApplication>
 

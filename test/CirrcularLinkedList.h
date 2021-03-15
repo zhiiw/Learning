@@ -1,53 +1,72 @@
 #ifndef CIRRCULARLINKEDLIST_H
 #define CIRRCULARLINKEDLIST_H
 #include "Node.h"
+#include <bits/stdc++.h>
 template <class T>
 class CirrcularLinkedList
 {
-private:
+public:
     Node<T> *head;
     int length;
 
 public:
     CirrcularLinkedList();
     ~CirrcularLinkedList();
-    void Insert(Node<T> *x);
-    void Delete(int k) const;
-    int Length(){return length;};
-    void Create(int count);// follow the input data to create k node;
+    void insert(Node<T> *x);
+    void Delete(int k) ;
+    int getValue() const;
 
+    int Length(){return length;};
+    void create(int count);// follow the input data to create k node;
+    bool isEmpty();
 
 };
+
 template<class T>
 CirrcularLinkedList<T>::CirrcularLinkedList(){
-    head =nullptr;
-    length=0;
+    head =new Node<T>;
+    head->val =1;
+    head->next=head;//initialize
+    length=1;
+
 }
 template<class T>
-void CirrcularLinkedList<T>::Create(int count){
-    if (head==nullptr){
-        if (count<=0){
+bool CirrcularLinkedList<T>::isEmpty(){
+    if(head->next==head){
+        return true;
+    }
+    return false;//judge the empty
+}
+template<class T>
+void CirrcularLinkedList<T>::create(int count){
+    if (isEmpty()){
+        if (count<=1){
             return;
         }
-        head=(Node<T> *)new Node<T>;
-        head->before=nullptr;
-        head->next=nullptr;
-        head->val=1;
-        int j;
-        for (j=2;j<=count;j++){
-            head->before=head;
-            head->next=nullptr;
-            head->val=1;
+
+        Node<T> *lastnode =head;
+
+
+        for(int i=2;i<=count;i++){
+
+            Node<T>* node = new Node<T>;
+            node->val=i;//create the number of node
+            lastnode->next=node;
+            node->next=head;
+            lastnode=node;
+            length++;
+
         }
 
     }
 }
+
 template<class T>
 CirrcularLinkedList<T>::~CirrcularLinkedList(){
     Node<T> *p =head;
     Node<T> *temp =p;
 
-    if(temp = nullptr|| temp->next=nullptr){
+    if(temp == nullptr|| temp->next=nullptr){
         return;
     }
 
@@ -56,23 +75,44 @@ CirrcularLinkedList<T>::~CirrcularLinkedList(){
         for (int i= 0; i<length;i++){
             p=temp;
             temp=temp->next;
-            delete p;
+            delete p;// deconstruct
             p=nullptr;
         }
     }
 
 
+
 }
-
 template<class T>
-void CirrcularLinkedList<T>::Delete(int k) const{
-    if(k<=0||){
+int CirrcularLinkedList<T>::getValue() const{
+    return head->val;
+}
+template<class T>
+void CirrcularLinkedList<T>::Delete(int k) {
+    if (k < 0 || k > length) {
+
         return;
-
-    for(int i=1;i=k;i++){
-
     }
 
+    Node<T> *node =head;
+    int e=0;
+    while(node!=node->next){
+        for(int i=0;i<k-1;i++){
+            if(e==0){
+                e++;
+            }else{
+                node = node->next;
+            }
+
+        }
+
+        Node<T> *nodeTemp=node->next;
+        node->next=nodeTemp->next;
+        std::cout<<nodeTemp->val<<std::endl;
+        delete (nodeTemp);
+        length--;
+    }
+    head=node;
 }
 
 #endif // CIRRCULARLINKEDLIST_H
