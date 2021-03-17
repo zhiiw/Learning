@@ -106,7 +106,7 @@ void CirrcularLinkedList<T>::Delete(int k) {
             if(e==0){
                 e++;
             }else{
-                node = node->next;
+                node = node->next;//go to the needed place
             }
 
         }

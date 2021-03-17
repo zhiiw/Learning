@@ -10,8 +10,6 @@
 bits/stdc++.h
 -
 
-/home/zhiiw/QT/MonkeyKing/itemdef.cpp
-
 /home/zhiiw/QT/MonkeyKing/itemdef.h
 QMetaType
 -
@@ -55,6 +53,12 @@ mainwindow.h
 /home/zhiiw/QT/MonkeyKing/ui_mainwindow.h
 CirrcularLinkedList.h
 /home/zhiiw/QT/MonkeyKing/CirrcularLinkedList.h
+itemdef.h
+/home/zhiiw/QT/MonkeyKing/itemdef.h
+itemdelegate.h
+/home/zhiiw/QT/MonkeyKing/itemdelegate.h
+bits/stdc++.h
+-
 QMainWindow
 -
 QButtonGroup
@@ -71,6 +75,12 @@ QMessageBox
 /home/zhiiw/QT/MonkeyKing/mainwindow.h
 QMainWindow
 -
+QObjectUserData
+-
+QSortFilterProxyModel
+-
+itemdelegate.h
+/home/zhiiw/QT/MonkeyKing/itemdelegate.h
 
 /home/zhiiw/QT/build-MonkeyKing-Desktop-Debug/MonkeyKing_autogen/EWIEGA46WW/moc_itemdelegate.cpp
 memory
@@ -122,6 +132,10 @@ qabstractitemmodel.h
 qobject.h
 /usr/include/qt/QtCore/qobject.h
 
+/usr/include/qt/QtCore/QSortFilterProxyModel
+qsortfilterproxymodel.h
+/usr/include/qt/QtCore/qsortfilterproxymodel.h
+
 /usr/include/qt/QtCore/QTextStream
 qtextstream.h
 /usr/include/qt/QtCore/qtextstream.h
@@ -138,6 +152,10 @@ QtCore/qobject.h
 QtCore/qhash.h
 -
 QtCore/qvector.h
+-
+
+/usr/include/qt/QtCore/qabstractproxymodel.h
+QtCore/qabstractitemmodel.h
 -
 
 /usr/include/qt/QtCore/qalgorithms.h
@@ -686,6 +704,14 @@ memory
 QtCore/qnamespace.h
 -
 QtCore/qmargins.h
+-
+
+/usr/include/qt/QtCore/qsortfilterproxymodel.h
+QtCore/qabstractproxymodel.h
+-
+QtCore/qregexp.h
+-
+QtCore/qregularexpression.h
 -
 
 /usr/include/qt/QtCore/qstring.h

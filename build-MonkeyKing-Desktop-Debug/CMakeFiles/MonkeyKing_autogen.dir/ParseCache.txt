@@ -324,6 +324,7 @@
  mmc:Q_OBJECT
  mdp:/home/zhiiw/QT/MonkeyKing/mainwindow.h
  mdp:/home/zhiiw/QT/build-MonkeyKing-Desktop-Debug/MonkeyKing_autogen/moc_predefs.h
+ mdp:/home/zhiiw/QT/MonkeyKing/itemdelegate.h
  mdp:/usr/include/assert.h
  mdp:/usr/include/bits/cpu-set.h
  mdp:/usr/include/bits/endian.h
@@ -522,6 +523,11 @@
  mdp:/usr/include/gnu/stubs.h
  mdp:/usr/include/locale.h
  mdp:/usr/include/pthread.h
+ mdp:/usr/include/qt/QtCore/QModelIndex
+ mdp:/usr/include/qt/QtCore/QObjectUserData
+ mdp:/usr/include/qt/QtCore/QSortFilterProxyModel
+ mdp:/usr/include/qt/QtCore/qabstractitemmodel.h
+ mdp:/usr/include/qt/QtCore/qabstractproxymodel.h
  mdp:/usr/include/qt/QtCore/qalgorithms.h
  mdp:/usr/include/qt/QtCore/qarraydata.h
  mdp:/usr/include/qt/QtCore/qatomic.h
@@ -545,7 +551,9 @@
  mdp:/usr/include/qt/QtCore/qiterator.h
  mdp:/usr/include/qt/QtCore/qline.h
  mdp:/usr/include/qt/QtCore/qlist.h
+ mdp:/usr/include/qt/QtCore/qlocale.h
  mdp:/usr/include/qt/QtCore/qlogging.h
+ mdp:/usr/include/qt/QtCore/qmap.h
  mdp:/usr/include/qt/QtCore/qmargins.h
  mdp:/usr/include/qt/QtCore/qmetatype.h
  mdp:/usr/include/qt/QtCore/qnamespace.h
@@ -560,11 +568,13 @@
  mdp:/usr/include/qt/QtCore/qrect.h
  mdp:/usr/include/qt/QtCore/qrefcount.h
  mdp:/usr/include/qt/QtCore/qregexp.h
+ mdp:/usr/include/qt/QtCore/qregularexpression.h
  mdp:/usr/include/qt/QtCore/qscopedpointer.h
  mdp:/usr/include/qt/QtCore/qshareddata.h
  mdp:/usr/include/qt/QtCore/qsharedpointer.h
  mdp:/usr/include/qt/QtCore/qsharedpointer_impl.h
  mdp:/usr/include/qt/QtCore/qsize.h
+ mdp:/usr/include/qt/QtCore/qsortfilterproxymodel.h
  mdp:/usr/include/qt/QtCore/qstring.h
  mdp:/usr/include/qt/QtCore/qstringalgorithms.h
  mdp:/usr/include/qt/QtCore/qstringlist.h
@@ -575,9 +585,11 @@
  mdp:/usr/include/qt/QtCore/qsystemdetection.h
  mdp:/usr/include/qt/QtCore/qtcore-config.h
  mdp:/usr/include/qt/QtCore/qtypeinfo.h
+ mdp:/usr/include/qt/QtCore/qvariant.h
  mdp:/usr/include/qt/QtCore/qvarlengtharray.h
  mdp:/usr/include/qt/QtCore/qvector.h
  mdp:/usr/include/qt/QtCore/qversiontagging.h
+ mdp:/usr/include/qt/QtGui/QStandardItemModel
  mdp:/usr/include/qt/QtGui/qbrush.h
  mdp:/usr/include/qt/QtGui/qcolor.h
  mdp:/usr/include/qt/QtGui/qcursor.h
@@ -596,13 +608,26 @@
  mdp:/usr/include/qt/QtGui/qregion.h
  mdp:/usr/include/qt/QtGui/qrgb.h
  mdp:/usr/include/qt/QtGui/qrgba64.h
+ mdp:/usr/include/qt/QtGui/qstandarditemmodel.h
  mdp:/usr/include/qt/QtGui/qtgui-config.h
  mdp:/usr/include/qt/QtGui/qtguiglobal.h
  mdp:/usr/include/qt/QtGui/qtransform.h
+ mdp:/usr/include/qt/QtGui/qvalidator.h
  mdp:/usr/include/qt/QtGui/qwindowdefs.h
  mdp:/usr/include/qt/QtWidgets/QMainWindow
+ mdp:/usr/include/qt/QtWidgets/QStyledItemDelegate
+ mdp:/usr/include/qt/QtWidgets/qabstractitemdelegate.h
+ mdp:/usr/include/qt/QtWidgets/qabstractslider.h
+ mdp:/usr/include/qt/QtWidgets/qabstractspinbox.h
+ mdp:/usr/include/qt/QtWidgets/qframe.h
  mdp:/usr/include/qt/QtWidgets/qmainwindow.h
+ mdp:/usr/include/qt/QtWidgets/qrubberband.h
  mdp:/usr/include/qt/QtWidgets/qsizepolicy.h
+ mdp:/usr/include/qt/QtWidgets/qslider.h
+ mdp:/usr/include/qt/QtWidgets/qstyle.h
+ mdp:/usr/include/qt/QtWidgets/qstyleditemdelegate.h
+ mdp:/usr/include/qt/QtWidgets/qstyleoption.h
+ mdp:/usr/include/qt/QtWidgets/qtabbar.h
  mdp:/usr/include/qt/QtWidgets/qtabwidget.h
  mdp:/usr/include/qt/QtWidgets/qtwidgets-config.h
  mdp:/usr/include/qt/QtWidgets/qtwidgetsglobal.h

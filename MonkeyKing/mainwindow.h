@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QObjectUserData>
+#include <QSortFilterProxyModel>
+#include "itemdelegate.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,7 +21,13 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
+
     Ui::MainWindow *ui;
+    ItemDelegate *m_delegate;                 //委托
+    QSortFilterProxyModel* m_proxyModel;
+    QStandardItemModel *m_model;
 };
 #endif // MAINWINDOW_H

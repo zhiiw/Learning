@@ -10,7 +10,7 @@ signals:
 public:
     explicit ItemDelegate(QObject *parent = 0);
     ~ItemDelegate();
-    void paint(QPainter *painter,const QStyleOptionViewItem & option ,const QModelIndex & index) const;
+    void paint(QPainter *painter,const QStyleOptionViewItem & option ,const QModelIndex & index) const;//reuse the paint function
     QSize sizeHint(const QStyleOptionViewItem &option,const QModelIndex &index) const;
 
 };

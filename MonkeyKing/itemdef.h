@@ -4,7 +4,7 @@
 
 typedef enum{
     Loser,
-    King
+    King//define the king status
 } ItemStatus;
 
 struct ItemData{

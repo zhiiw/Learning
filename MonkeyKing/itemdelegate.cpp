@@ -71,13 +71,9 @@ void ItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
             QRect NameRect = QRect(rect.left() +10, rect.top()+10, rect.width()-30, 20);
             QRect circle = QRect(NameRect.right(), rect.top()+10, 10, 10);
 
-
-
-
             painter->drawEllipse(circle);     //画圆圈
-
             painter->setPen(QPen(Qt::black));
-            painter->setFont(QFont("Times", 12, QFont::Bold));
+            painter->setFont(QFont("Times", 10, QFont::Bold));
             painter->drawText(NameRect,Qt::AlignLeft,data.name); //绘制名字
 
 
