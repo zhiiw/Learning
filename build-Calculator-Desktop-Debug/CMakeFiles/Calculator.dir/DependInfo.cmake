@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/mocs_compilation.cpp" "/home/zhiiw/QT/build-Calculator-Desktop-Debug/CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o"
   "/home/zhiiw/QT/Calculator/main.cpp" "/home/zhiiw/QT/build-Calculator-Desktop-Debug/CMakeFiles/Calculator.dir/main.cpp.o"
   "/home/zhiiw/QT/Calculator/mainwindow.cpp" "/home/zhiiw/QT/build-Calculator-Desktop-Debug/CMakeFiles/Calculator.dir/mainwindow.cpp.o"
+  "/home/zhiiw/QT/Calculator/stack.cpp" "/home/zhiiw/QT/build-Calculator-Desktop-Debug/CMakeFiles/Calculator.dir/stack.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

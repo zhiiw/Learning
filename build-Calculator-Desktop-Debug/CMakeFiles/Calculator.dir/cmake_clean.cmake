@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/Calculator.dir/main.cpp.o"
   "CMakeFiles/Calculator.dir/mainwindow.cpp.o"
+  "CMakeFiles/Calculator.dir/stack.cpp.o"
   "Calculator"
   "Calculator.pdb"
 )

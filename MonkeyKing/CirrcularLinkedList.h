@@ -48,7 +48,6 @@ void CirrcularLinkedList<T>::create(int count){
         if (count<=1){
             return;
         }
-
         Node<T> *lastnode =head;
 
 
@@ -70,11 +69,9 @@ template<class T>
 CirrcularLinkedList<T>::~CirrcularLinkedList(){
     Node<T> *p =head;
     Node<T> *temp =p;
-
     if(temp == nullptr|| temp->next=nullptr){
         return;
     }
-
     else{
         int length =Length();
         for (int i= 0; i<length;i++){
@@ -84,9 +81,6 @@ CirrcularLinkedList<T>::~CirrcularLinkedList(){
             p=nullptr;
         }
     }
-
-
-
 }
 template<class T>
 int CirrcularLinkedList<T>::getValue() const{

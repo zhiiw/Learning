@@ -335,17 +335,28 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o
  /usr/include/qt/QtGui/qwindowdefs.h
  /usr/include/qt/QtGui/qwindowdefs_win.h
  /usr/include/qt/QtWidgets/QApplication
+ /usr/include/qt/QtWidgets/QGridLayout
+ /usr/include/qt/QtWidgets/QLCDNumber
  /usr/include/qt/QtWidgets/QMainWindow
  /usr/include/qt/QtWidgets/QMenuBar
+ /usr/include/qt/QtWidgets/QPushButton
  /usr/include/qt/QtWidgets/QStatusBar
  /usr/include/qt/QtWidgets/QWidget
+ /usr/include/qt/QtWidgets/qabstractbutton.h
  /usr/include/qt/QtWidgets/qaction.h
  /usr/include/qt/QtWidgets/qactiongroup.h
  /usr/include/qt/QtWidgets/qapplication.h
+ /usr/include/qt/QtWidgets/qboxlayout.h
  /usr/include/qt/QtWidgets/qdesktopwidget.h
+ /usr/include/qt/QtWidgets/qframe.h
+ /usr/include/qt/QtWidgets/qgridlayout.h
+ /usr/include/qt/QtWidgets/qlayout.h
+ /usr/include/qt/QtWidgets/qlayoutitem.h
+ /usr/include/qt/QtWidgets/qlcdnumber.h
  /usr/include/qt/QtWidgets/qmainwindow.h
  /usr/include/qt/QtWidgets/qmenu.h
  /usr/include/qt/QtWidgets/qmenubar.h
+ /usr/include/qt/QtWidgets/qpushbutton.h
  /usr/include/qt/QtWidgets/qsizepolicy.h
  /usr/include/qt/QtWidgets/qstatusbar.h
  /usr/include/qt/QtWidgets/qtabwidget.h
@@ -353,3 +364,5 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o
  /usr/include/qt/QtWidgets/qtwidgetsglobal.h
  /usr/include/qt/QtWidgets/qwidget.h
  Calculator_autogen/include/ui_mainwindow.h
+CMakeFiles/Calculator.dir/stack.cpp.o
+ /home/zhiiw/QT/Calculator/stack.cpp

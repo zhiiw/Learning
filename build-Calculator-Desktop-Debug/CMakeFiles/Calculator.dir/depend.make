@@ -334,17 +334,28 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtGui/qvector2d.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtGui/qwindowdefs.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtGui/qwindowdefs_win.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QApplication
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QGridLayout
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QLCDNumber
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QMainWindow
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QMenuBar
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QPushButton
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QStatusBar
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QWidget
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qabstractbutton.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qaction.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qactiongroup.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qapplication.h
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qboxlayout.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qdesktopwidget.h
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qframe.h
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qgridlayout.h
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qlayout.h
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qlayoutitem.h
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qlcdnumber.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qmainwindow.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qmenu.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qmenubar.h
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qpushbutton.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qsizepolicy.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qstatusbar.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qtabwidget.h
@@ -352,4 +363,6 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qtwidgets-
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qtwidgetsglobal.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qwidget.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: Calculator_autogen/include/ui_mainwindow.h
+
+CMakeFiles/Calculator.dir/stack.cpp.o: /home/zhiiw/QT/Calculator/stack.cpp
 

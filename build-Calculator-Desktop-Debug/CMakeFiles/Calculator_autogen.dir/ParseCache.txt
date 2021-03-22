@@ -302,3 +302,5 @@
  mdp:/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stdarg.h
  mdp:/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stddef.h
  mdp:/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stdint.h
+/home/zhiiw/QT/Calculator/stack.h
+/home/zhiiw/QT/Calculator/stack.cpp
