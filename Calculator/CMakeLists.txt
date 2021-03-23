@@ -32,6 +32,7 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         stack.cpp
         stack.h
+        calculate.h
         mainwindow.h
         mainwindow.ui
 )

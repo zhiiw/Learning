@@ -1,5 +1,7 @@
 /home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/zhiiw/QT/Calculator/mainwindow.h \
   /home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/moc_predefs.h \
+  /home/zhiiw/QT/Calculator/calculate.h \
+  /home/zhiiw/QT/Calculator/stack.h \
   /usr/include/assert.h \
   /usr/include/bits/cpu-set.h \
   /usr/include/bits/endian.h \
@@ -77,6 +79,7 @@
   /usr/include/c++/10.2.0/bits/int_limits.h \
   /usr/include/c++/10.2.0/bits/invoke.h \
   /usr/include/c++/10.2.0/bits/ios_base.h \
+  /usr/include/c++/10.2.0/bits/istream.tcc \
   /usr/include/c++/10.2.0/bits/iterator_concepts.h \
   /usr/include/c++/10.2.0/bits/list.tcc \
   /usr/include/c++/10.2.0/bits/locale_classes.h \
@@ -102,6 +105,7 @@
   /usr/include/c++/10.2.0/bits/shared_ptr.h \
   /usr/include/c++/10.2.0/bits/shared_ptr_atomic.h \
   /usr/include/c++/10.2.0/bits/shared_ptr_base.h \
+  /usr/include/c++/10.2.0/bits/sstream.tcc \
   /usr/include/c++/10.2.0/bits/std_abs.h \
   /usr/include/c++/10.2.0/bits/std_function.h \
   /usr/include/c++/10.2.0/bits/stl_algo.h \
@@ -157,6 +161,8 @@
   /usr/include/c++/10.2.0/initializer_list \
   /usr/include/c++/10.2.0/ios \
   /usr/include/c++/10.2.0/iosfwd \
+  /usr/include/c++/10.2.0/iostream \
+  /usr/include/c++/10.2.0/istream \
   /usr/include/c++/10.2.0/iterator \
   /usr/include/c++/10.2.0/limits \
   /usr/include/c++/10.2.0/list \
@@ -171,6 +177,7 @@
   /usr/include/c++/10.2.0/pstl/glue_memory_defs.h \
   /usr/include/c++/10.2.0/pstl/glue_numeric_defs.h \
   /usr/include/c++/10.2.0/ranges \
+  /usr/include/c++/10.2.0/sstream \
   /usr/include/c++/10.2.0/stdexcept \
   /usr/include/c++/10.2.0/stdlib.h \
   /usr/include/c++/10.2.0/streambuf \

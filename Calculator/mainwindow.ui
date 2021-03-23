@@ -6,26 +6,96 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>985</width>
+    <height>516</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>20</y>
+      <width>521</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>90</y>
+      <width>321</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>30</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>History</string>
+    </property>
+    <property name="margin">
+     <number>51</number>
+    </property>
+   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>9</y>
-      <width>362</width>
-      <height>336</height>
+      <x>70</x>
+      <y>128</y>
+      <width>520</width>
+      <height>321</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton_10">
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>%</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="plusButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -41,8 +111,8 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="pushButton_11">
+     <item row="0" column="2">
+      <widget class="QPushButton" name="subButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -56,7 +126,7 @@
       </widget>
      </item>
      <item row="0" column="3">
-      <widget class="QPushButton" name="pushButton_15">
+      <widget class="QPushButton" name="leftButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -70,7 +140,7 @@
       </widget>
      </item>
      <item row="0" column="4">
-      <widget class="QPushButton" name="pushButton_16">
+      <widget class="QPushButton" name="rightButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -84,7 +154,21 @@
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="powerTButton">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>x^3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="oneButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -97,8 +181,8 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QPushButton" name="pushButton_2">
+     <item row="1" column="2">
+      <widget class="QPushButton" name="twoButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -112,7 +196,7 @@
       </widget>
      </item>
      <item row="1" column="3">
-      <widget class="QPushButton" name="pushButton_9">
+      <widget class="QPushButton" name="threeButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -126,7 +210,7 @@
       </widget>
      </item>
      <item row="1" column="4">
-      <widget class="QPushButton" name="pushButton_12">
+      <widget class="QPushButton" name="mulButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -138,7 +222,21 @@
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="paiButton">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>π</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="fourButton_2">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -151,8 +249,8 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="QPushButton" name="pushButton_4">
+     <item row="2" column="2">
+      <widget class="QPushButton" name="fourButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -166,7 +264,7 @@
       </widget>
      </item>
      <item row="2" column="3">
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="sixButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -180,7 +278,7 @@
       </widget>
      </item>
      <item row="2" column="4">
-      <widget class="QPushButton" name="pushButton_13">
+      <widget class="QPushButton" name="divButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -194,7 +292,21 @@
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="eButton">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="sevenButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -207,8 +319,8 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="1" colspan="2">
-      <widget class="QPushButton" name="pushButton_6">
+     <item row="3" column="2">
+      <widget class="QPushButton" name="eightButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -222,7 +334,7 @@
       </widget>
      </item>
      <item row="3" column="3">
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="nineButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -236,7 +348,7 @@
       </widget>
      </item>
      <item row="3" column="4">
-      <widget class="QPushButton" name="pushButton_14">
+      <widget class="QPushButton" name="equalButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -250,7 +362,35 @@
       </widget>
      </item>
      <item row="4" column="0">
-      <widget class="QPushButton" name="pushButton_17">
+      <widget class="QPushButton" name="powerButton">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>x^2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="lnButton">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="rootButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -261,8 +401,8 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="1">
-      <widget class="QPushButton" name="pushButton_18">
+     <item row="4" column="3">
+      <widget class="QPushButton" name="acButton">
        <property name="font">
         <font>
          <pointsize>20</pointsize>
@@ -275,8 +415,19 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="2" colspan="3">
-      <widget class="QLCDNumber" name="lcdNumber"/>
+     <item row="4" column="4">
+      <widget class="QPushButton" name="dotButton">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -286,8 +437,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>36</height>
+     <width>985</width>
+     <height>30</height>
     </rect>
    </property>
   </widget>

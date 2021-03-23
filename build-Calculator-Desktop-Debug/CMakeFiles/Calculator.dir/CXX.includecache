@@ -6,15 +6,55 @@
 
 #IncludeRegexTransform: 
 
+/home/zhiiw/QT/Calculator/calculate.h
+stack.h
+/home/zhiiw/QT/Calculator/stack.h
+iostream
+-
+string
+-
+
+/home/zhiiw/QT/Calculator/main.cpp
+mainwindow.h
+/home/zhiiw/QT/Calculator/mainwindow.h
+QApplication
+-
+
 /home/zhiiw/QT/Calculator/mainwindow.cpp
 mainwindow.h
 /home/zhiiw/QT/Calculator/mainwindow.h
 ./ui_mainwindow.h
 /home/zhiiw/QT/Calculator/ui_mainwindow.h
+stack.h
+/home/zhiiw/QT/Calculator/stack.h
+iostream
+-
+calculate.h
+/home/zhiiw/QT/Calculator/calculate.h
 
 /home/zhiiw/QT/Calculator/mainwindow.h
 QMainWindow
 -
+calculate.h
+-
+
+/home/zhiiw/QT/Calculator/stack.h
+sstream
+-
+
+/home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/EWIEGA46WW/moc_mainwindow.cpp
+memory
+-
+../../../Calculator/mainwindow.h
+/home/zhiiw/QT/Calculator/mainwindow.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/mocs_compilation.cpp
+EWIEGA46WW/moc_mainwindow.cpp
+/home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/EWIEGA46WW/moc_mainwindow.cpp
 
 /usr/include/qt/QtCore/QVariant
 qvariant.h
@@ -956,6 +996,14 @@ QtGui/qcolor.h
 QtGui/qbrush.h
 -
 
+/usr/include/qt/QtGui/qpen.h
+QtGui/qtguiglobal.h
+-
+QtGui/qcolor.h
+-
+QtGui/qbrush.h
+-
+
 /usr/include/qt/QtGui/qpixelformat.h
 QtGui/qtguiglobal.h
 -
@@ -1010,6 +1058,62 @@ QtCore/qprocessordetection.h
 QtGui/qtguiglobal.h
 -
 QtCore/qprocessordetection.h
+-
+
+/usr/include/qt/QtGui/qtextcursor.h
+QtGui/qtguiglobal.h
+-
+QtCore/qstring.h
+-
+QtCore/qshareddata.h
+-
+QtGui/qtextformat.h
+-
+
+/usr/include/qt/QtGui/qtextdocument.h
+QtGui/qtguiglobal.h
+-
+QtCore/qobject.h
+-
+QtCore/qsize.h
+-
+QtCore/qrect.h
+-
+QtCore/qvariant.h
+-
+QtGui/qfont.h
+-
+QtCore/qurl.h
+-
+
+/usr/include/qt/QtGui/qtextformat.h
+QtGui/qtguiglobal.h
+-
+QtGui/qcolor.h
+-
+QtGui/qfont.h
+-
+QtCore/qshareddata.h
+-
+QtCore/qvector.h
+-
+QtCore/qvariant.h
+-
+QtGui/qpen.h
+-
+QtGui/qbrush.h
+-
+QtGui/qtextoption.h
+-
+
+/usr/include/qt/QtGui/qtextoption.h
+QtGui/qtguiglobal.h
+-
+QtCore/qnamespace.h
+-
+QtCore/qchar.h
+-
+QtCore/qmetatype.h
 -
 
 /usr/include/qt/QtGui/qtgui-config.h
@@ -1074,9 +1178,9 @@ qapplication.h
 qgridlayout.h
 /usr/include/qt/QtWidgets/qgridlayout.h
 
-/usr/include/qt/QtWidgets/QLCDNumber
-qlcdnumber.h
-/usr/include/qt/QtWidgets/qlcdnumber.h
+/usr/include/qt/QtWidgets/QLabel
+qlabel.h
+/usr/include/qt/QtWidgets/qlabel.h
 
 /usr/include/qt/QtWidgets/QMainWindow
 qmainwindow.h
@@ -1094,6 +1198,10 @@ qpushbutton.h
 qstatusbar.h
 /usr/include/qt/QtWidgets/qstatusbar.h
 
+/usr/include/qt/QtWidgets/QTextEdit
+qtextedit.h
+/usr/include/qt/QtWidgets/qtextedit.h
+
 /usr/include/qt/QtWidgets/QWidget
 qwidget.h
 /usr/include/qt/QtWidgets/qwidget.h
@@ -1106,6 +1214,12 @@ QtGui/qicon.h
 QtGui/qkeysequence.h
 -
 QtWidgets/qwidget.h
+-
+
+/usr/include/qt/QtWidgets/qabstractscrollarea.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qframe.h
 -
 
 /usr/include/qt/QtWidgets/qaction.h
@@ -1180,6 +1294,12 @@ QtWidgets/qwidget.h
 limits.h
 -
 
+/usr/include/qt/QtWidgets/qlabel.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qframe.h
+-
+
 /usr/include/qt/QtWidgets/qlayout.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1208,12 +1328,6 @@ QtWidgets/qsizepolicy.h
 QtCore/qrect.h
 -
 limits.h
--
-
-/usr/include/qt/QtWidgets/qlcdnumber.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qframe.h
 -
 
 /usr/include/qt/QtWidgets/qmainwindow.h
@@ -1270,6 +1384,20 @@ QtWidgets/qwidget.h
 QtGui/qicon.h
 -
 
+/usr/include/qt/QtWidgets/qtextedit.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractscrollarea.h
+-
+QtGui/qtextdocument.h
+-
+QtGui/qtextoption.h
+-
+QtGui/qtextcursor.h
+-
+QtGui/qtextformat.h
+-
+
 /usr/include/qt/QtWidgets/qtwidgets-config.h
 
 /usr/include/qt/QtWidgets/qtwidgetsglobal.h
@@ -1317,7 +1445,7 @@ QtWidgets/QApplication
 -
 QtWidgets/QGridLayout
 -
-QtWidgets/QLCDNumber
+QtWidgets/QLabel
 -
 QtWidgets/QMainWindow
 -
@@ -1326,6 +1454,8 @@ QtWidgets/QMenuBar
 QtWidgets/QPushButton
 -
 QtWidgets/QStatusBar
+-
+QtWidgets/QTextEdit
 -
 QtWidgets/QWidget
 -
