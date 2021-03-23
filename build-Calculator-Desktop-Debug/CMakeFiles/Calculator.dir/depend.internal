@@ -107,7 +107,10 @@ CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtGui/qwindowdefs.h
  /usr/include/qt/QtGui/qwindowdefs_win.h
  /usr/include/qt/QtWidgets/QMainWindow
+ /usr/include/qt/QtWidgets/QMessageBox
+ /usr/include/qt/QtWidgets/qdialog.h
  /usr/include/qt/QtWidgets/qmainwindow.h
+ /usr/include/qt/QtWidgets/qmessagebox.h
  /usr/include/qt/QtWidgets/qsizepolicy.h
  /usr/include/qt/QtWidgets/qtabwidget.h
  /usr/include/qt/QtWidgets/qtwidgets-config.h
@@ -223,9 +226,12 @@ CMakeFiles/Calculator.dir/main.cpp.o
  /usr/include/qt/QtGui/qwindowdefs_win.h
  /usr/include/qt/QtWidgets/QApplication
  /usr/include/qt/QtWidgets/QMainWindow
+ /usr/include/qt/QtWidgets/QMessageBox
  /usr/include/qt/QtWidgets/qapplication.h
  /usr/include/qt/QtWidgets/qdesktopwidget.h
+ /usr/include/qt/QtWidgets/qdialog.h
  /usr/include/qt/QtWidgets/qmainwindow.h
+ /usr/include/qt/QtWidgets/qmessagebox.h
  /usr/include/qt/QtWidgets/qsizepolicy.h
  /usr/include/qt/QtWidgets/qtabwidget.h
  /usr/include/qt/QtWidgets/qtwidgets-config.h
@@ -350,6 +356,7 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o
  /usr/include/qt/QtWidgets/QLabel
  /usr/include/qt/QtWidgets/QMainWindow
  /usr/include/qt/QtWidgets/QMenuBar
+ /usr/include/qt/QtWidgets/QMessageBox
  /usr/include/qt/QtWidgets/QPushButton
  /usr/include/qt/QtWidgets/QStatusBar
  /usr/include/qt/QtWidgets/QTextEdit
@@ -361,6 +368,7 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o
  /usr/include/qt/QtWidgets/qapplication.h
  /usr/include/qt/QtWidgets/qboxlayout.h
  /usr/include/qt/QtWidgets/qdesktopwidget.h
+ /usr/include/qt/QtWidgets/qdialog.h
  /usr/include/qt/QtWidgets/qframe.h
  /usr/include/qt/QtWidgets/qgridlayout.h
  /usr/include/qt/QtWidgets/qlabel.h
@@ -369,6 +377,7 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o
  /usr/include/qt/QtWidgets/qmainwindow.h
  /usr/include/qt/QtWidgets/qmenu.h
  /usr/include/qt/QtWidgets/qmenubar.h
+ /usr/include/qt/QtWidgets/qmessagebox.h
  /usr/include/qt/QtWidgets/qpushbutton.h
  /usr/include/qt/QtWidgets/qsizepolicy.h
  /usr/include/qt/QtWidgets/qstatusbar.h

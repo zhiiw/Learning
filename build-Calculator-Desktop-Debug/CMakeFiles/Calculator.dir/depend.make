@@ -106,7 +106,10 @@ CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: /usr/includ
 CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qwindowdefs.h
 CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtGui/qwindowdefs_win.h
 CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtWidgets/QMainWindow
+CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtWidgets/QMessageBox
+CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtWidgets/qdialog.h
 CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtWidgets/qmainwindow.h
+CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtWidgets/qmessagebox.h
 CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtWidgets/qsizepolicy.h
 CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtWidgets/qtabwidget.h
 CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtWidgets/qtwidgets-config.h
@@ -222,9 +225,12 @@ CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtGui/qwindowdefs.h
 CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtGui/qwindowdefs_win.h
 CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtWidgets/QApplication
 CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtWidgets/QMainWindow
+CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtWidgets/QMessageBox
 CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtWidgets/qapplication.h
 CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtWidgets/qdesktopwidget.h
+CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtWidgets/qdialog.h
 CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtWidgets/qmainwindow.h
+CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtWidgets/qmessagebox.h
 CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtWidgets/qsizepolicy.h
 CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtWidgets/qtabwidget.h
 CMakeFiles/Calculator.dir/main.cpp.o: /usr/include/qt/QtWidgets/qtwidgets-config.h
@@ -349,6 +355,7 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QGridLayou
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QLabel
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QMainWindow
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QMenuBar
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QMessageBox
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QPushButton
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QStatusBar
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/QTextEdit
@@ -360,6 +367,7 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qactiongro
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qapplication.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qboxlayout.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qdesktopwidget.h
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qdialog.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qframe.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qgridlayout.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qlabel.h
@@ -368,6 +376,7 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qlayoutite
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qmainwindow.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qmenu.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qmenubar.h
+CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qmessagebox.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qpushbutton.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qsizepolicy.h
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /usr/include/qt/QtWidgets/qstatusbar.h

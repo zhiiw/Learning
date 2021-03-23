@@ -14,12 +14,6 @@ iostream
 string
 -
 
-/home/zhiiw/QT/Calculator/main.cpp
-mainwindow.h
-/home/zhiiw/QT/Calculator/mainwindow.h
-QApplication
--
-
 /home/zhiiw/QT/Calculator/mainwindow.cpp
 mainwindow.h
 /home/zhiiw/QT/Calculator/mainwindow.h
@@ -37,24 +31,14 @@ QMainWindow
 -
 calculate.h
 -
+iostream
+-
+QMessageBox
+-
 
 /home/zhiiw/QT/Calculator/stack.h
 sstream
 -
-
-/home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/EWIEGA46WW/moc_mainwindow.cpp
-memory
--
-../../../Calculator/mainwindow.h
-/home/zhiiw/QT/Calculator/mainwindow.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/mocs_compilation.cpp
-EWIEGA46WW/moc_mainwindow.cpp
-/home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/EWIEGA46WW/moc_mainwindow.cpp
 
 /usr/include/qt/QtCore/QVariant
 qvariant.h
@@ -1190,6 +1174,10 @@ qmainwindow.h
 qmenubar.h
 /usr/include/qt/QtWidgets/qmenubar.h
 
+/usr/include/qt/QtWidgets/QMessageBox
+qmessagebox.h
+/usr/include/qt/QtWidgets/qmessagebox.h
+
 /usr/include/qt/QtWidgets/QPushButton
 qpushbutton.h
 /usr/include/qt/QtWidgets/qpushbutton.h
@@ -1278,6 +1266,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 
+/usr/include/qt/QtWidgets/qdialog.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+
 /usr/include/qt/QtWidgets/qframe.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1354,6 +1348,12 @@ QtWidgets/qaction.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qmenu.h
+-
+
+/usr/include/qt/QtWidgets/qmessagebox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qdialog.h
 -
 
 /usr/include/qt/QtWidgets/qpushbutton.h
