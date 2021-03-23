@@ -1,6 +1,7 @@
 #ifndef STACK_H
 #define STACK_H
 #include <sstream>
+#include <iostream>
 using namespace std;
 template <class T>
 class stack{
@@ -13,6 +14,8 @@ public:
         stackTop--;
         return arratStack[stackTop+1];
     }
+    void show();
+
     void deleteAll()const {stackTop==-1;}
     int size()const {return stackTop+1;}
     bool isEmpty();
@@ -64,7 +67,7 @@ int stack<T>::find(string str)
         if(arratStack[i]==str){
             y++;
         }
-        if(x==y){
+        if(x==y&&x!=NULL){
             return i;
         }
     }
@@ -92,5 +95,13 @@ int stack<T>::find(int count)
     }
 
     return -1;
+}
+template<class T>
+void stack<T>::show()
+{
+    for(int i= 0;i<=stackTop;i++){
+        cout<<arratStack[i]<<" ";
+    }
+    cout<<endl;
 }
 #endif // STACK_H

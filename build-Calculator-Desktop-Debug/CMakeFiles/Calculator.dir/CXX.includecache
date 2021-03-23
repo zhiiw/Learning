@@ -39,6 +39,8 @@ QMessageBox
 /home/zhiiw/QT/Calculator/stack.h
 sstream
 -
+iostream
+-
 
 /usr/include/qt/QtCore/QVariant
 qvariant.h

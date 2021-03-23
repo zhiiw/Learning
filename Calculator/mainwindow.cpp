@@ -21,11 +21,279 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_equalButton_clicked()
 {
-
+    cout<<s.ops.find("(");
+    s.ops.show();
     if (s.ops.find("(")==-1){
-        int mul= s.ops.find("*");
-        int div =s.ops.find("÷");
 
+        int num=s.ops.size();//total operator number
+        double tempFor[100];
+        string tempForString[100];
+        for (int i=0;i<=num ;i++ ) {
+            cout<<"num is "<<num<<" i is   "<<i<<endl;
+
+            if(s.ops.arratStack[i]=="*"){
+                //if get the * , i from val 的
+                int countVal = s.vals.find(-5);
+                int multiNumber=0;
+                for(int j=countVal;j<s.vals.size();j++){
+                    if(s.vals.arratStack[j]==-3){
+                        multiNumber=j;//remember the multi sign number
+                        cout<<"the multi is "<<multiNumber<<endl;
+                        break;
+                    }
+                }
+                int tempBack=multiNumber+1;
+                string back="";
+                string front="";
+                s.ops.show();
+                s.vals.show();
+                int tempFront=multiNumber-1;
+                while(s.vals.arratStack[tempBack]>0){
+                    if(tempBack>s.vals.stackTop){
+                        break;
+                    }
+                    back=back+to_string((int)s.vals.arratStack[tempBack]);
+                    tempBack++;
+                }
+                while(s.vals.arratStack[tempFront]>0){
+                    front=to_string((int)s.vals.arratStack[tempFront])+front ;
+                    tempFront--;
+                }
+                //get the front number and back number
+                cout<<front<<back<<endl;
+                double result  = stod(back)*stod(front);
+                cout<<result<<endl;
+
+                //获取前后然后得到结果 然后加到 array 后面 再把前移
+                s.vals.arratStack[tempFront+1]=result;
+                s.vals.show();
+
+                int tempLen;
+                for (tempLen=tempBack;tempLen<=s.vals.stackTop;tempLen++ ) {
+                    tempFor[tempLen]=s.vals.arratStack[tempLen];
+                }
+                s.vals.show();
+                s.vals.stackTop=s.vals.stackTop-(tempBack-tempFront-2);
+                tempLen=tempBack;
+                for (int j= tempFront+2 ;j<= s.vals.stackTop;j++,tempLen++ ) {
+                    s.vals.arratStack[j]=tempFor[tempLen];
+                }
+                s.vals.show();
+
+                for (int j= i+1;j<=s.ops.stackTop ;j++ ) {
+                    tempForString[j]=s.ops.arratStack[j];
+                    cout<<s.ops.arratStack[j]<<endl;
+                }
+                s.vals.show();
+
+                s.ops.stackTop--;
+                for (int h= i; h<=s.ops.stackTop;h++ ) {
+                    s.ops.arratStack[h]=tempForString[h+1];
+                    cout<<s.ops.arratStack[h+1]<<endl;
+
+                }
+                s.ops.show();
+                s.vals.show();
+                num--;
+                i--;
+            }else if(s.ops.arratStack[i]=="÷"){
+                int countVal = s.vals.find(-5);
+                int multiNumber=0;
+                for(int j=countVal;j<s.vals.size();j++){
+                    if(s.vals.arratStack[j]==-4){
+                        multiNumber=j;//remember the multi sign number
+                        break;
+                    }
+                }
+                int tempBack=multiNumber+1;
+                string back="";
+                string front="";
+                s.ops.show();
+                s.vals.show();
+                int tempFront=multiNumber-1;
+                while(s.vals.arratStack[tempBack]>0){
+                    if(tempBack>s.vals.stackTop){
+                        break;
+                    }
+                    back=back+to_string((int)s.vals.arratStack[tempBack]);
+                    tempBack++;
+                }
+                while(s.vals.arratStack[tempFront]>0){
+                    front=to_string((int)s.vals.arratStack[tempFront])+front ;
+                    tempFront--;
+                }
+                cout<<front<<back<<endl;
+                double result  = stod(back)/stod(front);
+                cout<<result<<endl;
+
+                //获取前后然后得到结果 然后加到 array 后面 再把前移
+                s.vals.arratStack[tempFront+1]=result;
+                s.vals.show();
+
+                int tempLen;
+                for (tempLen=tempBack;tempLen<=s.vals.stackTop;tempLen++ ) {
+                    tempFor[tempLen]=s.vals.arratStack[tempLen];
+                }
+                s.vals.show();
+                s.vals.stackTop=s.vals.stackTop-(tempBack-tempFront-2);
+                tempLen=tempBack;
+                for (int j= tempFront+2 ;j<= s.vals.stackTop;j++,tempLen++ ) {
+                    s.vals.arratStack[j]=tempFor[tempLen];
+                }
+                s.vals.show();
+
+                for (int j= i+1;j<=s.ops.stackTop ;j++ ) {
+                    tempForString[j]=s.ops.arratStack[j];
+                    cout<<s.ops.arratStack[j]<<endl;
+                }
+                s.vals.show();
+
+                s.ops.stackTop--;
+                for (int h= i; h<=s.ops.stackTop;h++ ) {
+                    s.ops.arratStack[h]=tempForString[h+1];
+                    cout<<s.ops.arratStack[h+1]<<endl;
+
+                }
+                i--;
+                num--;
+                s.ops.show();
+                s.vals.show();
+            }
+            cout<<"wsngg"<<endl;
+
+        }
+        cout<<"hello world"<<endl;
+
+        string valStr = "";
+        int num2=s.ops.size()-1;
+        for (int i=0; i<=num2; i++) {
+            if(s.ops.find("+")>0){
+                int countVal = s.vals.find(-5);
+                int addNumber=0;
+                for(int j=countVal;j<s.vals.size();j++){
+                    if(s.vals.arratStack[j]==-1){
+                        addNumber=j;//remember the multi sign number
+                        break;
+                    }
+                }
+                int tempBack=addNumber+1;
+                string back="";
+                string front="";
+                s.ops.show();
+                s.vals.show();
+                int tempFront=addNumber-1;
+                while(s.vals.arratStack[tempBack]>0){
+                    if(tempBack>s.vals.stackTop){
+                        break;
+                    }
+                    back=back+to_string((int)s.vals.arratStack[tempBack]);
+                    tempBack++;
+                }
+                while(s.vals.arratStack[tempFront]>0){
+                    front=to_string((int)s.vals.arratStack[tempFront])+front ;
+                    tempFront--;
+                }
+                cout<<front<<"   "<<back<<endl;
+                double result  = stod(back)+stod(front);
+                cout<<result<<endl;
+
+                //获取前后然后得到结果 然后加到 array 后面 再把前移
+                s.vals.arratStack[tempFront+1]=result;
+                s.vals.show();
+
+                int tempLen;
+                for (tempLen=tempBack;tempLen<=s.vals.stackTop;tempLen++ ) {
+                    tempFor[tempLen]=s.vals.arratStack[tempLen];
+                }
+                s.vals.show();
+                s.vals.stackTop=s.vals.stackTop-(tempBack-tempFront-2);
+                tempLen=tempBack;
+                for (int j= tempFront+2 ;j<= s.vals.stackTop;j++,tempLen++ ) {
+                    s.vals.arratStack[j]=tempFor[tempLen];
+                }
+                s.vals.show();
+
+                cout<<i+1<< "  "<<s.ops.stackTop<<endl;
+                for (int j= i+1;j<=s.ops.stackTop ;j++ ) {
+                    tempForString[j]=s.ops.arratStack[j];
+                }
+                s.vals.show();
+
+                s.ops.stackTop--;
+                for (int h= i; h<=s.ops.stackTop;h++ ) {
+                    s.ops.arratStack[h]=tempForString[h+1];
+
+                }
+                i--;
+                num--;
+                s.ops.show();
+                s.vals.show();
+            }else if(s.ops.find("-")>0){
+                cout<<"wsngg chufa"<<endl;
+                int countVal = s.vals.find(-5);
+                int addNumber=0;
+                for(int j=countVal;j<s.vals.size();j++){
+                    if(s.vals.arratStack[j]==-2){
+                        addNumber=j;//remember the multi sign number
+                        break;
+                    }
+                }
+                int tempBack=addNumber+1;
+                string back="";
+                string front="";
+                s.ops.show();
+                s.vals.show();
+                int tempFront=addNumber-1;
+                while(s.vals.arratStack[tempBack]>0){
+                    if(tempBack>s.vals.stackTop){
+                        break;
+                    }
+                    back=back+to_string((int)s.vals.arratStack[tempBack]);
+                    tempBack++;
+                }
+                while(s.vals.arratStack[tempFront]>0){
+                    front=to_string((int)s.vals.arratStack[tempFront])+front ;
+                    tempFront--;
+                }
+                cout<<front<<" "<<back<<endl;
+                double result  = stod(front)-stod(back);
+                cout<<result<<endl;
+
+                //获取前后然后得到结果 然后加到 array 后面 再把前移
+                s.vals.arratStack[tempFront+1]=result;
+                s.vals.show();
+
+                int tempLen;
+                for (tempLen=tempBack;tempLen<=s.vals.stackTop;tempLen++ ) {
+                    tempFor[tempLen]=s.vals.arratStack[tempLen];
+                }
+                s.vals.show();
+                s.vals.stackTop=s.vals.stackTop-(tempBack-tempFront-2);
+                tempLen=tempBack;
+                for (int j= tempFront+2 ;j<= s.vals.stackTop;j++,tempLen++ ) {
+                    s.vals.arratStack[j]=tempFor[tempLen];
+                }
+                s.vals.show();
+
+                cout<<i+1<< "  "<<s.ops.stackTop<<endl;
+                for (int j= i+1;j<=s.ops.stackTop ;j++ ) {
+                    tempForString[j]=s.ops.arratStack[j];
+                    cout<<s.ops.arratStack[j]<<endl;
+                }
+                s.vals.show();
+
+                s.ops.stackTop--;
+                for (int h= i; h<=s.ops.stackTop;h++ ) {
+                    s.ops.arratStack[h]=tempForString[h+1];
+                    cout<<s.ops.arratStack[h+1]<<endl;
+
+                }
+                i--;
+                num--;
+                s.ops.show();
+                s.vals.show();
+            }
+        }
 
 
     }
@@ -162,59 +430,294 @@ void MainWindow::on_rightButton_clicked()
     if (s.ops.size()==0){
         return;
     }
+    s.ops.show();
     //count the number of ops to operate.
     int count=s.ops.find("(");
-    int num=s.ops.size()-count-1;
+    int num=s.ops.size()-count-1;//total operator number
+    double tempFor[100];// store the temp array
+    string tempForString[100];
+    //
+    cout<<"hi"<<endl;
+    for (int i=0;i<=num ;i++ ) {
+        cout<<"num is "<<num<<" i is   "<<i<<endl;
 
-    for (int i=0;i<num ;i++ ) {
-        if(s.ops.arratStack[count+i]=="*"||s.ops.arratStack[count+i]=="÷"){
+        if(s.ops.arratStack[count+i]=="*"){
+            //if get the * , i from val 的
             int countVal = s.vals.find(-5);
-            s.vals.arratStack[countVal];
+            int multiNumber=0;
+            for(int j=countVal;j<s.vals.size();j++){
+                if(s.vals.arratStack[j]==-3){
+                    multiNumber=j;//remember the multi sign number
+                    cout<<"the multi is "<<multiNumber<<endl;
+                    break;
+                }
+            }
+            int tempBack=multiNumber+1;
+            string back="";
+            string front="";
+            s.ops.show();
+            s.vals.show();
+            int tempFront=multiNumber-1;
+            while(s.vals.arratStack[tempBack]>0){
+                if(tempBack>s.vals.stackTop){
+                    break;
+                }
+                back=back+to_string((int)s.vals.arratStack[tempBack]);
+                tempBack++;
+            }
+            while(s.vals.arratStack[tempFront]>0){
+                front=to_string((int)s.vals.arratStack[tempFront])+front ;
+                tempFront--;
+            }
+            //get the front number and back number
+            cout<<front<<back<<endl;
+            double result  = stod(back)*stod(front);
+            cout<<result<<endl;
+
+            //获取前后然后得到结果 然后加到 array 后面 再把前移
+            s.vals.arratStack[tempFront+1]=result;
+            s.vals.show();
+
+            int tempLen;
+            for (tempLen=tempBack;tempLen<=s.vals.stackTop;tempLen++ ) {
+                tempFor[tempLen]=s.vals.arratStack[tempLen];
+            }
+            s.vals.show();
+            s.vals.stackTop=s.vals.stackTop-(tempBack-tempFront-2);
+            tempLen=tempBack;
+            for (int j= tempFront+2 ;j<= s.vals.stackTop;j++,tempLen++ ) {
+                s.vals.arratStack[j]=tempFor[tempLen];
+            }
+            s.vals.show();
+
+            cout<<count+i+1<< "  "<<s.ops.stackTop<<endl;
+            for (int j= count+i+1;j<=s.ops.stackTop ;j++ ) {
+                tempForString[j]=s.ops.arratStack[j];
+                cout<<s.ops.arratStack[j]<<endl;
+            }
+            s.vals.show();
+
+            s.ops.stackTop--;
+            for (int h= count+i; h<=s.ops.stackTop;h++ ) {
+                s.ops.arratStack[h]=tempForString[h+1];
+                cout<<s.ops.arratStack[h+1]<<endl;
+
+            }
+            s.ops.show();
+            s.vals.show();
+            num--;
+            i--;
+        }else if(s.ops.arratStack[count+i]=="÷"){
+            int countVal = s.vals.find(-5);
+            int multiNumber=0;
+            for(int j=countVal;j<s.vals.size();j++){
+                if(s.vals.arratStack[j]==-4){
+                    multiNumber=j;//remember the multi sign number
+                    break;
+                }
+            }
+            int tempBack=multiNumber+1;
+            string back="";
+            string front="";
+            s.ops.show();
+            s.vals.show();
+            int tempFront=multiNumber-1;
+            while(s.vals.arratStack[tempBack]>0){
+                if(tempBack>s.vals.stackTop){
+                    break;
+                }
+                back=back+to_string((int)s.vals.arratStack[tempBack]);
+                tempBack++;
+            }
+            while(s.vals.arratStack[tempFront]>0){
+                front=to_string((int)s.vals.arratStack[tempFront])+front ;
+                tempFront--;
+            }
+            cout<<front<<back<<endl;
+            double result  = stod(front)/stod(back);
+            cout<<result<<endl;
+
+            //获取前后然后得到结果 然后加到 array 后面 再把前移
+            s.vals.arratStack[tempFront+1]=result;
+            s.vals.show();
+
+            int tempLen;
+            for (tempLen=tempBack;tempLen<=s.vals.stackTop;tempLen++ ) {
+                tempFor[tempLen]=s.vals.arratStack[tempLen];
+            }
+            s.vals.show();
+            s.vals.stackTop=s.vals.stackTop-(tempBack-tempFront-2);
+            tempLen=tempBack;
+            for (int j= tempFront+2 ;j<= s.vals.stackTop;j++,tempLen++ ) {
+                s.vals.arratStack[j]=tempFor[tempLen];
+            }
+            s.vals.show();
+
+            cout<<count+i+1<< "  "<<s.ops.stackTop<<endl;
+            for (int j= count+i+1;j<=s.ops.stackTop ;j++ ) {
+                tempForString[j]=s.ops.arratStack[j];
+                cout<<s.ops.arratStack[j]<<endl;
+            }
+            s.vals.show();
+
+            s.ops.stackTop--;
+            for (int h= count+i; h<=s.ops.stackTop;h++ ) {
+                s.ops.arratStack[h]=tempForString[h+1];
+                cout<<s.ops.arratStack[h+1]<<endl;
+
+            }
+            i--;
+            num--;
+            s.ops.show();
+            s.vals.show();
+        }
+        cout<<"wsngg"<<endl;
+
+    }
+    cout<<"hello world"<<endl;
+
+    string valStr = "";
+    int num2=s.ops.size()-count-1;
+    for (int i=0; i<=num2; i++) {
+        if(s.ops.find("+")>0){
+            int countVal = s.vals.find(-5);
+            int addNumber=0;
+            for(int j=countVal;j<s.vals.size();j++){
+                if(s.vals.arratStack[j]==-1){
+                    addNumber=j;//remember the multi sign number
+                    break;
+                }
+            }
+            int tempBack=addNumber+1;
+            string back="";
+            string front="";
+            s.ops.show();
+            s.vals.show();
+            int tempFront=addNumber-1;
+            while(s.vals.arratStack[tempBack]>0){
+                if(tempBack>s.vals.stackTop){
+                    break;
+                }
+                back=back+to_string((int)s.vals.arratStack[tempBack]);
+                tempBack++;
+            }
+            while(s.vals.arratStack[tempFront]>0){
+                front=to_string((int)s.vals.arratStack[tempFront])+front ;
+                tempFront--;
+            }
+            cout<<front<<"   "<<back<<endl;
+            double result  = stod(back)+stod(front);
+            cout<<result<<endl;
+
+            //获取前后然后得到结果 然后加到 array 后面 再把前移
+            s.vals.arratStack[tempFront+1]=result;
+            s.vals.show();
+
+            int tempLen;
+            for (tempLen=tempBack;tempLen<=s.vals.stackTop;tempLen++ ) {
+                tempFor[tempLen]=s.vals.arratStack[tempLen];
+            }
+            s.vals.show();
+            s.vals.stackTop=s.vals.stackTop-(tempBack-tempFront-2);
+            tempLen=tempBack;
+            for (int j= tempFront+2 ;j<= s.vals.stackTop;j++,tempLen++ ) {
+                s.vals.arratStack[j]=tempFor[tempLen];
+            }
+            s.vals.show();
+
+            cout<<count+i+1<< "  "<<s.ops.stackTop<<endl;
+            for (int j= count+i+1;j<=s.ops.stackTop ;j++ ) {
+                tempForString[j]=s.ops.arratStack[j];
+            }
+            s.vals.show();
+
+            s.ops.stackTop--;
+            for (int h= count+i; h<=s.ops.stackTop;h++ ) {
+                s.ops.arratStack[h]=tempForString[h+1];
+
+            }
+            i--;
+            num--;
+            s.ops.show();
+            s.vals.show();
+        }else if(s.ops.find("-")>0){
+            cout<<"wsngg chufa"<<endl;
+            int countVal = s.vals.find(-5);
+            int addNumber=0;
+            for(int j=countVal;j<s.vals.size();j++){
+                if(s.vals.arratStack[j]==-2){
+                    addNumber=j;//remember the multi sign number
+                    break;
+                }
+            }
+            int tempBack=addNumber+1;
+            string back="";
+            string front="";
+            s.ops.show();
+            s.vals.show();
+            int tempFront=addNumber-1;
+            while(s.vals.arratStack[tempBack]>0){
+                if(tempBack>s.vals.stackTop){
+                    break;
+                }
+                back=back+to_string((int)s.vals.arratStack[tempBack]);
+                tempBack++;
+            }
+            while(s.vals.arratStack[tempFront]>0){
+                front=to_string((int)s.vals.arratStack[tempFront])+front ;
+                tempFront--;
+            }
+            cout<<front<<" "<<back<<endl;
+            double result  = stod(front)-stod(back);
+            cout<<result<<endl;
+
+            //获取前后然后得到结果 然后加到 array 后面 再把前移
+            s.vals.arratStack[tempFront+1]=result;
+            s.vals.show();
+
+            int tempLen;
+            for (tempLen=tempBack;tempLen<=s.vals.stackTop;tempLen++ ) {
+                tempFor[tempLen]=s.vals.arratStack[tempLen];
+            }
+            s.vals.show();
+            s.vals.stackTop=s.vals.stackTop-(tempBack-tempFront-2);
+            tempLen=tempBack;
+            for (int j= tempFront+2 ;j<= s.vals.stackTop;j++,tempLen++ ) {
+                s.vals.arratStack[j]=tempFor[tempLen];
+            }
+            s.vals.show();
+
+            cout<<count+i+1<< "  "<<s.ops.stackTop<<endl;
+            for (int j= count+i+1;j<=s.ops.stackTop ;j++ ) {
+                tempForString[j]=s.ops.arratStack[j];
+                cout<<s.ops.arratStack[j]<<endl;
+            }
+            s.vals.show();
+
+            s.ops.stackTop--;
+            for (int h= count+i; h<=s.ops.stackTop;h++ ) {
+                s.ops.arratStack[h]=tempForString[h+1];
+                cout<<s.ops.arratStack[h+1]<<endl;
+
+            }
+            i--;
+            num--;
+            s.ops.show();
+            s.vals.show();
         }
     }
 
-    string op =s.ops.top();
+    cout<<"yingle"<<endl;
     s.ops.pop();
-    int val=s.vals.top();
-    string valStr = "";
-    while (s.vals.top()!=-1&&s.vals.top()!=-2&&s.vals.top()!=-3&&s.vals.top()!=-4) {
-        val=s.vals.pop();
-        valStr=to_string((int)val)+valStr;
+    int tempLen;
+    for (tempLen=count;tempLen<=count+1;tempLen++ ) {
+        tempFor[tempLen]=s.vals.arratStack[tempLen];
     }
-    if(op=="+"){
-        s.vals.pop();
-        double value =stod(valStr);
-        double temp = s.vals.pop();
-        value +=temp;
-        s.vals.push(value);
+    s.vals.show();
+    s.vals.arratStack[count]=tempFor[count+1];
+    s.vals.stackTop=s.vals.stackTop-1;
 
-    }else if(op=="sqrt"){
-        s.vals.pop();
-        double value =stod(valStr);
-        double temp = s.vals.pop();
-        value =temp;
-        s.vals.push(value);
-
-    }else if(op=="-"){
-        s.vals.pop();
-        double value =stod(valStr);
-        double temp = s.vals.pop();
-        value =temp-value;
-        s.vals.push(value);
-    }else if(op=="*"){
-        s.vals.pop();
-        double value =stod(valStr);
-        double temp = s.vals.pop();
-        value *=temp;
-        s.vals.push(value);
-    }else if(op=="÷"){
-        s.vals.pop();
-        double value =stod(valStr);
-        double temp = s.vals.pop();
-        value =temp/value;
-        s.vals.push(value);
-    }
-    s.ops.pop();
+    s.vals.show();
     QString x = ui->textEdit->toPlainText();
     x.append(")");
     ui->textEdit->setText(x);
@@ -237,8 +740,6 @@ void MainWindow::on_divButton_clicked()
     x.append("÷");
     ui->textEdit->setText(x);
     s.vals.push(-4);
-
-
 }
 
 void MainWindow::on_dotButton_clicked()
