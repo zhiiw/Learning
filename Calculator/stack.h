@@ -23,7 +23,7 @@ public:
         if(stackTop==-1){
 
         }
-        return arratStack[stackTop];
+        return arratStack[stackTop];//show the toppest
     }
     int find(string str);
     int find(int count);
@@ -68,7 +68,7 @@ int stack<T>::find(string str)
             y++;
         }
         if(x==y&&x!=NULL){
-            return i;
+            return i;//get the index of stack
         }
     }
 
@@ -100,7 +100,7 @@ template<class T>
 void stack<T>::show()
 {
     for(int i= 0;i<=stackTop;i++){
-        cout<<arratStack[i]<<" ";
+        cout<<arratStack[i]<<" ";//遍历stack
     }
     cout<<endl;
 }

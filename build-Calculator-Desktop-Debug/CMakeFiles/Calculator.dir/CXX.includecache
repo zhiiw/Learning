@@ -14,6 +14,12 @@ iostream
 string
 -
 
+/home/zhiiw/QT/Calculator/main.cpp
+mainwindow.h
+/home/zhiiw/QT/Calculator/mainwindow.h
+QApplication
+-
+
 /home/zhiiw/QT/Calculator/mainwindow.cpp
 mainwindow.h
 /home/zhiiw/QT/Calculator/mainwindow.h
@@ -22,6 +28,8 @@ mainwindow.h
 stack.h
 /home/zhiiw/QT/Calculator/stack.h
 iostream
+-
+cmath
 -
 calculate.h
 /home/zhiiw/QT/Calculator/calculate.h
@@ -41,6 +49,20 @@ sstream
 -
 iostream
 -
+
+/home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/EWIEGA46WW/moc_mainwindow.cpp
+memory
+-
+../../../Calculator/mainwindow.h
+/home/zhiiw/QT/Calculator/mainwindow.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/mocs_compilation.cpp
+EWIEGA46WW/moc_mainwindow.cpp
+/home/zhiiw/QT/build-Calculator-Desktop-Debug/Calculator_autogen/EWIEGA46WW/moc_mainwindow.cpp
 
 /usr/include/qt/QtCore/QVariant
 qvariant.h

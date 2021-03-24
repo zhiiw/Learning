@@ -425,7 +425,7 @@
         </font>
        </property>
        <property name="text">
-        <string>.</string>
+        <string>M-</string>
        </property>
       </widget>
      </item>

@@ -2,7 +2,7 @@
 #include "./ui_mainwindow.h"
 #include "stack.h"
 #include <iostream>
-
+#include <cmath>
 #include "calculate.h"
 using namespace std;
 MainWindow::MainWindow(QWidget *parent)
@@ -26,16 +26,60 @@ void MainWindow::on_equalButton_clicked()
     s.ops.show();
     /*
     else {
-         msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
+         Box = new QMessageBox("title",    ///--这里是设置消息框标题
                "Please input correctly ",            ///--这里是设置消息框显示的内容
                QMessageBox::Critical,              ///--这里是在消息框显示的图标
                QMessageBox::Ok | QMessageBox::Default,    ///---这里是显示消息框上的按钮情况
-               QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
+               QMmsgessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
                0);
        msgBox->show();
        return;
     }*/
-    MainWindow::on_rightButton_clicked();
+    try {
+        MainWindow::on_rightButton_clicked();
+
+    }  catch (overflow_error) {
+        msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
+              "Please input correctly ",            ///--这里是设置消息框显示的内容
+              QMessageBox::Critical,              ///--这里是在消息框显示的图标
+              QMessageBox::Ok | QMessageBox::Default,    ///---这里是显示消息框上的按钮情况
+              QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
+              0);
+      msgBox->show();
+      return;
+    }catch (std::invalid_argument&){
+        msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
+              "Invalid_argument ",            ///--这里是设置消息框显示的内容
+              QMessageBox::Critical,              ///--这里是在消息框显示的图标
+              QMessageBox::Ok | QMessageBox::Default,    ///---这里是显示消息框上的按钮情况
+              QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
+              0);
+      msgBox->show();
+      return;		cout << "Invalid_argument" << endl;
+    }
+    catch (std::out_of_range&){
+        msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
+              "Out of range",            ///--这里是设置消息框显示的内容
+              QMessageBox::Critical,              ///--这里是在消息框显示的图标
+              QMessageBox::Ok | QMessageBox::Default,    ///---这里是显示消息框上的按钮情况
+              QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
+              0);
+      msgBox->show();
+      return;
+        cout << "" << endl;
+    }
+    catch (...) {
+        msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
+              "Something else ",            ///--这里是设置消息框显示的内容
+              QMessageBox::Critical,              ///--这里是在消息框显示的图标
+              QMessageBox::Ok | QMessageBox::Default,    ///---这里是显示消息框上的按钮情况
+              QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
+              0);
+      msgBox->show();
+      return;
+        cout << "" << endl;
+    }
+
     double x = s.vals.top();
     string str = "=";
     str=str+std::to_string(x);
@@ -134,6 +178,8 @@ void MainWindow::on_acButton_clicked()
     s.ops.deleteAll();
     s.vals.deleteAll();
     ui->textEdit->clear();
+    s.vals.push(-5);
+    s.ops.push("(");
 }
 
 void MainWindow::on_subButton_clicked()
@@ -151,7 +197,8 @@ void MainWindow::on_leftButton_clicked()
     s.vals.push(-5);
     QString x = ui->textEdit->toPlainText();
     x.append("(");
-    ui->textEdit->setText(x);}
+    ui->textEdit->setText(x);
+}
 
 void MainWindow::on_rightButton_clicked()
 {
@@ -168,8 +215,220 @@ void MainWindow::on_rightButton_clicked()
     cout<<"hi"<<endl;
     for (int i=0;i<=num ;i++ ) {
         cout<<"num is "<<num<<" i is   "<<i<<endl;
+        if(s.ops.arratStack[count+i]=="²"){
+            int countVal = s.vals.find(-5);
+            int multiNumber=0;
+            cout<<" countVal is "<<countVal<<endl;
 
-        if(s.ops.arratStack[count+i]=="*"){
+            for(int j=countVal;j<s.vals.size();j++){
+                if(s.vals.arratStack[j]==-6){
+                    multiNumber=j;//remember the multi sign number
+                    cout<<"the multi is "<<multiNumber<<endl;
+                    break;
+                }
+            }
+            int tempBack=multiNumber+1;
+            string front="";
+            s.ops.show();
+            s.vals.show();
+            int tempFront=multiNumber-1;
+            cout<<s.vals.arratStack[tempFront]<<" mul is "<<multiNumber<<endl;
+            while(s.vals.arratStack[tempFront]>=0){
+                front=to_string((int)s.vals.arratStack[tempFront])+front ;
+                tempFront--;
+            }
+            //get the front number and back number
+            cout<<front<<endl;
+            double result  = stod(front)*stod(front);
+            cout<<result<<endl;
+
+            //获取前后然后得到结果 然后加到 array 后面 再把前移
+            s.vals.arratStack[tempFront+1]=result;
+            s.vals.show();
+
+            int tempLen;
+            for (tempLen=tempBack;tempLen<=s.vals.stackTop;tempLen++ ) {
+                tempFor[tempLen]=s.vals.arratStack[tempLen];
+            }
+            s.vals.show();
+            s.vals.stackTop=s.vals.stackTop-(tempBack-tempFront-2);
+            tempLen=tempBack;
+            for (int j= tempFront+2 ;j<= s.vals.stackTop;j++,tempLen++ ) {
+                s.vals.arratStack[j]=tempFor[tempLen];
+            }
+            s.vals.show();
+
+            cout<<count+i+1<< "  "<<s.ops.stackTop<<endl;
+            for (int j= count+i+1;j<=s.ops.stackTop ;j++ ) {
+                tempForString[j]=s.ops.arratStack[j];
+                cout<<s.ops.arratStack[j]<<endl;
+            }
+            s.vals.show();
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
+            s.ops.show();
+
+            if(s.ops.stackTop-s.ops.find("(")==1){
+                s.ops.show();
+                s.ops.pop();
+                s.ops.stackTop--;
+                break;
+            }
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
+
+            s.ops.stackTop--;
+            for (int h= count+i; h<=s.ops.stackTop;h++ ) {
+                s.ops.arratStack[h]=tempForString[h+1];
+                cout<<s.ops.arratStack[h+1]<<endl;
+
+            }
+            s.ops.show();
+            s.vals.show();
+            num--;
+            i--;
+        }else if(s.ops.arratStack[count+i]=="sqrt"){
+            int countVal = s.vals.find(-5);
+            int multiNumber=0;
+            cout<<" countVal is "<<countVal<<endl;
+
+            for(int j=countVal;j<s.vals.size();j++){
+                if(s.vals.arratStack[j]==-8){
+                    multiNumber=j;//remember the multi sign number
+                    cout<<"the multi is "<<multiNumber<<endl;
+                    break;
+                }
+            }
+            int tempBack=multiNumber+1;
+            string back="";
+            s.ops.show();
+            s.vals.show();
+            int tempFront=multiNumber-1;
+            while(s.vals.arratStack[tempBack]>=0){
+                if(tempBack>s.vals.stackTop){
+                    break;
+                }
+                back=back+to_string((int)s.vals.arratStack[tempBack]);
+                tempBack++;
+            }
+
+            cout<<back<<endl;
+            double result  = sqrt(stod(back));
+            cout<<result<<endl;
+
+            //获取前后然后得到结果 然后加到 array 后面 再把前移
+            s.vals.arratStack[tempFront+1]=result;
+            s.vals.show();
+
+            int tempLen;
+            for (tempLen=tempBack;tempLen<=s.vals.stackTop;tempLen++ ) {
+                tempFor[tempLen]=s.vals.arratStack[tempLen];
+            }
+            s.vals.show();
+            s.vals.stackTop=s.vals.stackTop-(tempBack-tempFront-2);
+            tempLen=tempBack;
+            for (int j= tempFront+2 ;j<= s.vals.stackTop;j++,tempLen++ ) {
+                s.vals.arratStack[j]=tempFor[tempLen];
+            }
+            s.vals.show();
+
+            cout<<count+i+1<< "  "<<s.ops.stackTop<<endl;
+            for (int j= count+i+1;j<=s.ops.stackTop ;j++ ) {
+                tempForString[j]=s.ops.arratStack[j];
+                cout<<s.ops.arratStack[j]<<endl;
+            }
+            s.vals.show();
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
+            s.ops.show();
+
+            if(s.ops.stackTop-s.ops.find("(")==1){
+                s.ops.show();
+                s.ops.pop();
+                s.ops.stackTop--;
+                break;
+            }
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
+
+            s.ops.stackTop--;
+            for (int h= count+i; h<=s.ops.stackTop;h++ ) {
+                s.ops.arratStack[h]=tempForString[h+1];
+                cout<<s.ops.arratStack[h+1]<<endl;
+
+            }
+            s.ops.show();
+            s.vals.show();
+            num--;
+            i--;
+        }else if(s.ops.arratStack[count+i]=="³"){
+            int countVal = s.vals.find(-5);
+            int multiNumber=0;
+            cout<<" countVal is "<<countVal<<endl;
+
+            for(int j=countVal;j<s.vals.size();j++){
+                if(s.vals.arratStack[j]==-7){
+                    multiNumber=j;//remember the multi sign number
+                    cout<<"the multi is "<<multiNumber<<endl;
+                    break;
+                }
+            }
+            int tempBack=multiNumber+1;
+            string front="";
+            s.ops.show();
+            s.vals.show();
+            int tempFront=multiNumber-1;
+            cout<<s.vals.arratStack[tempFront]<<" mul is "<<multiNumber<<endl;
+            while(s.vals.arratStack[tempFront]>=0){
+                front=to_string((int)s.vals.arratStack[tempFront])+front ;
+                tempFront--;
+            }
+            //get the front number and back number
+            cout<<front<<endl;
+            double result  = stod(front)*stod(front)*stod(front);
+            cout<<result<<endl;
+
+            //获取前后然后得到结果 然后加到 array 后面 再把前移
+            s.vals.arratStack[tempFront+1]=result;
+            s.vals.show();
+
+            int tempLen;
+            for (tempLen=tempBack;tempLen<=s.vals.stackTop;tempLen++ ) {
+                tempFor[tempLen]=s.vals.arratStack[tempLen];
+            }
+            s.vals.show();
+            s.vals.stackTop=s.vals.stackTop-(tempBack-tempFront-2);
+            tempLen=tempBack;
+            for (int j= tempFront+2 ;j<= s.vals.stackTop;j++,tempLen++ ) {
+                s.vals.arratStack[j]=tempFor[tempLen];
+            }
+            s.vals.show();
+
+            cout<<count+i+1<< "  "<<s.ops.stackTop<<endl;
+            for (int j= count+i+1;j<=s.ops.stackTop ;j++ ) {
+                tempForString[j]=s.ops.arratStack[j];
+                cout<<s.ops.arratStack[j]<<endl;
+            }
+            s.vals.show();
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
+            s.ops.show();
+
+            if(s.ops.stackTop-s.ops.find("(")==1){
+                s.ops.show();
+                s.ops.pop();
+                s.ops.stackTop--;
+                break;
+            }
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
+
+            s.ops.stackTop--;
+            for (int h= count+i; h<=s.ops.stackTop;h++ ) {
+                s.ops.arratStack[h]=tempForString[h+1];
+                cout<<s.ops.arratStack[h+1]<<endl;
+
+            }
+            s.ops.show();
+            s.vals.show();
+            num--;
+            i--;
+        }
+        else if(s.ops.arratStack[count+i]=="*"){
             //if get the * , i from val 的
             int countVal = s.vals.find(-5);
             int multiNumber=0;
@@ -224,6 +483,16 @@ void MainWindow::on_rightButton_clicked()
                 cout<<s.ops.arratStack[j]<<endl;
             }
             s.vals.show();
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
+            s.ops.show();
+
+            if(s.ops.stackTop-s.ops.find("(")==1){
+                s.ops.show();
+                s.ops.pop();
+                s.ops.stackTop--;
+                break;
+            }
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
 
             s.ops.stackTop--;
             for (int h= count+i; h<=s.ops.stackTop;h++ ) {
@@ -280,7 +549,15 @@ void MainWindow::on_rightButton_clicked()
                 s.vals.arratStack[j]=tempFor[tempLen];
             }
             s.vals.show();
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
+            s.ops.show();
 
+            if(s.ops.stackTop-s.ops.find("(")==1){
+                s.ops.show();
+                s.ops.pop();
+                s.ops.stackTop--;
+                break;
+            }
             cout<<count+i+1<< "  "<<s.ops.stackTop<<endl;
             for (int j= count+i+1;j<=s.ops.stackTop ;j++ ) {
                 tempForString[j]=s.ops.arratStack[j];
@@ -352,17 +629,25 @@ void MainWindow::on_rightButton_clicked()
                 s.vals.arratStack[j]=tempFor[tempLen];
             }
             s.vals.show();
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
+            s.ops.show();
 
+            if(s.ops.stackTop-s.ops.find("(")==1){
+                s.ops.show();
+                s.ops.pop();
+                s.ops.stackTop--;
+                break;
+            }
             cout<<count+i+1<< "  "<<s.ops.stackTop<<endl;
             for (int j= count+i+1;j<=s.ops.stackTop ;j++ ) {
                 tempForString[j]=s.ops.arratStack[j];
             }
             s.vals.show();
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
 
             s.ops.stackTop--;
-            for (int h= count+i; h<=s.ops.stackTop;h++ ) {
+            for (int h= count+i+1; h<=s.ops.stackTop;h++ ) {
                 s.ops.arratStack[h]=tempForString[h+1];
-
             }
             i--;
             num--;
@@ -414,7 +699,14 @@ void MainWindow::on_rightButton_clicked()
                 s.vals.arratStack[j]=tempFor[tempLen];
             }
             s.vals.show();
+            cout <<"stacktop is "<<s.ops.stackTop<<" ( is "<<s.ops.find("(")<<endl;
+            s.ops.show();
 
+            if(s.ops.stackTop-s.ops.find("(")==1){
+                s.ops.show();
+                s.ops.stackTop--;
+                break;
+            }
             cout<<count+i+1<< "  "<<s.ops.stackTop<<endl;
             for (int j= count+i+1;j<=s.ops.stackTop ;j++ ) {
                 tempForString[j]=s.ops.arratStack[j];
@@ -422,11 +714,9 @@ void MainWindow::on_rightButton_clicked()
             }
             s.vals.show();
 
-            s.ops.stackTop--;
             for (int h= count+i; h<=s.ops.stackTop;h++ ) {
                 s.ops.arratStack[h]=tempForString[h+1];
-                cout<<s.ops.arratStack[h+1]<<endl;
-
+                cout<<s.ops.arratStack[h]<<endl;
             }
             i--;
             num--;
@@ -436,7 +726,8 @@ void MainWindow::on_rightButton_clicked()
     }
 
     cout<<"yingle"<<endl;
-    s.ops.pop();
+    s.ops.show();
+
     int tempLen;
     int leftBracket = s.vals.find(-5);
     for (tempLen=leftBracket;tempLen<=leftBracket+1;tempLen++ ) {
@@ -473,12 +764,40 @@ void MainWindow::on_divButton_clicked()
 
 void MainWindow::on_dotButton_clicked()
 {
+    cout<<s.ops.stackTop<< "  "<<s.vals.stackTop<<endl;
+    s.ops.show();s.vals.show();
 
+    if(s.ops.stackTop>=0&&s.vals.stackTop>=0){
+        int tempFront=s.vals.stackTop;
+        string front="";
+        int i=0;
+        while(s.vals.arratStack[tempFront]>=0){
+            if(tempFront<0){
+                break;
+            }
+            front=to_string((int)s.vals.arratStack[tempFront])+front;
+            tempFront--;
+        }
+        cout<<front<<endl;
+        int result  = stoi(front);
+        result--;
+        string resStr =to_string(result);
+        QString x = ui->textEdit->toPlainText();
+        x.append("\n");
+        x.append(QString::fromStdString(resStr));
+        ui->textEdit->append(x);
+        s.vals.top()-=1;
+        ui->textEdit_2->append(QString::fromStdString(resStr));
+
+
+    }
 }
 
 void MainWindow::on_rootButton_clicked()
 {
     s.ops.push("sqrt");
+    s.vals.push(-8);
+
     QString x = ui->textEdit->toPlainText();
     x.append("√");
     ui->textEdit->setText(x);
@@ -495,14 +814,30 @@ void MainWindow::on_lnButton_clicked()
 void MainWindow::on_powerButton_clicked()
 {
 
+    s.ops.push("²");
+    s.vals.push(-6);
+
+    QString x = ui->textEdit->toPlainText();
+    x.append("²");
+    ui->textEdit->setText(x);
 }
 
 void MainWindow::on_eButton_clicked()
 {
     QString qstr =ui->textEdit->toPlainText();
     int x = qstr.length();
+    QString del = qstr.mid(x-1,x);
+
     QString str = qstr.mid(0,x-1);
+    string temp = del.toStdString();
+    if(temp=="+"||temp=="-"||temp=="*"||temp=="/"||temp=="("||temp==")"||temp=="²"||temp=="³"){
+        s.ops.pop();
+        s.vals.pop();
+    }else{
+        s.vals.pop();
+    }
     ui->textEdit->setText(str);
+
 }
 
 void MainWindow::on_paiButton_clicked()
@@ -515,11 +850,48 @@ void MainWindow::on_paiButton_clicked()
 
 void MainWindow::on_powerTButton_clicked()
 {
+    s.ops.push("³");
+    s.vals.push(-7);
+    QString x = ui->textEdit->toPlainText();
+    x.append("³");
+    ui->textEdit->setText(x);
 
 }
 
 void MainWindow::on_pushButton_8_clicked()
 {
-    ui->textEdit->insertPlainText("wdsnbjkfhuiafgadfg");
+    cout<<s.ops.stackTop<< "  "<<s.vals.stackTop<<endl;
+    s.ops.show();s.vals.show();
 
+    if(s.ops.stackTop>=0&&s.vals.stackTop>=0){
+        int tempFront=s.vals.stackTop;
+        string front="";
+        int i=0;
+        while(s.vals.arratStack[tempFront]>=0){
+            if(tempFront<0){
+                break;
+            }
+            front=to_string((int)s.vals.arratStack[tempFront])+front;
+            tempFront--;
+        }
+        cout<<front<<endl;
+        int result  = stoi(front);
+        result*=result;
+        string resStr =to_string(result);
+        QString x = ui->textEdit->toPlainText();
+        x.append("\n");
+        x.append(QString::fromStdString(resStr));
+        ui->textEdit->setText(x);
+        s.vals.top()*=s.vals.top();
+
+        ui->textEdit_2->append(QString::fromStdString(resStr));
+    }else {
+        msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
+              "Please input correctly ",            ///--这里是设置消息框显示的内容
+              QMessageBox::Critical,              ///--这里是在消息框显示的图标
+              QMessageBox::Ok | QMessageBox::Default,    ///---这里是显示消息框上的按钮情况
+              QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
+              0);
+      msgBox->show();
+    }
 }
