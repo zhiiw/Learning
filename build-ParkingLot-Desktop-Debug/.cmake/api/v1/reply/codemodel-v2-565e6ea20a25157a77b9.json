@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ParkingLot",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ParkingLot::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ParkingLot-Debug-3c4d705a40f74d46f073.json",
+					"name" : "ParkingLot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ParkingLot_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ParkingLot_autogen-Debug-eaab060d9f6d589ccefa.json",
+					"name" : "ParkingLot_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug",
+		"source" : "/home/zhiiw/QT/ParkingLot"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

@@ -1,0 +1,4 @@
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot_autogen.dir

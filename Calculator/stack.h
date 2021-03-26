@@ -11,7 +11,7 @@ public:
         if (stackTop==-1){
 
         }
-        stackTop--;
+        stackTop--;//reduce the count
         return arratStack[stackTop+1];
     }
     void show();
@@ -47,7 +47,7 @@ stack<T>::stack()
 
 template <class T>
 void stack<T>::push(const T &val){
-    arratStack[++stackTop] = val;
+    arratStack[++stackTop] = val;//push the value
 
 }
 
@@ -87,7 +87,7 @@ int stack<T>::find(int count)
     for(int i= 0;i<=stackTop;i++){
 
         if(arratStack[i]==count){
-            y++;
+            y++;//get the index of stack
         }
         if(x==y){
             return i;
