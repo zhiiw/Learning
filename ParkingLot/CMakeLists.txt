@@ -30,6 +30,10 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
+        queue.h
+        car.h
+        parkinglot.h
+        myExceptions.h
         mainwindow.h
         mainwindow.ui
 )
