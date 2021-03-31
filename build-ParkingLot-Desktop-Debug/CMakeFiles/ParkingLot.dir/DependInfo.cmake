@@ -14,6 +14,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "QT_CORE_LIB"
   "QT_GUI_LIB"
+  "QT_SQL_LIB"
   "QT_WIDGETS_LIB"
   )
 
@@ -27,6 +28,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/qt/QtGui"
   "/usr/include/qt/QtCore"
   "/usr/lib/qt/mkspecs/linux-g++"
+  "/usr/include/qt/QtSql"
   )
 
 # Targets to which this target links.

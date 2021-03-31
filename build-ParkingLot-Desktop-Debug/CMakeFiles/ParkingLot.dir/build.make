@@ -129,6 +129,7 @@ ParkingLot: CMakeFiles/ParkingLot.dir/main.cpp.o
 ParkingLot: CMakeFiles/ParkingLot.dir/mainwindow.cpp.o
 ParkingLot: CMakeFiles/ParkingLot.dir/build.make
 ParkingLot: /usr/lib/libQt5Widgets.so.5.15.2
+ParkingLot: /usr/lib/libQt5Sql.so.5.15.2
 ParkingLot: /usr/lib/libQt5Gui.so.5.15.2
 ParkingLot: /usr/lib/libQt5Core.so.5.15.2
 ParkingLot: CMakeFiles/ParkingLot.dir/link.txt

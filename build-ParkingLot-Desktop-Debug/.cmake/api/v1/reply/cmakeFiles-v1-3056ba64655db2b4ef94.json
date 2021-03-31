@@ -104,19 +104,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake"
+			"path" : "/usr/lib64/cmake/Qt5Sql/Qt5SqlConfigVersion.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/usr/lib64/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/usr/lib64/cmake/Qt5Gui/Qt5GuiConfig.cmake"
+			"path" : "/usr/lib64/cmake/Qt5Sql/Qt5SqlConfig.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -142,6 +134,58 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/usr/share/cmake-3.19/Modules/CMakeParseArguments.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Sql/Qt5Sql_QIBaseDriverPlugin.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Sql/Qt5Sql_QMYSQLDriverPlugin.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Sql/Qt5Sql_QODBCDriverPlugin.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Sql/Qt5Sql_QPSQLDriverPlugin.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Sql/Qt5Sql_QTDSDriverPlugin.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5/Qt5ConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5/Qt5Config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5/Qt5ModuleLocation.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Gui/Qt5GuiConfig.cmake"
 		},
 		{
 			"isExternal" : true,

@@ -7,7 +7,6 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -24,7 +23,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #    endif()
 #endif()
 
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
+
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets  REQUIRED)
+find_package(Qt5 COMPONENTS Sql REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 set(PROJECT_SOURCES
@@ -54,4 +55,5 @@ else()
     endif()
 endif()
 
-target_link_libraries(ParkingLot PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(ParkingLot PRIVATE Qt${QT_VERSION_MAJOR}::Widgets )
+target_link_libraries(ParkingLot PRIVATE Qt5::Sql)

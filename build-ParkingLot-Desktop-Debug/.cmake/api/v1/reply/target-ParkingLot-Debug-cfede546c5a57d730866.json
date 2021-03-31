@@ -25,13 +25,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 51,
+				"line" : 52,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 57,
+				"line" : 58,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 59,
 				"parent" : 0
 			}
 		]
@@ -61,6 +67,10 @@
 				{
 					"backtrace" : 2,
 					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "QT_SQL_LIB"
 				},
 				{
 					"backtrace" : 2,
@@ -103,6 +113,11 @@
 					"backtrace" : 2,
 					"isSystem" : true,
 					"path" : "/usr/lib/qt/mkspecs/linux-g++"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/usr/include/qt/QtSql"
 				}
 			],
 			"language" : "CXX",
@@ -145,6 +160,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "/usr/lib/libQt5Widgets.so.5.15.2",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/lib/libQt5Sql.so.5.15.2",
 				"role" : "libraries"
 			},
 			{
