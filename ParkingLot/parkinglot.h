@@ -21,9 +21,11 @@ template<class T>
 class parkinglot{
 private:
     queue<T> *wait;//the waiting queue.
+    int totalCar;
     bool *carInParkingLot; //the car array in parkinglot
     queue<unique_ptr<T>> queueForPark;
     unique_ptr<queue<T>> queueForParking;
+    int parkNumber;
     std::mutex mtx;
     std::mutex mtxCounter;
     double initialTime;
@@ -36,11 +38,13 @@ public:
     parkinglot();
     parkinglot(int parkingNumber,int queueNumber);//n is p
     ~parkinglot();
-    void produceCar(int i);
+    void produceCar(car<T> &x);
     void consumeCar();
     void insertCar();
     double totalCharge;
     double chargeForCar();
+    bool isParkinglotFull();
+    bool isParkinglotEmpty();
 
     void randomTime();
 
@@ -55,40 +59,73 @@ parkinglot<T>::~parkinglot(){
 template<class T>
 parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
     carInParkingLot= new bool[parkingNumber];
+    parkNumber=parkingNumber;
     for (int i= 0 ; i<parkingNumber;i++){
         carInParkingLot[i]=false;
     }
     queue<int> *xm = new queue<int>(queueNumber);
     wait = xm;
-
+    totalCar=0;
 }
 template<class T>
-void parkinglot<T>::produceCar(int i){
-
-    /*
-    unique_lock<mutex> lck(mtx);
-    while ((write_position+1)%repository_size==read_position) {
-        wait.EnQueue();//while is full,add it to the queue
-        cout<<"Producer is waiting for ...."<<queueNotFull.wait(lck)<<endl;
+bool parkinglot<T>::isParkinglotFull(){
+    for (int i= 0 ; i<parkNumber;i++){
+        if(carInParkingLot[i]==false){
+            return false;
+        }
     }
+    return true;
+}
+template<class T>
+bool parkinglot<T>::isParkinglotEmpty(){
+    for (int i= 0 ; i<parkNumber;i++){
+        if(carInParkingLot[i]==true){
+            return false;
+        }
+    }
+    return true;
+}
+template<class T>
+void parkinglot<T>::produceCar(car<T> &x){
 
-    queueNotFull.notify_all();//通知消费者产品库不为空
+    QSqlQuery qry;
+    unique_lock<mutex> lck(mtx);
+    while (wait->IsFull()&&isParkinglotFull()) {
+        cout<<"car is waiting for empty space"<<endl;
+        queueNotFull.wait(lck);
+    }
+    if (isParkinglotFull()){
+        wait->EnQueue(*x);//make a reminder to notify me to dequeue the car and add it to the bool array;
+    }else {
+        for(int i = 0 ;i<parkNumber;i++){
+            if(carInParkingLot[i]==false){
+                carInParkingLot[i]=true;//add a car to the bool array;
+                totalCar++;
+                string query="INSERT INTO names (id, enterTime, leaveTime,plate) VALUES (";
+                query+=to_string(totalCar);
+                query+=", 2, 3,";
+                query+= x.getPlate();
+                query+=")";
+
+                qry.prepare(QString::fromStdString(query));
+            }
+        }
+    }
+    queueNotEmpty.notify_all();//通知消费者产品库不为空
     lck.unlock();//解锁
-    */
-
 }
 template<class T>
 void parkinglot<T>::consumeCar(){
-    /*
+
     int data;
     unique_lock<mutex> lck(mtx);
     // item buffer is empty, just wait here.
-    while (write_position == read_position)
+    while (wait->IsEmpty()&&isParkinglotEmpty())
     {
-        std::cout << "Consumer is waiting for items..." << std::endl;
-        repo_not_empty.wait(lck);// 消费者等待"产品库缓冲区不为空"这一条件发生.
+        std::cout << "Parking lot is waiting for cars..." << std::endl;
+        queueNotEmpty.wait(lck);// 消费者等待"产品库缓冲区不为空"这一条件发生.
     }
-
+    if(queue)
     data = item_buffer[read_position];//读取产品
     read_position++;
 
@@ -97,11 +134,8 @@ void parkinglot<T>::consumeCar(){
         read_position = 0;
     }
 
-    repo_not_full.notify_all();//通知产品库不满
+    queueNotFull.notify_all();//通知产品库不满
     lck.unlock();
-
-    return data;
-    */
 }
 template<class T>
 double parkinglot<T>::chargeForCar(){
