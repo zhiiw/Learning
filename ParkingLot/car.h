@@ -14,7 +14,7 @@ private:
     double charge;
     string plate;
     int parkingTime;
-    int index;//car's index in parking lot
+    int  index;//car's index in parking lot
     
     car(int waitingTime,
     string enterTime,
@@ -47,8 +47,8 @@ string car<T>::randomGetPlate(){
     
     random_device rd;
     default_random_engine random(rd());
-    plate+='京';
-    plate+='A';
+    plate+="京";
+    plate+="A";
     
     for (int i = 0; i < 5; i++) {
         tmp = random() % 36;	// 随机一个小于 36 的整数，0-9、A-Z 共 36 种字符

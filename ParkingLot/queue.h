@@ -28,10 +28,13 @@ public:
 template<class T>
 queue<T>::queue(int MaxQueueSize) {
     MaxSize =MaxQueueSize+1;
-    queue = new T[MaxSize];
+    array = new T[MaxSize];
     front = rear =0;
 }
-
+template<class T>
+queue<T>::~queue() {
+    delete [] array;
+}
 template<class T>
 T queue<T>::First(){
     if(IsEmpty()){
@@ -45,7 +48,7 @@ T queue<T>::Last(){
     if(IsEmpty()){
         throw myException("out of bound");
     }
-    return queue[rear];
+    return array[rear];
 }
 
 template<class T>
@@ -54,7 +57,7 @@ void queue<T>::EnQueue(T x){
         throw myException("Out of space");
     }
     rear=(rear+1)%MaxSize;
-    queue[rear] = x;
+    array[rear] = x;
 
 }
 

@@ -105,7 +105,10 @@ CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtGui/qwindowdefs.h
  /usr/include/qt/QtGui/qwindowdefs_win.h
  /usr/include/qt/QtWidgets/QMainWindow
+ /usr/include/qt/QtWidgets/QMessageBox
+ /usr/include/qt/QtWidgets/qdialog.h
  /usr/include/qt/QtWidgets/qmainwindow.h
+ /usr/include/qt/QtWidgets/qmessagebox.h
  /usr/include/qt/QtWidgets/qsizepolicy.h
  /usr/include/qt/QtWidgets/qtabwidget.h
  /usr/include/qt/QtWidgets/qtwidgets-config.h
@@ -219,18 +222,26 @@ CMakeFiles/ParkingLot.dir/main.cpp.o
  /usr/include/qt/QtGui/qwindowdefs_win.h
  /usr/include/qt/QtWidgets/QApplication
  /usr/include/qt/QtWidgets/QMainWindow
+ /usr/include/qt/QtWidgets/QMessageBox
  /usr/include/qt/QtWidgets/qapplication.h
  /usr/include/qt/QtWidgets/qdesktopwidget.h
+ /usr/include/qt/QtWidgets/qdialog.h
  /usr/include/qt/QtWidgets/qmainwindow.h
+ /usr/include/qt/QtWidgets/qmessagebox.h
  /usr/include/qt/QtWidgets/qsizepolicy.h
  /usr/include/qt/QtWidgets/qtabwidget.h
  /usr/include/qt/QtWidgets/qtwidgets-config.h
  /usr/include/qt/QtWidgets/qtwidgetsglobal.h
  /usr/include/qt/QtWidgets/qwidget.h
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o
+ /home/zhiiw/QT/ParkingLot/car.h
  /home/zhiiw/QT/ParkingLot/mainwindow.cpp
  /home/zhiiw/QT/ParkingLot/mainwindow.h
+ /home/zhiiw/QT/ParkingLot/myExceptions.h
+ /home/zhiiw/QT/ParkingLot/parkinglot.h
+ /home/zhiiw/QT/ParkingLot/queue.h
  /usr/include/qt/QtCore/QVariant
+ /usr/include/qt/QtCore/QtDebug
  /usr/include/qt/QtCore/qalgorithms.h
  /usr/include/qt/QtCore/qarraydata.h
  /usr/include/qt/QtCore/qatomic.h
@@ -339,10 +350,20 @@ CMakeFiles/ParkingLot.dir/mainwindow.cpp.o
  /usr/include/qt/QtGui/qvector2d.h
  /usr/include/qt/QtGui/qwindowdefs.h
  /usr/include/qt/QtGui/qwindowdefs_win.h
+ /usr/include/qt/QtSql/QSql
+ /usr/include/qt/QtSql/QSqlDatabase
+ /usr/include/qt/QtSql/QSqlError
+ /usr/include/qt/QtSql/QSqlQuery
+ /usr/include/qt/QtSql/qsqldatabase.h
+ /usr/include/qt/QtSql/qsqlerror.h
+ /usr/include/qt/QtSql/qsqlquery.h
+ /usr/include/qt/QtSql/qtsql-config.h
+ /usr/include/qt/QtSql/qtsqlglobal.h
  /usr/include/qt/QtWidgets/QApplication
  /usr/include/qt/QtWidgets/QLabel
  /usr/include/qt/QtWidgets/QMainWindow
  /usr/include/qt/QtWidgets/QMenuBar
+ /usr/include/qt/QtWidgets/QMessageBox
  /usr/include/qt/QtWidgets/QPushButton
  /usr/include/qt/QtWidgets/QStatusBar
  /usr/include/qt/QtWidgets/QTextEdit
@@ -353,11 +374,13 @@ CMakeFiles/ParkingLot.dir/mainwindow.cpp.o
  /usr/include/qt/QtWidgets/qactiongroup.h
  /usr/include/qt/QtWidgets/qapplication.h
  /usr/include/qt/QtWidgets/qdesktopwidget.h
+ /usr/include/qt/QtWidgets/qdialog.h
  /usr/include/qt/QtWidgets/qframe.h
  /usr/include/qt/QtWidgets/qlabel.h
  /usr/include/qt/QtWidgets/qmainwindow.h
  /usr/include/qt/QtWidgets/qmenu.h
  /usr/include/qt/QtWidgets/qmenubar.h
+ /usr/include/qt/QtWidgets/qmessagebox.h
  /usr/include/qt/QtWidgets/qpushbutton.h
  /usr/include/qt/QtWidgets/qsizepolicy.h
  /usr/include/qt/QtWidgets/qstatusbar.h

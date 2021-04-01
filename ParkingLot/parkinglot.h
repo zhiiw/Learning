@@ -20,7 +20,7 @@ static std::size_t item_counter = 0;//消费者消费产品计数器
 template<class T>
 class parkinglot{
 private:
-    queue<T> wait;//the waiting queue.
+    queue<T> *wait;//the waiting queue.
     bool *carInParkingLot; //the car array in parkinglot
     queue<unique_ptr<T>> queueForPark;
     unique_ptr<queue<T>> queueForParking;
@@ -30,36 +30,56 @@ private:
     condition_variable queueNotFull;
     condition_variable queueNotEmpty;
     std::chrono::seconds t;
-    QSqlDataBase database;
+    QSqlDatabase database;
 
 public:
     parkinglot();
+    parkinglot(int parkingNumber,int queueNumber);//n is p
     ~parkinglot();
     void produceCar(int i);
-    int consumeCar();
+    void consumeCar();
     void insertCar();
-    int chargeForCar();
+    double totalCharge;
+    double chargeForCar();
 
     void randomTime();
 
 };
 template<class T>
 parkinglot<T>::parkinglot(){
-    queueForParking= make_unique<queue<T>>(new queue<T>());
+}
+template<class T>
+parkinglot<T>::~parkinglot(){
+
+}
+template<class T>
+parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
+    carInParkingLot= new bool[parkingNumber];
+    for (int i= 0 ; i<parkingNumber;i++){
+        carInParkingLot[i]=false;
+    }
+    queue<int> *xm = new queue<int>(queueNumber);
+    wait = xm;
+
 }
 template<class T>
 void parkinglot<T>::produceCar(int i){
+
+    /*
     unique_lock<mutex> lck(mtx);
     while ((write_position+1)%repository_size==read_position) {
         wait.EnQueue();//while is full,add it to the queue
         cout<<"Producer is waiting for ...."<<queueNotFull.wait(lck)<<endl;
     }
 
-    repo_not_empty.notify_all();//通知消费者产品库不为空
+    queueNotFull.notify_all();//通知消费者产品库不为空
     lck.unlock();//解锁
+    */
+
 }
 template<class T>
 void parkinglot<T>::consumeCar(){
+    /*
     int data;
     unique_lock<mutex> lck(mtx);
     // item buffer is empty, just wait here.
@@ -81,6 +101,7 @@ void parkinglot<T>::consumeCar(){
     lck.unlock();
 
     return data;
+    */
 }
 template<class T>
 double parkinglot<T>::chargeForCar(){
@@ -88,6 +109,7 @@ double parkinglot<T>::chargeForCar(){
 }
 template<class T>
 void producerThread(){
+    /*
     bool readyToExit;
     while(1){
         unique_lock<mutex> lck(mtxCounter);
@@ -96,12 +118,12 @@ void producerThread(){
             produceCar();
 
         }
-    }
+    }*/
 }
-
 template<class T>
 void consumerThread(){
     static int cnt=0;
+    /*
     while (1) {
         this_thread::sleep_for(t);
         int item = 0;
@@ -109,6 +131,6 @@ void consumerThread(){
         if(++cnt==item_total){
             break;
         }
-    }
+    }*/
 }
 #endif // PARKINGLOT_H

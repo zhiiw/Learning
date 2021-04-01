@@ -286,7 +286,10 @@
  mdp:/usr/include/qt/QtGui/qtransform.h
  mdp:/usr/include/qt/QtGui/qwindowdefs.h
  mdp:/usr/include/qt/QtWidgets/QMainWindow
+ mdp:/usr/include/qt/QtWidgets/QMessageBox
+ mdp:/usr/include/qt/QtWidgets/qdialog.h
  mdp:/usr/include/qt/QtWidgets/qmainwindow.h
+ mdp:/usr/include/qt/QtWidgets/qmessagebox.h
  mdp:/usr/include/qt/QtWidgets/qsizepolicy.h
  mdp:/usr/include/qt/QtWidgets/qtabwidget.h
  mdp:/usr/include/qt/QtWidgets/qtwidgets-config.h
