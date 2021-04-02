@@ -17,6 +17,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+
     QString n = ui->textEdit->toPlainText();
     QString m = ui->textEdit->toPlainText();
     if(n.toInt()<=0||m.toInt()<=0){
@@ -30,7 +31,6 @@ void MainWindow::on_pushButton_clicked()
           return;
     }
     parkinglot<int> pl(n.toInt(),m.toInt());
-
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("parkinglot.db");
     if( !db.open() )
@@ -39,7 +39,7 @@ void MainWindow::on_pushButton_clicked()
       cout<<"connected failure."<<endl;
     }
     QSqlQuery qry;
-    qry.prepare( "CREATE TABLE IF NOT EXISTS names (id INTEGER UNIQUE PRIMARY KEY, enterTime DOUBLE, leaveTime DOUBLE,plate TEXT,charge DOUBLE) " );
+    qry.prepare( "CREATE TABLE IF NOT EXISTS names (id INTEGER UNIQUE PRIMARY KEY ,enterTime DOUBLE, leaveTime DOUBLE,plate TEXT,charge DOUBLE) " );
     if( !qry.exec() ){
        qDebug() << qry.lastError();
        cout<<"connected failure."<<endl;
@@ -61,8 +61,9 @@ void MainWindow::on_pushButton_clicked()
     {
         qDebug( "Selected!" );
     }
-}
 
+
+}
 void MainWindow::on_pushButton_2_clicked()
 {
 

@@ -34,11 +34,17 @@ QMessageBox
 string
 -
 
+/home/zhiiw/QT/ParkingLot/parkingSpot.h
+car.h
+/home/zhiiw/QT/ParkingLot/car.h
+
 /home/zhiiw/QT/ParkingLot/parkinglot.h
 queue.h
 /home/zhiiw/QT/ParkingLot/queue.h
 car.h
 /home/zhiiw/QT/ParkingLot/car.h
+parkingSpot.h
+/home/zhiiw/QT/ParkingLot/parkingSpot.h
 memory
 -
 condition_variable

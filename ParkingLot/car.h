@@ -8,24 +8,57 @@
 template<class T>
 class car{
 private:
-    int waitingTime;
+    double waitingTime;
     double enterTime;
     double outTime;
     double charge;
     string plate;
     int parkingTime;
-    int  index;//car's index in parking lot
-    
-    car(int waitingTime,
-    string enterTime,
-    string index);
-    
-    ~car();
-    int randomParkingTime();
-    double getOutTime();
     string randomGetPlate();
     double countCharge();
+    int randomParkingTime();
+    int  index;//car's index in parking lot
+public:
+    car();
+    car(double enter);
+    ~car();
+
+    double getOutTime();
+    double getCharge();
+    double getEnterTime();
+    string getPlate();
+
+
 };
+template<class T>
+car<T>::car(){
+
+}
+
+template<class T>
+car<T>::~car(){
+
+}
+template<class T>
+car<T>::car(double enter){
+    enterTime=enter;
+    waitingTime=randomParkingTime();
+    outTime=waitingTime+enterTime;
+    charge=countCharge();
+    plate=randomGetPlate();
+}
+template<class T>
+string car<T>::getPlate(){
+    return plate;
+}
+template<class T>
+double car<T>::getCharge(){
+    return charge;
+}
+template<class T>
+double car<T>::getEnterTime(){
+    return enterTime;
+}
 
 template<class T>
 int car<T>::randomParkingTime(){
@@ -36,7 +69,7 @@ int car<T>::randomParkingTime(){
 }
 template<class T>
 double car<T>::getOutTime(){
-    return parkingTime+enterTime;
+    return outTime;
 }
 
 template<class T>

@@ -113,6 +113,11 @@
 			"EWIEGA46WW/moc_myExceptions.cpp"
 		],
 		[
+			"/home/zhiiw/QT/ParkingLot/parkingSpot.h",
+			"MU",
+			"EWIEGA46WW/moc_parkingSpot.cpp"
+		],
+		[
 			"/home/zhiiw/QT/ParkingLot/parkinglot.h",
 			"MU",
 			"EWIEGA46WW/moc_parkinglot.cpp"

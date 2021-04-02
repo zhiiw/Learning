@@ -32,6 +32,7 @@ set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
         queue.h
+        parkingSpot.h
         car.h
         parkinglot.h
         myExceptions.h

@@ -237,6 +237,7 @@ CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/car.h
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/mainwindow.cpp
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/mainwindow.h
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/myExceptions.h
+CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/parkingSpot.h
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/parkinglot.h
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/queue.h
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /usr/include/qt/QtCore/QVariant
