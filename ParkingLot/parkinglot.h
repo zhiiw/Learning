@@ -12,6 +12,7 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
+#include <unistd.h>
 using namespace std;
 static const int repository_size = 10;//循环队列的大小
 static const int item_total = 40;//要生产的产品数目
@@ -33,6 +34,8 @@ private:
     double nowaTime;
     condition_variable queueNotFull;
     condition_variable queueNotEmpty;
+    condition_variable parkinglotNotFull;
+    condition_variable parkinglotNotEmpty;
     std::chrono::seconds t;
     QSqlDatabase database;
 public:
@@ -167,7 +170,14 @@ void parkinglot<T>::producerThread(){
 
         if(item_counter<item_total){
             ++item_counter;
+            sleep(5);
+            if(isParkinglotFull()){
+                if(isQueueFull()){
+                    queueN;
+                }else{
 
+                }
+            }
 
         }
     }
@@ -175,14 +185,23 @@ void parkinglot<T>::producerThread(){
 template<class T>
 void parkinglot<T>::consumerThread(){
     static int cnt=0;
-
+    bool read_to_exit;
     while (1) {
         this_thread::sleep_for(t);
         int item = 0;
         std::cout<<"consumer consume "<<item<<"product";
         if(++cnt==item_total){
+            
             break;
+        }else
+        {
+            read_to_exit = true;
         }
     }
+    
+    
+
+    if (read_to_exit == true)
+        break;
 }
 #endif // PARKINGLOT_H
