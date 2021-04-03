@@ -62,6 +62,8 @@ void MainWindow::on_pushButton_clicked()
         qDebug( "Selected!" );
     }
 
+    pl.startThreading();
+
 
 }
 void MainWindow::on_pushButton_2_clicked()
