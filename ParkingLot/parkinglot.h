@@ -53,6 +53,7 @@ public:
     bool isParkinglotEmpty();
     bool isQueueFull();
     bool isQueueEmpty();
+    void startThreading();
 
     void randomTime();
 
@@ -173,10 +174,12 @@ void parkinglot<T>::producerThread(){
             sleep(5);
             if(isParkinglotFull()){
                 if(isQueueFull()){
-                    queueN;
+                    sleep(5);
                 }else{
-
+                    produceCar(car<T>(initialTime));
                 }
+            }else{
+                produceCar(car<T>(initialTime));
             }
 
         }
@@ -187,21 +190,41 @@ void parkinglot<T>::consumerThread(){
     static int cnt=0;
     bool read_to_exit;
     while (1) {
-        this_thread::sleep_for(t);
+        sleep(1);
         int item = 0;
+        consumeCar();
         std::cout<<"consumer consume "<<item<<"product";
         if(++cnt==item_total){
-            
             break;
         }else
         {
             read_to_exit = true;
         }
+        if (read_to_exit == true)
+            break;
     }
     
-    
 
-    if (read_to_exit == true)
-        break;
+}
+
+template<class T>
+void parkinglot<T>::startThreading(){
+    std::vector<std::thread> thread_vector;
+    for (int i = 0; i <2; ++i)
+    {
+        thread_vector.push_back(std::thread(producerThread));// 创建消费者线程.
+    }
+    vector<std::thread> threadVectorConsume;
+    threadVectorConsume.push_back(std::thread(consumerThread)); // 创建消费之线程.
+
+    for (auto &thr : thread_vector)
+    {
+        thr.join();
+    }
+
+    for (auto &thr : threadVectorConsume)
+    {
+        thr.join();
+    }
 }
 #endif // PARKINGLOT_H
