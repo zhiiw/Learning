@@ -73,6 +73,8 @@ iostream
 -
 myExceptions.h
 /home/zhiiw/QT/ParkingLot/myExceptions.h
+car.h
+/home/zhiiw/QT/ParkingLot/car.h
 
 /usr/include/qt/QtCore/QVariant
 qvariant.h

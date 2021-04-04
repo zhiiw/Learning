@@ -3,14 +3,14 @@
 #include <stdlib.h>
 #include <iostream>
 #include "myExceptions.h"
-
+#include "car.h"
 template <class T>
 class queue{
 private:
     int front;
     int rear;
     int MaxSize;
-    T *array;
+    car<T> *array;
 
 public:
     queue(int MaxQueueSize = 0);
@@ -19,16 +19,16 @@ public:
     bool IsFull() {
         return (rear+1)%MaxSize;
     }
-    T First();
-    T Last();
-    void EnQueue(T x);
+    car<T> First();
+    car<T> Last();
+    void EnQueue(car<T> x);
     void DeQueue();
 };
 
 template<class T>
 queue<T>::queue(int MaxQueueSize) {
     MaxSize =MaxQueueSize+1;
-    array = new T[MaxSize];
+    array = new car<T>[MaxSize];
     front = rear =0;
 }
 template<class T>
@@ -36,7 +36,7 @@ queue<T>::~queue() {
     delete [] array;
 }
 template<class T>
-T queue<T>::First(){
+car<T> queue<T>::First(){
     if(IsEmpty()){
         throw myException("out of bound");
     }
@@ -44,7 +44,7 @@ T queue<T>::First(){
 }
 
 template<class T>
-T queue<T>::Last(){
+car<T> queue<T>::Last(){
     if(IsEmpty()){
         throw myException("out of bound");
     }
@@ -52,7 +52,7 @@ T queue<T>::Last(){
 }
 
 template<class T>
-void queue<T>::EnQueue(T x){
+void queue<T>::EnQueue(car<T> x){
     if (IsFull()){
         throw myException("Out of space");
     }

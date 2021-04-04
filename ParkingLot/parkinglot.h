@@ -24,9 +24,9 @@ class parkinglot{
 private:
     queue<T> *wait;//the waiting queue.
     int totalCar;
+    std::chrono::time_point<std::chrono::system_clock, std::chrono::milliseconds> tp;
     parkingSpot<T> carInParkingLot; //the car array in parkinglot
-    queue<unique_ptr<T>> queueForPark;
-    unique_ptr<queue<T>> queueForParking;
+
     int parkNumber;
     std::mutex mtx;
     std::mutex mtxCounter;
@@ -36,13 +36,12 @@ private:
     condition_variable queueNotEmpty;
     condition_variable parkinglotNotFull;
     condition_variable parkinglotNotEmpty;
-    std::chrono::seconds t;
     QSqlDatabase database;
 public:
     parkinglot();
     parkinglot(int parkingNumber,int queueNumber);//n is p
     ~parkinglot();
-    void produceCar(car<T> &x);
+    void produceCar(car<T> x);
     void consumeCar();
     void producerThread();
     void consumerThread();
@@ -69,11 +68,11 @@ template<class T>
 parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
     carInParkingLot= parkingSpot<T>(parkingNumber);
     parkNumber=parkingNumber;
-
+    tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
     for (int i= 0 ; i<parkingNumber;i++){
         carInParkingLot.existence[i]=false;
     }
-
+    initialTime= (double)std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()).count();
     queue<int> *xm = new queue<int>(queueNumber);
     wait = xm;
     totalCar=0;
@@ -107,9 +106,10 @@ bool parkinglot<T>::isQueueFull(){
     return wait->IsFull();
 }
 template<class T>
-void parkinglot<T>::produceCar(car<T> &x){
-
+void parkinglot<T>::produceCar(car<T> x){
+    cout<<"tthe produce car thread have started"<<endl;
     QSqlQuery qry;
+
     unique_lock<mutex> lck(mtx);
     while (wait->IsFull()&&isParkinglotFull()) {
         cout<<"car is waiting for empty space"<<endl;
@@ -117,20 +117,26 @@ void parkinglot<T>::produceCar(car<T> &x){
     }
 
     if (isParkinglotFull()){
-        wait->EnQueue(*x);//make a reminder to notify me to dequeue the car and add it to the bool array;
+        wait->EnQueue(x);//make a reminder to notify me to dequeue the car and add it to the bool array;
     }else {
         for(int i = 0 ;i<parkNumber;i++){
             if(carInParkingLot.existence[i]==false){
+
                 carInParkingLot.existence[i]=true;//add a car to the bool array;
-                carInParkingLot.carSpace[i]=x;
+
+                carInParkingLot.carSpace.push_back(x);
+
                 totalCar++;
                 string query="INSERT INTO names (id, enterTime, leaveTime,plate) VALUES (";
+
                 query+=to_string(totalCar);
                 query+=", 2, 3,";
                 query+= x.getPlate();
                 query+=")";
 
                 qry.prepare(QString::fromStdString(query));
+                cout<<"we have produced one car."<<endl;
+                break;
             }
         }
     }
@@ -145,13 +151,17 @@ void parkinglot<T>::consumeCar(){
     while (wait->IsEmpty()&&isParkinglotEmpty())
     {
         std::cout << "Parking lot is waiting for cars..." << std::endl;
-        queueNotEmpty.wait(lck);// 消费者等待"产品库缓冲区不为空"这一条件发生.
+        queueNotEmpty.wait(lck);      // 消费者等待"产品库缓冲区不为空"这一条件发生.
     }
-
-    nowaTime=initialTime;
+    cout<<"ee"<<endl;
+    tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
+    nowaTime=(double)std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()).count() - initialTime;
+    cout<<"nowatime is "<<nowaTime/1000<<endl ;
     for (int i=0;i<parkNumber;i++){
-        if(nowaTime>=carInParkingLot.carSpace[i].getOutTime()){
+        if(nowaTime/1000>=carInParkingLot.carSpace[i].getOutTime()&&carInParkingLot.existence[i]==true){
+            cout<<"The getOut Time of car is "<<carInParkingLot.carSpace[i].getOutTime()<<endl;
             carInParkingLot.existence[i]=false;
+            break;
         }
     }
 
@@ -176,10 +186,19 @@ void parkinglot<T>::producerThread(){
                 if(isQueueFull()){
                     sleep(5);
                 }else{
-                    produceCar(car<T>(initialTime));
+                    tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
+                    double enterTime = (double)std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()).count() - initialTime;
+                       cout<<"the enter time is  "<<enterTime/1000<<endl;
+                    car<T> temp(enterTime/1000);
+                    produceCar(temp);
                 }
             }else{
-                produceCar(car<T>(initialTime));
+                std::chrono::time_point<std::chrono::system_clock, std::chrono::milliseconds> y = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
+                double enterTime = (double)std::chrono::duration_cast<std::chrono::milliseconds>(y.time_since_epoch()).count() - initialTime;
+                cout<<"the enter time is  "<<enterTime/1000<<endl;
+
+                car<T> temp(enterTime/1000);
+                produceCar(temp);
             }
 
         }
@@ -190,21 +209,13 @@ void parkinglot<T>::consumerThread(){
     static int cnt=0;
     bool read_to_exit;
     while (1) {
-        sleep(1);
+        sleep(5);
         int item = 0;
         consumeCar();
-        std::cout<<"consumer consume "<<item<<"product";
         if(++cnt==item_total){
             break;
-        }else
-        {
-            read_to_exit = true;
         }
-        if (read_to_exit == true)
-            break;
     }
-    
-
 }
 
 template<class T>
@@ -212,10 +223,11 @@ void parkinglot<T>::startThreading(){
     std::vector<std::thread> thread_vector;
     for (int i = 0; i <2; ++i)
     {
-        thread_vector.push_back(std::thread(producerThread));// 创建消费者线程.
+
+        thread_vector.push_back(std::thread(&parkinglot<T>::producerThread,this));// 创建消费者线程.
     }
     vector<std::thread> threadVectorConsume;
-    threadVectorConsume.push_back(std::thread(consumerThread)); // 创建消费之线程.
+    threadVectorConsume.push_back(std::thread(&parkinglot<T>::consumerThread,this)); // 创建消费之线程.
 
     for (auto &thr : thread_vector)
     {
