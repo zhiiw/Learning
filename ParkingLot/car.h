@@ -47,9 +47,10 @@ car<T>::car(double enter){
     waitingTime=0;
     outTime=0;
     charge=0;
-    plate="";
+    plate=randomGetPlate();
     waitingTime=randomParkingTime();
     outTime= enterTime+waitingTime;
+    charge= getCharge();
 }
 template<class T>
 string car<T>::getPlate(){
@@ -57,6 +58,8 @@ string car<T>::getPlate(){
 }
 template<class T>
 double car<T>::getCharge(){
+    int value=waitingTime/15;
+    charge= 1.5*value;
     return charge;
 }
 template<class T>

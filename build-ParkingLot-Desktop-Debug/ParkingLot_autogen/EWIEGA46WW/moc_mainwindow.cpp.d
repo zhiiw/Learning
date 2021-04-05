@@ -6,7 +6,6 @@
   /home/zhiiw/QT/ParkingLot/parkingSpot.h \
   /home/zhiiw/QT/ParkingLot/parkinglot.h \
   /home/zhiiw/QT/ParkingLot/queue.h \
-  /home/zhiiw/QT/ParkingLot/worker.h \
   /usr/include/assert.h \
   /usr/include/bits/confname.h \
   /usr/include/bits/cpu-set.h \
@@ -25,6 +24,7 @@
   /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/sched.h \
   /usr/include/bits/setjmp.h \
+  /usr/include/bits/stdio_lim.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
   /usr/include/bits/thread-shared-types.h \
@@ -35,13 +35,17 @@
   /usr/include/bits/types.h \
   /usr/include/bits/types/FILE.h \
   /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
   /usr/include/bits/types/__locale_t.h \
   /usr/include/bits/types/__mbstate_t.h \
   /usr/include/bits/types/__sigset_t.h \
   /usr/include/bits/types/clock_t.h \
   /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
   /usr/include/bits/types/locale_t.h \
   /usr/include/bits/types/mbstate_t.h \
+  /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/struct___jmp_buf_tag.h \
   /usr/include/bits/types/struct_itimerspec.h \
   /usr/include/bits/types/struct_sched_param.h \
@@ -170,7 +174,6 @@
   /usr/include/c++/10.2.0/ext/string_conversions.h \
   /usr/include/c++/10.2.0/ext/type_traits.h \
   /usr/include/c++/10.2.0/functional \
-  /usr/include/c++/10.2.0/future \
   /usr/include/c++/10.2.0/initializer_list \
   /usr/include/c++/10.2.0/ios \
   /usr/include/c++/10.2.0/iosfwd \
@@ -220,8 +223,7 @@
   /usr/include/gnu/stubs.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
-  /usr/include/qt/QtCore/QObject \
-  /usr/include/qt/QtCore/QThread \
+  /usr/include/qt/QtCore/QDebug \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/qt/QtCore/qatomic.h \
@@ -234,9 +236,9 @@
   /usr/include/qt/QtCore/qconfig.h \
   /usr/include/qt/QtCore/qcontainerfwd.h \
   /usr/include/qt/QtCore/qcontainertools_impl.h \
+  /usr/include/qt/QtCore/qcontiguouscache.h \
   /usr/include/qt/QtCore/qdatastream.h \
-  /usr/include/qt/QtCore/qdeadlinetimer.h \
-  /usr/include/qt/QtCore/qelapsedtimer.h \
+  /usr/include/qt/QtCore/qdebug.h \
   /usr/include/qt/QtCore/qflags.h \
   /usr/include/qt/QtCore/qgenericatomic.h \
   /usr/include/qt/QtCore/qglobal.h \
@@ -247,7 +249,9 @@
   /usr/include/qt/QtCore/qiterator.h \
   /usr/include/qt/QtCore/qline.h \
   /usr/include/qt/QtCore/qlist.h \
+  /usr/include/qt/QtCore/qlocale.h \
   /usr/include/qt/QtCore/qlogging.h \
+  /usr/include/qt/QtCore/qmap.h \
   /usr/include/qt/QtCore/qmargins.h \
   /usr/include/qt/QtCore/qmetatype.h \
   /usr/include/qt/QtCore/qnamespace.h \
@@ -263,6 +267,7 @@
   /usr/include/qt/QtCore/qrefcount.h \
   /usr/include/qt/QtCore/qregexp.h \
   /usr/include/qt/QtCore/qscopedpointer.h \
+  /usr/include/qt/QtCore/qset.h \
   /usr/include/qt/QtCore/qshareddata.h \
   /usr/include/qt/QtCore/qsharedpointer.h \
   /usr/include/qt/QtCore/qsharedpointer_impl.h \
@@ -276,8 +281,9 @@
   /usr/include/qt/QtCore/qsysinfo.h \
   /usr/include/qt/QtCore/qsystemdetection.h \
   /usr/include/qt/QtCore/qtcore-config.h \
-  /usr/include/qt/QtCore/qthread.h \
+  /usr/include/qt/QtCore/qtextstream.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
+  /usr/include/qt/QtCore/qvariant.h \
   /usr/include/qt/QtCore/qvarlengtharray.h \
   /usr/include/qt/QtCore/qvector.h \
   /usr/include/qt/QtCore/qversiontagging.h \
@@ -324,6 +330,7 @@
   /usr/include/qt/QtWidgets/qwidget.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/sys/cdefs.h \

@@ -5,6 +5,8 @@
 #include "parkinglot.h"
 class worker : public QThread
 {
+public:
+
     Q_OBJECT
     int x;
     int y;
@@ -14,7 +16,7 @@ public:
         y=b;
     }
 private:
-    void run();
+    void run() override;
 };
 
 

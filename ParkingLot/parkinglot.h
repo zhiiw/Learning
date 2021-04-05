@@ -13,6 +13,7 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <unistd.h>
+#include <QDebug>
 #include <mainwindow.h>
 using namespace std;
 static const int repository_size = 10;//循环队列的大小
@@ -38,7 +39,8 @@ private:
     condition_variable queueNotEmpty;
     condition_variable parkinglotNotFull;
     condition_variable parkinglotNotEmpty;
-    QSqlDatabase database;
+    QSqlDatabase db;
+
 public:
     parkinglot();
     parkinglot(int parkingNumber,int queueNumber);//n is p
@@ -82,6 +84,38 @@ parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
     totalCar=0;
     count=0;
 
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("parkinglot.db");
+    if( !db.open() )
+    {
+      qFatal( "Failed to connect.  ee" );
+      cout<<"connected failure."<<endl;
+    }
+    QSqlQuery qry(db);
+
+    qry.prepare( "CREATE TABLE IF NOT EXISTS parkingLots (id INTEGER UNIQUE PRIMARY KEY ,enterTime DOUBLE, leaveTime DOUBLE,plate TEXT,charge DOUBLE, parkingIndex INTEGER)" );
+    if( !qry.exec() ){
+       qDebug() << qry.lastError();
+       cout<<"connected failure.ww"<<endl;
+    }
+     else{
+       qDebug() << "Table created!";
+       cout<<"Table created"<<endl;
+
+    }
+    qry.prepare( "INSERT INTO parkingLots (id, enterTime, leaveTime,plate) VALUES (2, 2, 3,'rdgfer')" );
+      if( !qry.exec() )
+        qDebug() << qry.lastError();
+      else
+        qDebug( "Inserted!" );
+    qry.prepare( "SELECT * FROM names" );
+    if( !qry.exec() )
+        qDebug() << qry.lastError();
+    else
+    {
+        qDebug( "Selected!" );
+    }
+
 }
 template<class T>
 bool parkinglot<T>::isParkinglotFull(){
@@ -114,7 +148,7 @@ bool parkinglot<T>::isQueueFull(){
 template<class T>
 void parkinglot<T>::produceCar(car<T> x){
     cout<<"the produce car thread have started"<<endl;
-    QSqlQuery qry;
+    QSqlQuery qry(db);
 
     unique_lock<mutex> lck(mtx);
     while (wait->IsFull()&&isParkinglotFull()) {
@@ -134,15 +168,27 @@ void parkinglot<T>::produceCar(car<T> x){
 
                 totalCar++;
 
-                string query="INSERT INTO names (id, enterTime, leaveTime,plate) VALUES (";
+                string query="INSERT INTO parkingLots (id, enterTime, leaveTime,plate,charge,index) VALUES (";
 
                 query+=to_string(totalCar);
-                query+=", 5, 3,";
-                query+= x.getPlate();
+                query+=",";
+                query+=x.getEnterTime();
+                query+=",";
+                query+=x.getOutTime();
+                query+=",";
+                query+=x.getPlate();
+                query+=",";
+                query+=x.getCharge();
+
+                query+=",";
+                query+=i;
+
+
                 query+=")";
 
                 qry.prepare(QString::fromStdString(query));
-                cout<<"we have produced one car."<<endl;
+                qry.exec();
+                cout<<"we have produced one car and the plate is "<<carInParkingLot.carSpace[i].getPlate()<<endl;
                 break;
             }
         }
@@ -160,15 +206,18 @@ void parkinglot<T>::consumeCar(){
         std::cout << "Parking lot is waiting for cars..." << std::endl;
         queueNotEmpty.wait(lck);      // 消费者等待"产品库缓冲区不为空"这一条件发生.
     }
-    cout<<"ee"<<endl;
     tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
     nowaTime=(double)std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()).count() - initialTime;
     cout<<"nowatime is "<<nowaTime/200<<endl ;
     for (int i=0;i<parkNumber;i++){
         if(nowaTime/200>=carInParkingLot.carSpace[i].getOutTime()&&carInParkingLot.existence[i]==true){
-            cout<<"The getOut Time of car is "<<carInParkingLot.carSpace[i].getOutTime();
+            cout<<"The getOut Time of car is "<<carInParkingLot.carSpace[i].getOutTime()<<endl;
             cout<<"the enter time is "<<carInParkingLot.carSpace[i].getEnterTime()<<endl;
             cout<<"The waitingtime is "<<carInParkingLot.carSpace[i].getParkTime()<<endl;
+            cout<<"The plate is "<<carInParkingLot.carSpace[i].getPlate()<<endl;
+            cout<<"The charge is "<<carInParkingLot.carSpace[i].getCharge()<<endl;
+
+
             carInParkingLot.existence[i]=false;
             count++;
             break;

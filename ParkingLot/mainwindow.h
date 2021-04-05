@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
-#include "worker.h"
 #include <parkinglot.h>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

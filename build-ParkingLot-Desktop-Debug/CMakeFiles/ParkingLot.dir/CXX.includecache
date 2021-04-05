@@ -39,8 +39,6 @@ QMainWindow
 -
 QMessageBox
 -
-worker.h
-/home/zhiiw/QT/ParkingLot/worker.h
 parkinglot.h
 -
 
@@ -78,6 +76,8 @@ QSqlError
 QSqlQuery
 -
 unistd.h
+-
+QDebug
 -
 mainwindow.h
 -
@@ -133,6 +133,10 @@ EWIEGA46WW/moc_mainwindow.cpp
 /home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_mainwindow.cpp
 EWIEGA46WW/moc_worker.cpp
 /home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_worker.cpp
+
+/usr/include/qt/QtCore/QDebug
+qdebug.h
+/usr/include/qt/QtCore/qdebug.h
 
 /usr/include/qt/QtCore/QObject
 qobject.h

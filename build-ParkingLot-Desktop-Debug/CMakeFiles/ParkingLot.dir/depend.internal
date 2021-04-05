@@ -12,6 +12,7 @@ CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o
  /home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_mainwindow.cpp
  /home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_worker.cpp
  /home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/mocs_compilation.cpp
+ /usr/include/qt/QtCore/QDebug
  /usr/include/qt/QtCore/QObject
  /usr/include/qt/QtCore/QThread
  /usr/include/qt/QtCore/qalgorithms.h
@@ -143,9 +144,7 @@ CMakeFiles/ParkingLot.dir/main.cpp.o
  /home/zhiiw/QT/ParkingLot/parkingSpot.h
  /home/zhiiw/QT/ParkingLot/parkinglot.h
  /home/zhiiw/QT/ParkingLot/queue.h
- /home/zhiiw/QT/ParkingLot/worker.h
- /usr/include/qt/QtCore/QObject
- /usr/include/qt/QtCore/QThread
+ /usr/include/qt/QtCore/QDebug
  /usr/include/qt/QtCore/qalgorithms.h
  /usr/include/qt/QtCore/qarraydata.h
  /usr/include/qt/QtCore/qatomic.h
@@ -165,9 +164,7 @@ CMakeFiles/ParkingLot.dir/main.cpp.o
  /usr/include/qt/QtCore/qcoreapplication.h
  /usr/include/qt/QtCore/qcoreevent.h
  /usr/include/qt/QtCore/qdatastream.h
- /usr/include/qt/QtCore/qdeadlinetimer.h
  /usr/include/qt/QtCore/qdebug.h
- /usr/include/qt/QtCore/qelapsedtimer.h
  /usr/include/qt/QtCore/qeventloop.h
  /usr/include/qt/QtCore/qfile.h
  /usr/include/qt/QtCore/qfiledevice.h
@@ -216,7 +213,6 @@ CMakeFiles/ParkingLot.dir/main.cpp.o
  /usr/include/qt/QtCore/qsystemdetection.h
  /usr/include/qt/QtCore/qtcore-config.h
  /usr/include/qt/QtCore/qtextstream.h
- /usr/include/qt/QtCore/qthread.h
  /usr/include/qt/QtCore/qtypeinfo.h
  /usr/include/qt/QtCore/qurl.h
  /usr/include/qt/QtCore/qurlquery.h
@@ -283,6 +279,7 @@ CMakeFiles/ParkingLot.dir/mainwindow.cpp.o
  /home/zhiiw/QT/ParkingLot/parkinglot.h
  /home/zhiiw/QT/ParkingLot/queue.h
  /home/zhiiw/QT/ParkingLot/worker.h
+ /usr/include/qt/QtCore/QDebug
  /usr/include/qt/QtCore/QObject
  /usr/include/qt/QtCore/QThread
  /usr/include/qt/QtCore/QVariant
@@ -450,6 +447,7 @@ CMakeFiles/ParkingLot.dir/work.cpp.o
  /home/zhiiw/QT/ParkingLot/queue.h
  /home/zhiiw/QT/ParkingLot/work.cpp
  /home/zhiiw/QT/ParkingLot/worker.h
+ /usr/include/qt/QtCore/QDebug
  /usr/include/qt/QtCore/QObject
  /usr/include/qt/QtCore/QThread
  /usr/include/qt/QtCore/qalgorithms.h

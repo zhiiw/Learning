@@ -11,6 +11,7 @@ CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o: /home/zhiiw
 CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o: ParkingLot_autogen/EWIEGA46WW/moc_mainwindow.cpp
 CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o: ParkingLot_autogen/EWIEGA46WW/moc_worker.cpp
 CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o: ParkingLot_autogen/mocs_compilation.cpp
+CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/QDebug
 CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/QObject
 CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/QThread
 CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o: /usr/include/qt/QtCore/qalgorithms.h
@@ -142,9 +143,7 @@ CMakeFiles/ParkingLot.dir/main.cpp.o: /home/zhiiw/QT/ParkingLot/myExceptions.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /home/zhiiw/QT/ParkingLot/parkingSpot.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /home/zhiiw/QT/ParkingLot/parkinglot.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /home/zhiiw/QT/ParkingLot/queue.h
-CMakeFiles/ParkingLot.dir/main.cpp.o: /home/zhiiw/QT/ParkingLot/worker.h
-CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/QObject
-CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/QThread
+CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/QDebug
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qalgorithms.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qarraydata.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qatomic.h
@@ -164,9 +163,7 @@ CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qcontiguouscache.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qcoreapplication.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qcoreevent.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qdatastream.h
-CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qdeadlinetimer.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qdebug.h
-CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qelapsedtimer.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qeventloop.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qfile.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qfiledevice.h
@@ -215,7 +212,6 @@ CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qsysinfo.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qsystemdetection.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qtcore-config.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qtextstream.h
-CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qthread.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qtypeinfo.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qurl.h
 CMakeFiles/ParkingLot.dir/main.cpp.o: /usr/include/qt/QtCore/qurlquery.h
@@ -282,6 +278,7 @@ CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/parkingSpo
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/parkinglot.h
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/queue.h
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/worker.h
+CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /usr/include/qt/QtCore/QDebug
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /usr/include/qt/QtCore/QObject
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /usr/include/qt/QtCore/QThread
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /usr/include/qt/QtCore/QVariant
@@ -449,6 +446,7 @@ CMakeFiles/ParkingLot.dir/work.cpp.o: /home/zhiiw/QT/ParkingLot/parkinglot.h
 CMakeFiles/ParkingLot.dir/work.cpp.o: /home/zhiiw/QT/ParkingLot/queue.h
 CMakeFiles/ParkingLot.dir/work.cpp.o: /home/zhiiw/QT/ParkingLot/work.cpp
 CMakeFiles/ParkingLot.dir/work.cpp.o: /home/zhiiw/QT/ParkingLot/worker.h
+CMakeFiles/ParkingLot.dir/work.cpp.o: /usr/include/qt/QtCore/QDebug
 CMakeFiles/ParkingLot.dir/work.cpp.o: /usr/include/qt/QtCore/QObject
 CMakeFiles/ParkingLot.dir/work.cpp.o: /usr/include/qt/QtCore/QThread
 CMakeFiles/ParkingLot.dir/work.cpp.o: /usr/include/qt/QtCore/qalgorithms.h
