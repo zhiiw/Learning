@@ -154,7 +154,8 @@ void MainWindow::on_eightButton_clicked()
     s.vals.push(8.0);
     QString x = ui->textEdit->toPlainText();
     x.append("8");
-    ui->textEdit->setText(x);}
+    ui->textEdit->setText(x);
+}
 
 void MainWindow::on_nineButton_clicked()
 {

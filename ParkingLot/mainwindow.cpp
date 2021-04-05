@@ -1,13 +1,37 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <parkinglot.h>
+#include "worker.h"
 #include <QtDebug>
+#include <QInputDialog>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    bool bOk;
+    int n = QInputDialog::getInt(this,
+                                        "QInputDialog_Age",
+                                        "请输入最大容纳人数（人数不超过10）",
+                                        7,				//默认值
+                                        0,				//最小值
+                                        100,			//最大值
+                                        5,				//步进
+                                        &bOk);
+    int m = QInputDialog::getInt(this,
+                                        "QInputDialog_Age",
+                                        "请输入最大排队人数（人数不超过10）",
+                                        7,				//默认值
+                                        0,				//最小值
+                                        100,			//最大值
+                                        5,				//步进
+                                        &bOk);
+    worker x;
+    x.setValue(n,m);
+    x.start();
+    cout<<"EE"<<endl;
 }
+
 
 MainWindow::~MainWindow()
 {
@@ -17,7 +41,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-
+    ui->textEdit_3->setText("wswe");
+    sleep(3);
     QString n = ui->textEdit->toPlainText();
     QString m = ui->textEdit->toPlainText();
     if(n.toInt()<=0||m.toInt()<=0){
@@ -62,9 +87,15 @@ void MainWindow::on_pushButton_clicked()
         qDebug( "Selected!" );
     }
 
-    pl.startThreading();
+    ui->textEdit_3->setText("wswe");
+    worker x;
 
+    x.setValue(n.toInt(),m.toInt());
 
+    x.start();
+    while(1){
+
+    }
 }
 void MainWindow::on_pushButton_2_clicked()
 {

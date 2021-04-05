@@ -26,6 +26,8 @@ public:
     double getOutTime();
     double getCharge();
     double getEnterTime();
+    double getParkTime();
+
     string getPlate();
 
 
@@ -42,10 +44,12 @@ car<T>::~car(){
 template<class T>
 car<T>::car(double enter){
     enterTime=enter;
+    waitingTime=0;
+    outTime=0;
+    charge=0;
+    plate="";
     waitingTime=randomParkingTime();
-    outTime=waitingTime+enterTime;
-    charge=countCharge();
-    plate=randomGetPlate();
+    outTime= enterTime+waitingTime;
 }
 template<class T>
 string car<T>::getPlate(){
@@ -59,7 +63,10 @@ template<class T>
 double car<T>::getEnterTime(){
     return enterTime;
 }
-
+template<class T>
+double car<T>::getParkTime(){
+    return waitingTime;
+}
 template<class T>
 int car<T>::randomParkingTime(){
     random_device rd;

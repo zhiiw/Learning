@@ -13,12 +13,13 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <unistd.h>
+#include <mainwindow.h>
 using namespace std;
 static const int repository_size = 10;//循环队列的大小
-static const int item_total = 40;//要生产的产品数目
+static const int item_total = 8;//要生产的产品数目
 static std::size_t read_position = 0;//消费者读取产品的位置
 static std::size_t write_position = 0;
-static std::size_t item_counter = 0;//消费者消费产品计数器
+static std::size_t  item_counter = 0;//消费者消费产品计数器
 template<class T>
 class parkinglot{
 private:
@@ -32,6 +33,7 @@ private:
     std::mutex mtxCounter;
     double initialTime;
     double nowaTime;
+    int count;
     condition_variable queueNotFull;
     condition_variable queueNotEmpty;
     condition_variable parkinglotNotFull;
@@ -69,13 +71,17 @@ parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
     carInParkingLot= parkingSpot<T>(parkingNumber);
     parkNumber=parkingNumber;
     tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
+
+    initialTime= (double)std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()).count();
     for (int i= 0 ; i<parkingNumber;i++){
         carInParkingLot.existence[i]=false;
+        carInParkingLot.carSpace[i]=car<T>(initialTime);
     }
-    initialTime= (double)std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()).count();
     queue<int> *xm = new queue<int>(queueNumber);
     wait = xm;
     totalCar=0;
+    count=0;
+
 }
 template<class T>
 bool parkinglot<T>::isParkinglotFull(){
@@ -107,7 +113,7 @@ bool parkinglot<T>::isQueueFull(){
 }
 template<class T>
 void parkinglot<T>::produceCar(car<T> x){
-    cout<<"tthe produce car thread have started"<<endl;
+    cout<<"the produce car thread have started"<<endl;
     QSqlQuery qry;
 
     unique_lock<mutex> lck(mtx);
@@ -124,13 +130,14 @@ void parkinglot<T>::produceCar(car<T> x){
 
                 carInParkingLot.existence[i]=true;//add a car to the bool array;
 
-                carInParkingLot.carSpace.push_back(x);
+                carInParkingLot.carSpace[i]=x;
 
                 totalCar++;
+
                 string query="INSERT INTO names (id, enterTime, leaveTime,plate) VALUES (";
 
                 query+=to_string(totalCar);
-                query+=", 2, 3,";
+                query+=", 5, 3,";
                 query+= x.getPlate();
                 query+=")";
 
@@ -156,11 +163,14 @@ void parkinglot<T>::consumeCar(){
     cout<<"ee"<<endl;
     tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
     nowaTime=(double)std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()).count() - initialTime;
-    cout<<"nowatime is "<<nowaTime/1000<<endl ;
+    cout<<"nowatime is "<<nowaTime/200<<endl ;
     for (int i=0;i<parkNumber;i++){
-        if(nowaTime/1000>=carInParkingLot.carSpace[i].getOutTime()&&carInParkingLot.existence[i]==true){
-            cout<<"The getOut Time of car is "<<carInParkingLot.carSpace[i].getOutTime()<<endl;
+        if(nowaTime/200>=carInParkingLot.carSpace[i].getOutTime()&&carInParkingLot.existence[i]==true){
+            cout<<"The getOut Time of car is "<<carInParkingLot.carSpace[i].getOutTime();
+            cout<<"the enter time is "<<carInParkingLot.carSpace[i].getEnterTime()<<endl;
+            cout<<"The waitingtime is "<<carInParkingLot.carSpace[i].getParkTime()<<endl;
             carInParkingLot.existence[i]=false;
+            count++;
             break;
         }
     }
@@ -180,7 +190,6 @@ void parkinglot<T>::producerThread(){
         unique_lock<mutex> lck(mtxCounter);
 
         if(item_counter<item_total){
-            ++item_counter;
             sleep(5);
             if(isParkinglotFull()){
                 if(isQueueFull()){
@@ -189,7 +198,9 @@ void parkinglot<T>::producerThread(){
                     tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
                     double enterTime = (double)std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()).count() - initialTime;
                        cout<<"the enter time is  "<<enterTime/1000<<endl;
-                    car<T> temp(enterTime/1000);
+                    car<T> temp(enterTime/2000);
+                    ++item_counter;
+
                     produceCar(temp);
                 }
             }else{
@@ -197,10 +208,15 @@ void parkinglot<T>::producerThread(){
                 double enterTime = (double)std::chrono::duration_cast<std::chrono::milliseconds>(y.time_since_epoch()).count() - initialTime;
                 cout<<"the enter time is  "<<enterTime/1000<<endl;
 
-                car<T> temp(enterTime/1000);
+                car<T> temp(enterTime/200);
+                ++item_counter;
+
                 produceCar(temp);
             }
 
+        }
+        else{
+            break;
         }
     }
 }
@@ -212,7 +228,7 @@ void parkinglot<T>::consumerThread(){
         sleep(5);
         int item = 0;
         consumeCar();
-        if(++cnt==item_total){
+        if(count==item_total){
             break;
         }
     }
@@ -220,6 +236,7 @@ void parkinglot<T>::consumerThread(){
 
 template<class T>
 void parkinglot<T>::startThreading(){
+    cout<<"ee"<<endl;
     std::vector<std::thread> thread_vector;
     for (int i = 0; i <2; ++i)
     {

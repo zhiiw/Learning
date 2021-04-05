@@ -14,6 +14,12 @@ random
 string
 -
 
+/home/zhiiw/QT/ParkingLot/main.cpp
+mainwindow.h
+/home/zhiiw/QT/ParkingLot/mainwindow.h
+QApplication
+-
+
 /home/zhiiw/QT/ParkingLot/mainwindow.cpp
 mainwindow.h
 /home/zhiiw/QT/ParkingLot/mainwindow.h
@@ -21,13 +27,21 @@ mainwindow.h
 /home/zhiiw/QT/ParkingLot/ui_mainwindow.h
 parkinglot.h
 -
+worker.h
+/home/zhiiw/QT/ParkingLot/worker.h
 QtDebug
+-
+QInputDialog
 -
 
 /home/zhiiw/QT/ParkingLot/mainwindow.h
 QMainWindow
 -
 QMessageBox
+-
+worker.h
+/home/zhiiw/QT/ParkingLot/worker.h
+parkinglot.h
 -
 
 /home/zhiiw/QT/ParkingLot/myExceptions.h
@@ -65,6 +79,8 @@ QSqlQuery
 -
 unistd.h
 -
+mainwindow.h
+-
 
 /home/zhiiw/QT/ParkingLot/queue.h
 stdlib.h
@@ -75,6 +91,56 @@ myExceptions.h
 /home/zhiiw/QT/ParkingLot/myExceptions.h
 car.h
 /home/zhiiw/QT/ParkingLot/car.h
+
+/home/zhiiw/QT/ParkingLot/work.cpp
+worker.h
+/home/zhiiw/QT/ParkingLot/worker.h
+parkinglot.h
+/home/zhiiw/QT/ParkingLot/parkinglot.h
+mainwindow.h
+/home/zhiiw/QT/ParkingLot/mainwindow.h
+
+/home/zhiiw/QT/ParkingLot/worker.h
+QObject
+-
+QThread
+-
+parkinglot.h
+/home/zhiiw/QT/ParkingLot/parkinglot.h
+
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_mainwindow.cpp
+memory
+-
+../../../ParkingLot/mainwindow.h
+/home/zhiiw/QT/ParkingLot/mainwindow.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_worker.cpp
+memory
+-
+../../../ParkingLot/worker.h
+/home/zhiiw/QT/ParkingLot/worker.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/mocs_compilation.cpp
+EWIEGA46WW/moc_mainwindow.cpp
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_mainwindow.cpp
+EWIEGA46WW/moc_worker.cpp
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_worker.cpp
+
+/usr/include/qt/QtCore/QObject
+qobject.h
+/usr/include/qt/QtCore/qobject.h
+
+/usr/include/qt/QtCore/QThread
+qthread.h
+/usr/include/qt/QtCore/qthread.h
 
 /usr/include/qt/QtCore/QVariant
 qvariant.h
@@ -212,6 +278,20 @@ QtCore/qiodevice.h
 QtCore/qpair.h
 -
 
+/usr/include/qt/QtCore/qdeadlinetimer.h
+QtCore/qelapsedtimer.h
+-
+QtCore/qmetatype.h
+-
+QtCore/qnamespace.h
+-
+QtCore/qpair.h
+-
+limits
+-
+chrono
+-
+
 /usr/include/qt/QtCore/qdebug.h
 QtCore/qalgorithms.h
 -
@@ -242,6 +322,10 @@ list
 map
 -
 utility
+-
+
+/usr/include/qt/QtCore/qelapsedtimer.h
+QtCore/qglobal.h
 -
 
 /usr/include/qt/QtCore/qeventloop.h
@@ -708,6 +792,16 @@ QtCore/qlocale.h
 QtCore/qscopedpointer.h
 -
 stdio.h
+-
+
+/usr/include/qt/QtCore/qthread.h
+QtCore/qobject.h
+-
+QtCore/qdeadlinetimer.h
+-
+future
+-
+functional
 -
 
 /usr/include/qt/QtCore/qtypeinfo.h
@@ -1242,6 +1336,10 @@ QtSql/qtsql-config.h
 qapplication.h
 /usr/include/qt/QtWidgets/qapplication.h
 
+/usr/include/qt/QtWidgets/QInputDialog
+qinputdialog.h
+/usr/include/qt/QtWidgets/qinputdialog.h
+
 /usr/include/qt/QtWidgets/QLabel
 qlabel.h
 /usr/include/qt/QtWidgets/qlabel.h
@@ -1348,10 +1446,32 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 
+/usr/include/qt/QtWidgets/qinputdialog.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtCore/qstring.h
+-
+QtWidgets/qlineedit.h
+-
+QtWidgets/qdialog.h
+-
+
 /usr/include/qt/QtWidgets/qlabel.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qframe.h
+-
+
+/usr/include/qt/QtWidgets/qlineedit.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qframe.h
+-
+QtGui/qtextcursor.h
+-
+QtCore/qstring.h
+-
+QtCore/qmargins.h
 -
 
 /usr/include/qt/QtWidgets/qmainwindow.h

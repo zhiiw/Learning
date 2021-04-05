@@ -1,4 +1,4 @@
-/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/zhiiw/QT/ParkingLot/mainwindow.h \
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_worker.cpp: /home/zhiiw/QT/ParkingLot/worker.h \
   /home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/moc_predefs.h \
   /home/zhiiw/QT/ParkingLot/car.h \
   /home/zhiiw/QT/ParkingLot/mainwindow.h \

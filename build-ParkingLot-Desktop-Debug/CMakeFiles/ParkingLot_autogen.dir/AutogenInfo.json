@@ -122,7 +122,12 @@
 			"MU",
 			"EWIEGA46WW/moc_parkinglot.cpp"
 		],
-		[ "/home/zhiiw/QT/ParkingLot/queue.h", "MU", "EWIEGA46WW/moc_queue.cpp" ]
+		[ "/home/zhiiw/QT/ParkingLot/queue.h", "MU", "EWIEGA46WW/moc_queue.cpp" ],
+		[
+			"/home/zhiiw/QT/ParkingLot/worker.h",
+			"MU",
+			"EWIEGA46WW/moc_worker.cpp"
+		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/include",
@@ -178,7 +183,8 @@
 	"SOURCES" : 
 	[
 		[ "/home/zhiiw/QT/ParkingLot/main.cpp", "MU" ],
-		[ "/home/zhiiw/QT/ParkingLot/mainwindow.cpp", "MU" ]
+		[ "/home/zhiiw/QT/ParkingLot/mainwindow.cpp", "MU" ],
+		[ "/home/zhiiw/QT/ParkingLot/work.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

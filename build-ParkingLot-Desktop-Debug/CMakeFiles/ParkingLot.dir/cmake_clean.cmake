@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/ParkingLot.dir/main.cpp.o"
   "CMakeFiles/ParkingLot.dir/mainwindow.cpp.o"
+  "CMakeFiles/ParkingLot.dir/work.cpp.o"
   "ParkingLot"
   "ParkingLot.pdb"
 )

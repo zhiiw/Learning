@@ -5,7 +5,7 @@ template<class T>
 class parkingSpot{
 public:
     bool *existence;
-    vector<car<int>> carSpace;
+    car<T>* carSpace;
 
     parkingSpot();
     ~parkingSpot();
@@ -17,6 +17,7 @@ public:
 template<class T>
 parkingSpot<T>::parkingSpot(int number){
     existence= new bool[number];
+    carSpace=new car<T>[number];
 }
 template<class T>
 parkingSpot<T>::parkingSpot(){

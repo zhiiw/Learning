@@ -34,6 +34,8 @@ set(PROJECT_SOURCES
         queue.h
         parkingSpot.h
         car.h
+        worker.h
+        work.cpp
         parkinglot.h
         myExceptions.h
         mainwindow.h
