@@ -281,6 +281,7 @@ CMakeFiles/ParkingLot.dir/mainwindow.cpp.o
  /home/zhiiw/QT/ParkingLot/worker.h
  /usr/include/qt/QtCore/QDebug
  /usr/include/qt/QtCore/QObject
+ /usr/include/qt/QtCore/QString
  /usr/include/qt/QtCore/QThread
  /usr/include/qt/QtCore/QVariant
  /usr/include/qt/QtCore/QtDebug

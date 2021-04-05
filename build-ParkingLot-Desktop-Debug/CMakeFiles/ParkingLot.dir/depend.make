@@ -280,6 +280,7 @@ CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/queue.h
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /home/zhiiw/QT/ParkingLot/worker.h
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /usr/include/qt/QtCore/QDebug
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /usr/include/qt/QtCore/QObject
+CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /usr/include/qt/QtCore/QString
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /usr/include/qt/QtCore/QThread
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /usr/include/qt/QtCore/QVariant
 CMakeFiles/ParkingLot.dir/mainwindow.cpp.o: /usr/include/qt/QtCore/QtDebug

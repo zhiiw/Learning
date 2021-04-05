@@ -40,6 +40,8 @@ private:
     condition_variable parkinglotNotFull;
     condition_variable parkinglotNotEmpty;
     QSqlDatabase db;
+    QSqlQuery qry;
+
 
 public:
     parkinglot();
@@ -91,7 +93,7 @@ parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
       qFatal( "Failed to connect.  ee" );
       cout<<"connected failure."<<endl;
     }
-    QSqlQuery qry(db);
+    qry = QSqlQuery(db);
 
     qry.prepare( "CREATE TABLE IF NOT EXISTS parkingLots (id INTEGER UNIQUE PRIMARY KEY ,enterTime DOUBLE, leaveTime DOUBLE,plate TEXT,charge DOUBLE, parkingIndex INTEGER)" );
     if( !qry.exec() ){
@@ -103,7 +105,8 @@ parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
        cout<<"Table created"<<endl;
 
     }
-    qry.prepare( "INSERT INTO parkingLots (id, enterTime, leaveTime,plate) VALUES (2, 2, 3,'rdgfer')" );
+    qry.prepare("delete from parkinglots");
+    qry.exec();
       if( !qry.exec() )
         qDebug() << qry.lastError();
       else
@@ -168,26 +171,29 @@ void parkinglot<T>::produceCar(car<T> x){
 
                 totalCar++;
 
-                string query="INSERT INTO parkingLots (id, enterTime, leaveTime,plate,charge,index) VALUES (";
+                string query="INSERT INTO parkinglots (id, enterTime, leaveTime,plate,charge,parkingIndex) VALUES (";
 
                 query+=to_string(totalCar);
                 query+=",";
-                query+=x.getEnterTime();
+                query+=to_string(x.getEnterTime());
                 query+=",";
-                query+=x.getOutTime();
-                query+=",";
+                query+=to_string(x.getOutTime());
+                query+=",'";
                 query+=x.getPlate();
-                query+=",";
-                query+=x.getCharge();
+                query+="',";
+                query+=to_string(x.getCharge());
 
                 query+=",";
-                query+=i;
+                query+=to_string(i);
 
 
                 query+=")";
-
+                cout<<query<<endl;
                 qry.prepare(QString::fromStdString(query));
-                qry.exec();
+
+                if(!qry.exec()){
+                 cout<<"male";
+                }
                 cout<<"we have produced one car and the plate is "<<carInParkingLot.carSpace[i].getPlate()<<endl;
                 break;
             }

@@ -36,6 +36,7 @@ set(PROJECT_SOURCES
         car.h
         worker.h
         work.cpp
+        test.qrc
         parkinglot.h
         myExceptions.h
         mainwindow.h
