@@ -106,6 +106,7 @@ parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
 
     }
     qry.prepare("delete from parkinglots");
+    qry.exec("UPDATE judgeExist SET existence=0");
     qry.exec();
       if( !qry.exec() )
         qDebug() << qry.lastError();
@@ -166,7 +167,13 @@ void parkinglot<T>::produceCar(car<T> x){
             if(carInParkingLot.existence[i]==false){
 
                 carInParkingLot.existence[i]=true;//add a car to the bool array;
+                string qr = "UPDATE judgeExist SET existence=1 where id =";
+                qr+=to_string(i+1);
+                qry.prepare(QString::fromStdString(qr));
 
+                if(!qry.exec()){
+                 cout<<"womale";
+                }
                 carInParkingLot.carSpace[i]=x;
 
                 totalCar++;
@@ -223,7 +230,13 @@ void parkinglot<T>::consumeCar(){
             cout<<"The plate is "<<carInParkingLot.carSpace[i].getPlate()<<endl;
             cout<<"The charge is "<<carInParkingLot.carSpace[i].getCharge()<<endl;
 
+            string qr = "UPDATE judgeExist SET existence=0 where id =";
+            qr+=to_string(i+1);
+            qry.prepare(QString::fromStdString(qr));
 
+            if(!qry.exec()){
+             cout<<"womale";
+            }
             carInParkingLot.existence[i]=false;
             count++;
             break;

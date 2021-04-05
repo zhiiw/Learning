@@ -72,3 +72,27 @@ void MainWindow::on_pushButton_2_clicked()
                   0);
     msgBox->show();
 }
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    QSqlDatabase database;
+
+    database = QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("parkinglot.db");
+    if (!database.open()) {
+           QMessageBox::warning(0, QObject::tr("Database Error"),
+                                database.lastError().text());
+    }
+
+    QSqlQuery qry(database);
+    qry.prepare("");
+    if(!qry.exec()){
+        ui->textEdit_3->append("amle");
+    }
+
+    QString x= "the average count is ";
+    while(qry.next()){
+        x.append(qry.value(0).toString());
+
+    }
+}
