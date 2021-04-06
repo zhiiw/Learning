@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zhiiw/QT/ParkingLot/main.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/main.cpp.o"
   "/home/zhiiw/QT/ParkingLot/mainwindow.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/mainwindow.cpp.o"
   "/home/zhiiw/QT/ParkingLot/producerThread.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/producerThread.cpp.o"
+  "/home/zhiiw/QT/ParkingLot/sql.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/sql.cpp.o"
   "/home/zhiiw/QT/ParkingLot/work.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/work.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

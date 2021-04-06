@@ -1,5 +1,5 @@
 {
-	"BUILD_DIR" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen",
+	"BUILD_DIR" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/parkinglot_autogen",
 	"CMAKE_BINARY_DIR" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug",
 	"CMAKE_CURRENT_BINARY_DIR" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug",
 	"CMAKE_CURRENT_SOURCE_DIR" : "/home/zhiiw/QT/ParkingLot",
@@ -100,51 +100,11 @@
 	"CMAKE_SOURCE_DIR" : "/home/zhiiw/QT/ParkingLot",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
-	"HEADERS" : 
-	[
-		[ "/home/zhiiw/QT/ParkingLot/car.h", "MU", "EWIEGA46WW/moc_car.cpp" ],
-		[
-			"/home/zhiiw/QT/ParkingLot/consumerThread.h",
-			"MU",
-			"EWIEGA46WW/moc_consumerThread.cpp"
-		],
-		[
-			"/home/zhiiw/QT/ParkingLot/mainwindow.h",
-			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp"
-		],
-		[
-			"/home/zhiiw/QT/ParkingLot/myExceptions.h",
-			"MU",
-			"EWIEGA46WW/moc_myExceptions.cpp"
-		],
-		[
-			"/home/zhiiw/QT/ParkingLot/parkingSpot.h",
-			"MU",
-			"EWIEGA46WW/moc_parkingSpot.cpp"
-		],
-		[
-			"/home/zhiiw/QT/ParkingLot/parkinglot.h",
-			"MU",
-			"EWIEGA46WW/moc_parkinglot.cpp"
-		],
-		[
-			"/home/zhiiw/QT/ParkingLot/producerThread.h",
-			"MU",
-			"EWIEGA46WW/moc_producerThread.cpp"
-		],
-		[ "/home/zhiiw/QT/ParkingLot/queue.h", "MU", "EWIEGA46WW/moc_queue.cpp" ],
-		[ "/home/zhiiw/QT/ParkingLot/sql.h", "MU", "EWIEGA46WW/moc_sql.cpp" ],
-		[
-			"/home/zhiiw/QT/ParkingLot/worker.h",
-			"MU",
-			"EWIEGA46WW/moc_worker.cpp"
-		]
-	],
+	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_SQL_LIB", "QT_WIDGETS_LIB" ],
+	"INCLUDE_DIR" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/parkinglot_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/parkinglot_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -156,12 +116,6 @@
 	[
 		"/home/zhiiw/QT/build-ParkingLot-Desktop-Debug",
 		"/home/zhiiw/QT/ParkingLot",
-		"/usr/include/qt",
-		"/usr/include/qt/QtWidgets",
-		"/usr/include/qt/QtGui",
-		"/usr/include/qt/QtCore",
-		"/usr/lib/qt/mkspecs/linux-g++",
-		"/usr/include/qt/QtSql",
 		"/usr/include/c++/10.2.0",
 		"/usr/include/c++/10.2.0/x86_64-pc-linux-gnu",
 		"/usr/include/c++/10.2.0/backward",
@@ -181,25 +135,20 @@
 		"-c",
 		"/usr/share/cmake-3.19/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/parkinglot_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/parkinglot_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/parkinglot_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/zhiiw/QT/ParkingLot/consumerThread.cpp", "MU" ],
-		[ "/home/zhiiw/QT/ParkingLot/main.cpp", "MU" ],
-		[ "/home/zhiiw/QT/ParkingLot/mainwindow.cpp", "MU" ],
-		[ "/home/zhiiw/QT/ParkingLot/producerThread.cpp", "MU" ],
-		[ "/home/zhiiw/QT/ParkingLot/sql.cpp", "MU" ],
-		[ "/home/zhiiw/QT/ParkingLot/work.cpp", "MU" ]
+		[ "/home/zhiiw/QT/ParkingLot/main.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

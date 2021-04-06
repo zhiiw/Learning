@@ -39,6 +39,7 @@ set(PROJECT_SOURCES
         worker.h
         producerThread.cpp
         consumerThread.cpp
+        sql.cpp
         work.cpp
         test.qrc
         sql.h

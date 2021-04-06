@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ParkingLot.dir/main.cpp.o"
   "CMakeFiles/ParkingLot.dir/mainwindow.cpp.o"
   "CMakeFiles/ParkingLot.dir/producerThread.cpp.o"
+  "CMakeFiles/ParkingLot.dir/sql.cpp.o"
   "CMakeFiles/ParkingLot.dir/work.cpp.o"
   "ParkingLot"
   "ParkingLot.pdb"

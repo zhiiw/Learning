@@ -78,6 +78,7 @@ include CMakeFiles/ParkingLot.dir/flags.make
 
 ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp: /home/zhiiw/QT/ParkingLot/test.qrc
 ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp: CMakeFiles/ParkingLot_autogen.dir/AutoRcc_test_EWIEGA46WW_Info.json
+ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp: /home/zhiiw/Desktop/car.jpg
 ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp: /usr/bin/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for test.qrc"
 	/usr/bin/cmake -E cmake_autorcc /home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot_autogen.dir/AutoRcc_test_EWIEGA46WW_Info.json Debug
@@ -147,9 +148,22 @@ CMakeFiles/ParkingLot.dir/consumerThread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParkingLot.dir/consumerThread.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhiiw/QT/ParkingLot/consumerThread.cpp -o CMakeFiles/ParkingLot.dir/consumerThread.cpp.s
 
+CMakeFiles/ParkingLot.dir/sql.cpp.o: CMakeFiles/ParkingLot.dir/flags.make
+CMakeFiles/ParkingLot.dir/sql.cpp.o: /home/zhiiw/QT/ParkingLot/sql.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ParkingLot.dir/sql.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParkingLot.dir/sql.cpp.o -c /home/zhiiw/QT/ParkingLot/sql.cpp
+
+CMakeFiles/ParkingLot.dir/sql.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParkingLot.dir/sql.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhiiw/QT/ParkingLot/sql.cpp > CMakeFiles/ParkingLot.dir/sql.cpp.i
+
+CMakeFiles/ParkingLot.dir/sql.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParkingLot.dir/sql.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhiiw/QT/ParkingLot/sql.cpp -o CMakeFiles/ParkingLot.dir/sql.cpp.s
+
 CMakeFiles/ParkingLot.dir/work.cpp.o: CMakeFiles/ParkingLot.dir/flags.make
 CMakeFiles/ParkingLot.dir/work.cpp.o: /home/zhiiw/QT/ParkingLot/work.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ParkingLot.dir/work.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ParkingLot.dir/work.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParkingLot.dir/work.cpp.o -c /home/zhiiw/QT/ParkingLot/work.cpp
 
 CMakeFiles/ParkingLot.dir/work.cpp.i: cmake_force
@@ -162,7 +176,7 @@ CMakeFiles/ParkingLot.dir/work.cpp.s: cmake_force
 
 CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o: CMakeFiles/ParkingLot.dir/flags.make
 CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o: ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o -c /home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp
 
 CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.i: cmake_force
@@ -180,6 +194,7 @@ ParkingLot_OBJECTS = \
 "CMakeFiles/ParkingLot.dir/mainwindow.cpp.o" \
 "CMakeFiles/ParkingLot.dir/producerThread.cpp.o" \
 "CMakeFiles/ParkingLot.dir/consumerThread.cpp.o" \
+"CMakeFiles/ParkingLot.dir/sql.cpp.o" \
 "CMakeFiles/ParkingLot.dir/work.cpp.o" \
 "CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o"
 
@@ -191,6 +206,7 @@ ParkingLot: CMakeFiles/ParkingLot.dir/main.cpp.o
 ParkingLot: CMakeFiles/ParkingLot.dir/mainwindow.cpp.o
 ParkingLot: CMakeFiles/ParkingLot.dir/producerThread.cpp.o
 ParkingLot: CMakeFiles/ParkingLot.dir/consumerThread.cpp.o
+ParkingLot: CMakeFiles/ParkingLot.dir/sql.cpp.o
 ParkingLot: CMakeFiles/ParkingLot.dir/work.cpp.o
 ParkingLot: CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o
 ParkingLot: CMakeFiles/ParkingLot.dir/build.make
@@ -199,7 +215,7 @@ ParkingLot: /usr/lib/libQt5Sql.so.5.15.2
 ParkingLot: /usr/lib/libQt5Gui.so.5.15.2
 ParkingLot: /usr/lib/libQt5Core.so.5.15.2
 ParkingLot: CMakeFiles/ParkingLot.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ParkingLot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ParkingLot"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ParkingLot.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

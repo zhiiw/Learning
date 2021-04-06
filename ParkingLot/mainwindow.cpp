@@ -2,24 +2,56 @@
 #include "./ui_mainwindow.h"
 #include <parkinglot.h>
 #include "worker.h"
+#include "sql.h"
 #include <QString>
 #include <QtDebug>
 #include <QInputDialog>
+#include "producerThread.h"
+#include "consumerThread.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    db = new sql();
+    if(db->db.open()){
+        cout<<"open successfully"<<endl;
+    }
+    db->execSql("delete from parkinglots");
+    db->execSql("UPDATE judgeExist SET existence=0");
 
+
+    pro = new produceThread();
+    connect(pro,&produceThread::addLabel,this,&MainWindow::addImage);
+    connect(pro,&produceThread::addSql,this,&MainWindow::runSql);
+    connect(pro,&produceThread::appendText,this,&MainWindow::appendTextEdit);
+
+    con = new consumerThread();
+    connect(con,&consumerThread::deleteLabel,this,&MainWindow::deleteImage);
+    connect(con,&consumerThread::addSql,this,&MainWindow::runSql);
+    connect(con,&consumerThread::appendText,this,&MainWindow::appendTextEdit);
+    pro->start();
+    con->start();
 }
 
 
 MainWindow::~MainWindow()
 {
     delete ui;
+
 }
+void MainWindow::addImage(int i){
 
+}
+void MainWindow::deleteImage(int i){
 
+}
+void MainWindow::runSql(QString str){
+    db->execSql(str);
+}
+void MainWindow::appendTextEdit(QString str){
+    ui->textEdit_3->append(str);
+}
 void MainWindow::on_pushButton_clicked()
 {
     QString n = ui->textEdit->toPlainText();
@@ -32,11 +64,15 @@ void MainWindow::on_pushButton_clicked()
                   QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
                   0);
           msgBox->show();
+
           return;
     }
-    worker *x=new worker();
-    x->setValue(n.toInt(),m.toInt());
-    x->start();
+    pl =new parkinglot<int> (n.toInt(),m.toInt());
+    pro->setParkinglot(pl);
+    con->setParkinglot(pl);
+    pro->start();
+    con->start();
+
 
 }
 
@@ -75,25 +111,6 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    QSqlDatabase database;
-
-    database = QSqlDatabase::addDatabase("QSQLITE");
-    database.setDatabaseName("parkinglot.db");
-    if (!database.open()) {
-           QMessageBox::warning(0, QObject::tr("Database Error"),
-                                database.lastError().text());
-    }
-
-    QSqlQuery qry(database);
-    qry.prepare("");
-    if(!qry.exec()){
-        ui->textEdit_3->append("amle");
-    }
-
-    QString x= "the average count is ";
-    while(qry.next()){
-        x.append(qry.value(0).toString());
-
-    }
-    database.close();
+    QPixmap myPix(":/../Desktop/car.jpg");
+    ui->label_4->setPixmap(myPix);
 }

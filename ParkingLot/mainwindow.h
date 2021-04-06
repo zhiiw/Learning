@@ -1,9 +1,11 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
 #include <QMessageBox>
-#include <parkinglot.h>
+#include "parkinglot.h"
+#include "sql.h"
+#include "producerThread.h"
+#include "consumerThread.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -23,8 +25,16 @@ private slots:
 
     void on_pushButton_2_clicked();
     void on_pushButton_3_clicked();
-
-public:
+    void appendTextEdit(QString);
+    void addImage(int);
+    void deleteImage(int);
+    void runSql(QString);
+private:
     Ui::MainWindow *ui;
+    parkinglot<int> *pl;
+    sql *db;
+    produceThread *pro;
+    consumerThread *con;
+
 };
 #endif // MAINWINDOW_H

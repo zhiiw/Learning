@@ -1,13 +1,10 @@
-/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/zhiiw/QT/ParkingLot/mainwindow.h \
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_producerThread.cpp: /home/zhiiw/QT/ParkingLot/producerThread.h \
   /home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/moc_predefs.h \
   /home/zhiiw/QT/ParkingLot/car.h \
-  /home/zhiiw/QT/ParkingLot/consumerThread.h \
   /home/zhiiw/QT/ParkingLot/myExceptions.h \
   /home/zhiiw/QT/ParkingLot/parkingSpot.h \
   /home/zhiiw/QT/ParkingLot/parkinglot.h \
-  /home/zhiiw/QT/ParkingLot/producerThread.h \
   /home/zhiiw/QT/ParkingLot/queue.h \
-  /home/zhiiw/QT/ParkingLot/sql.h \
   /usr/include/assert.h \
   /usr/include/bits/confname.h \
   /usr/include/bits/cpu-set.h \
@@ -228,7 +225,6 @@
   /usr/include/qt/QtCore/QDebug \
   /usr/include/qt/QtCore/QMutex \
   /usr/include/qt/QtCore/QObject \
-  /usr/include/qt/QtCore/QString \
   /usr/include/qt/QtCore/QThread \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
@@ -243,7 +239,6 @@
   /usr/include/qt/QtCore/qcontainerfwd.h \
   /usr/include/qt/QtCore/qcontainertools_impl.h \
   /usr/include/qt/QtCore/qcontiguouscache.h \
-  /usr/include/qt/QtCore/qdatastream.h \
   /usr/include/qt/QtCore/qdeadlinetimer.h \
   /usr/include/qt/QtCore/qdebug.h \
   /usr/include/qt/QtCore/qelapsedtimer.h \
@@ -255,12 +250,10 @@
   /usr/include/qt/QtCore/qhashfunctions.h \
   /usr/include/qt/QtCore/qiodevice.h \
   /usr/include/qt/QtCore/qiterator.h \
-  /usr/include/qt/QtCore/qline.h \
   /usr/include/qt/QtCore/qlist.h \
   /usr/include/qt/QtCore/qlocale.h \
   /usr/include/qt/QtCore/qlogging.h \
   /usr/include/qt/QtCore/qmap.h \
-  /usr/include/qt/QtCore/qmargins.h \
   /usr/include/qt/QtCore/qmetatype.h \
   /usr/include/qt/QtCore/qmutex.h \
   /usr/include/qt/QtCore/qnamespace.h \
@@ -270,9 +263,7 @@
   /usr/include/qt/QtCore/qobjectdefs.h \
   /usr/include/qt/QtCore/qobjectdefs_impl.h \
   /usr/include/qt/QtCore/qpair.h \
-  /usr/include/qt/QtCore/qpoint.h \
   /usr/include/qt/QtCore/qprocessordetection.h \
-  /usr/include/qt/QtCore/qrect.h \
   /usr/include/qt/QtCore/qrefcount.h \
   /usr/include/qt/QtCore/qregexp.h \
   /usr/include/qt/QtCore/qscopedpointer.h \
@@ -280,7 +271,6 @@
   /usr/include/qt/QtCore/qshareddata.h \
   /usr/include/qt/QtCore/qsharedpointer.h \
   /usr/include/qt/QtCore/qsharedpointer_impl.h \
-  /usr/include/qt/QtCore/qsize.h \
   /usr/include/qt/QtCore/qstring.h \
   /usr/include/qt/QtCore/qstringalgorithms.h \
   /usr/include/qt/QtCore/qstringlist.h \
@@ -297,46 +287,6 @@
   /usr/include/qt/QtCore/qvarlengtharray.h \
   /usr/include/qt/QtCore/qvector.h \
   /usr/include/qt/QtCore/qversiontagging.h \
-  /usr/include/qt/QtGui/qbrush.h \
-  /usr/include/qt/QtGui/qcolor.h \
-  /usr/include/qt/QtGui/qcursor.h \
-  /usr/include/qt/QtGui/qfont.h \
-  /usr/include/qt/QtGui/qfontinfo.h \
-  /usr/include/qt/QtGui/qfontmetrics.h \
-  /usr/include/qt/QtGui/qicon.h \
-  /usr/include/qt/QtGui/qimage.h \
-  /usr/include/qt/QtGui/qkeysequence.h \
-  /usr/include/qt/QtGui/qmatrix.h \
-  /usr/include/qt/QtGui/qpaintdevice.h \
-  /usr/include/qt/QtGui/qpalette.h \
-  /usr/include/qt/QtGui/qpixelformat.h \
-  /usr/include/qt/QtGui/qpixmap.h \
-  /usr/include/qt/QtGui/qpolygon.h \
-  /usr/include/qt/QtGui/qregion.h \
-  /usr/include/qt/QtGui/qrgb.h \
-  /usr/include/qt/QtGui/qrgba64.h \
-  /usr/include/qt/QtGui/qtgui-config.h \
-  /usr/include/qt/QtGui/qtguiglobal.h \
-  /usr/include/qt/QtGui/qtransform.h \
-  /usr/include/qt/QtGui/qwindowdefs.h \
-  /usr/include/qt/QtSql/QSqlDatabase \
-  /usr/include/qt/QtSql/QSqlError \
-  /usr/include/qt/QtSql/QSqlQuery \
-  /usr/include/qt/QtSql/qsqldatabase.h \
-  /usr/include/qt/QtSql/qsqlerror.h \
-  /usr/include/qt/QtSql/qsqlquery.h \
-  /usr/include/qt/QtSql/qtsql-config.h \
-  /usr/include/qt/QtSql/qtsqlglobal.h \
-  /usr/include/qt/QtWidgets/QMainWindow \
-  /usr/include/qt/QtWidgets/QMessageBox \
-  /usr/include/qt/QtWidgets/qdialog.h \
-  /usr/include/qt/QtWidgets/qmainwindow.h \
-  /usr/include/qt/QtWidgets/qmessagebox.h \
-  /usr/include/qt/QtWidgets/qsizepolicy.h \
-  /usr/include/qt/QtWidgets/qtabwidget.h \
-  /usr/include/qt/QtWidgets/qtwidgets-config.h \
-  /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
-  /usr/include/qt/QtWidgets/qwidget.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
