@@ -95,4 +95,5 @@ void MainWindow::on_pushButton_3_clicked()
         x.append(qry.value(0).toString());
 
     }
+    database.close();
 }

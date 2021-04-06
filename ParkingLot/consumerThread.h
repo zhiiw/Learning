@@ -1,0 +1,4 @@
+#ifndef CONSUMERTHREAD_H
+#define CONSUMERTHREAD_H
+
+#endif // CONSUMERTHREAD_H

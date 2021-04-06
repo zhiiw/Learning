@@ -30,14 +30,18 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 set(PROJECT_SOURCES
         main.cpp
+        producerThread.h
+        consumerThread.h
         mainwindow.cpp
         queue.h
         parkingSpot.h
         car.h
         worker.h
+        producerThread.cpp
+        consumerThread.cpp
         work.cpp
         test.qrc
-
+        sql.h
         parkinglot.h
         myExceptions.h
         mainwindow.h

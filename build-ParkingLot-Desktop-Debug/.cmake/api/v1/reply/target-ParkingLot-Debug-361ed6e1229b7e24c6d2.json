@@ -25,19 +25,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 57,
+				"line" : 61,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 63,
+				"line" : 67,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 64,
+				"line" : 68,
 				"parent" : 0
 			}
 		]
@@ -133,9 +133,11 @@
 			[
 				0,
 				1,
-				2,
-				7,
-				13
+				4,
+				9,
+				10,
+				11,
+				18
 			]
 		}
 	],
@@ -195,37 +197,42 @@
 			[
 				0,
 				1,
-				2,
-				7,
-				13
+				4,
+				9,
+				10,
+				11,
+				18
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
+				2,
 				3,
-				4,
 				5,
 				6,
-				9,
-				10,
-				11
+				7,
+				8,
+				13,
+				14,
+				15,
+				16
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				8,
-				12
+				12,
+				17
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				14
+				19
 			]
 		}
 	],
@@ -243,6 +250,16 @@
 			"compileGroupIndex" : 0,
 			"path" : "main.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "producerThread.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "consumerThread.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
@@ -273,6 +290,18 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "producerThread.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "consumerThread.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "work.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -280,6 +309,11 @@
 			"backtrace" : 1,
 			"path" : "test.qrc",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "sql.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,

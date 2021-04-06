@@ -356,6 +356,7 @@
  mdp:/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stddef.h
  mdp:/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stdint.h
 /home/zhiiw/QT/ParkingLot/queue.h
+/home/zhiiw/QT/ParkingLot/sql.h
 /home/zhiiw/QT/ParkingLot/main.cpp
 /home/zhiiw/QT/ParkingLot/parkinglot.h
 /home/zhiiw/QT/ParkingLot/parkingSpot.h

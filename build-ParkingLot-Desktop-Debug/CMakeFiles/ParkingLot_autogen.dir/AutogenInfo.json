@@ -104,6 +104,11 @@
 	[
 		[ "/home/zhiiw/QT/ParkingLot/car.h", "MU", "EWIEGA46WW/moc_car.cpp" ],
 		[
+			"/home/zhiiw/QT/ParkingLot/consumerThread.h",
+			"MU",
+			"EWIEGA46WW/moc_consumerThread.cpp"
+		],
+		[
 			"/home/zhiiw/QT/ParkingLot/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp"
@@ -123,7 +128,13 @@
 			"MU",
 			"EWIEGA46WW/moc_parkinglot.cpp"
 		],
+		[
+			"/home/zhiiw/QT/ParkingLot/producerThread.h",
+			"MU",
+			"EWIEGA46WW/moc_producerThread.cpp"
+		],
 		[ "/home/zhiiw/QT/ParkingLot/queue.h", "MU", "EWIEGA46WW/moc_queue.cpp" ],
+		[ "/home/zhiiw/QT/ParkingLot/sql.h", "MU", "EWIEGA46WW/moc_sql.cpp" ],
 		[
 			"/home/zhiiw/QT/ParkingLot/worker.h",
 			"MU",
@@ -183,8 +194,10 @@
 	"SETTINGS_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/zhiiw/QT/ParkingLot/consumerThread.cpp", "MU" ],
 		[ "/home/zhiiw/QT/ParkingLot/main.cpp", "MU" ],
 		[ "/home/zhiiw/QT/ParkingLot/mainwindow.cpp", "MU" ],
+		[ "/home/zhiiw/QT/ParkingLot/producerThread.cpp", "MU" ],
 		[ "/home/zhiiw/QT/ParkingLot/work.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],

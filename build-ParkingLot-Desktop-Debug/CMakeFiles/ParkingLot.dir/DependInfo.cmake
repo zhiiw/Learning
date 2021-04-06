@@ -6,8 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o"
   "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/mocs_compilation.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o"
+  "/home/zhiiw/QT/ParkingLot/consumerThread.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/consumerThread.cpp.o"
   "/home/zhiiw/QT/ParkingLot/main.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/main.cpp.o"
   "/home/zhiiw/QT/ParkingLot/mainwindow.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/mainwindow.cpp.o"
+  "/home/zhiiw/QT/ParkingLot/producerThread.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/producerThread.cpp.o"
   "/home/zhiiw/QT/ParkingLot/work.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/work.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -1,0 +1,4 @@
+#ifndef PRODUCERTHREAD_H
+#define PRODUCERTHREAD_H
+
+#endif // PRODUCERTHREAD_H

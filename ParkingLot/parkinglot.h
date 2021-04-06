@@ -106,8 +106,9 @@ parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
 
     }
     qry.prepare("delete from parkinglots");
-    qry.exec("UPDATE judgeExist SET existence=0");
     qry.exec();
+    qry.exec("UPDATE judgeExist SET existence=0");
+
       if( !qry.exec() )
         qDebug() << qry.lastError();
       else
@@ -119,6 +120,7 @@ parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
     {
         qDebug( "Selected!" );
     }
+    db.close();
 
 }
 template<class T>
@@ -165,7 +167,11 @@ void parkinglot<T>::produceCar(car<T> x){
     }else {
         for(int i = 0 ;i<parkNumber;i++){
             if(carInParkingLot.existence[i]==false){
-
+                if( !db.open() )
+                {
+                  qFatal( "Failed to connect.  ee" );
+                  cout<<"connected failure."<<endl;
+                }
                 carInParkingLot.existence[i]=true;//add a car to the bool array;
                 string qr = "UPDATE judgeExist SET existence=1 where id =";
                 qr+=to_string(i+1);
@@ -201,6 +207,7 @@ void parkinglot<T>::produceCar(car<T> x){
                 if(!qry.exec()){
                  cout<<"male";
                 }
+                db.close();
                 cout<<"we have produced one car and the plate is "<<carInParkingLot.carSpace[i].getPlate()<<endl;
                 break;
             }
@@ -229,7 +236,11 @@ void parkinglot<T>::consumeCar(){
             cout<<"The waitingtime is "<<carInParkingLot.carSpace[i].getParkTime()<<endl;
             cout<<"The plate is "<<carInParkingLot.carSpace[i].getPlate()<<endl;
             cout<<"The charge is "<<carInParkingLot.carSpace[i].getCharge()<<endl;
-
+            if( !db.open() )
+            {
+              qFatal( "Failed to connect.  ee" );
+              cout<<"connected failure."<<endl;
+            }
             string qr = "UPDATE judgeExist SET existence=0 where id =";
             qr+=to_string(i+1);
             qry.prepare(QString::fromStdString(qr));
@@ -239,6 +250,7 @@ void parkinglot<T>::consumeCar(){
             }
             carInParkingLot.existence[i]=false;
             count++;
+            db.close();
             break;
         }
     }
