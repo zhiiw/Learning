@@ -78,7 +78,7 @@ include CMakeFiles/ParkingLot.dir/flags.make
 
 ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp: /home/zhiiw/QT/ParkingLot/test.qrc
 ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp: CMakeFiles/ParkingLot_autogen.dir/AutoRcc_test_EWIEGA46WW_Info.json
-ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp: /home/zhiiw/Desktop/car.jpg
+ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp: /home/zhiiw/QT/ParkingLot/images/car.jpg
 ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp: /usr/bin/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for test.qrc"
 	/usr/bin/cmake -E cmake_autorcc /home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot_autogen.dir/AutoRcc_test_EWIEGA46WW_Info.json Debug

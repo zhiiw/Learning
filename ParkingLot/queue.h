@@ -13,11 +13,11 @@ private:
     car<T> *array;
 
 public:
-    queue(int MaxQueueSize = 0);
+    queue(int MaxQueueSize = 10);
     ~queue();
     bool IsEmpty() {return front==rear;}
     bool IsFull() {
-        return (rear+1)%MaxSize;
+        return (rear+1)%MaxSize==front;
     }
     car<T> First();
     car<T> Last();

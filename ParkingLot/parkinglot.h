@@ -11,7 +11,7 @@
 #include <QDebug>
 using namespace std;
 static const int repository_size = 10;//循环队列的大小
-static const int item_total = 20;//要生产的产品数目
+static const int item_total = 30;//要生产的产品数目
 static std::size_t read_position = 0;//消费者读取产品的位置
 static std::size_t write_position = 0;
 static std::size_t  item_counter = 0;//消费者消费产品计数器
@@ -79,8 +79,7 @@ parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
         carInParkingLot.existence[i]=false;
         carInParkingLot.carSpace[i]=car<T>(initialTime);
     }
-    queue<int> *xm = new queue<int>(queueNumber);
-    wait = xm;
+    wait = new queue<int>(queueNumber);
     totalCar=0;
     count=0;
 
@@ -91,6 +90,7 @@ template<class T>
 bool parkinglot<T>::isParkinglotFull(){
     for (int i= 0 ; i<parkNumber;i++){
         if(carInParkingLot.existence[i]==false){
+            cout<<"the lot is full"<<endl;
             return false;
         }
     }
@@ -112,7 +112,12 @@ bool parkinglot<T>::isQueueEmpty(){
 }
 template<class T>
 bool parkinglot<T>::isQueueFull(){
+    if(wait->IsFull()){
+        cout<<"the queue is full .";
+        return true;
+    }
     return wait->IsFull();
+
 }
 
 #endif // PARKINGLOT_H

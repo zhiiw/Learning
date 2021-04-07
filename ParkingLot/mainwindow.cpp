@@ -30,8 +30,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(con,&consumerThread::deleteLabel,this,&MainWindow::deleteImage);
     connect(con,&consumerThread::addSql,this,&MainWindow::runSql);
     connect(con,&consumerThread::appendText,this,&MainWindow::appendTextEdit);
-    pro->start();
-    con->start();
 }
 
 
@@ -41,10 +39,21 @@ MainWindow::~MainWindow()
 
 }
 void MainWindow::addImage(int i){
-
+    int c=i+4;
+    string x="label_";
+    x+=to_string(c);
+    QLabel* bl = this->findChild<QLabel*>(QString::fromStdString(x));
+    QPixmap myPix(":/new/images/car.jpg");
+    myPix.scaled(bl->size(),Qt::KeepAspectRatio);
+    bl->setScaledContents(true);
+    bl->setPixmap(myPix);
 }
 void MainWindow::deleteImage(int i){
-
+    int c=i+4;
+    string x="label_";
+    x+=to_string(c);
+    QLabel* bl = this->findChild<QLabel*>(QString::fromStdString(x));
+    bl->clear();
 }
 void MainWindow::runSql(QString str){
     db->execSql(str);
@@ -55,7 +64,7 @@ void MainWindow::appendTextEdit(QString str){
 void MainWindow::on_pushButton_clicked()
 {
     QString n = ui->textEdit->toPlainText();
-    QString m = ui->textEdit->toPlainText();
+    QString m = ui->textEdit_2->toPlainText();
     if(n.toInt()<=0||m.toInt()<=0){
     msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
                   "ERROR INPUT",            ///--这里是设置消息框显示的内容
@@ -111,6 +120,8 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    QPixmap myPix(":/../Desktop/car.jpg");
-    ui->label_4->setPixmap(myPix);
+    QPixmap myPix(":/new/images/car.jpg");
+    myPix.scaled(ui->label_4->size(),Qt::KeepAspectRatio);
+    ui->label_9->setScaledContents(true);
+    ui->label_9->setPixmap(myPix);
 }

@@ -5,7 +5,7 @@
 	"CMAKE_CURRENT_SOURCE_DIR" : "/home/zhiiw/QT/ParkingLot",
 	"CMAKE_SOURCE_DIR" : "/home/zhiiw/QT/ParkingLot",
 	"INCLUDE_DIR" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/include",
-	"INPUTS" : [ "/home/zhiiw/Desktop/car.jpg" ],
+	"INPUTS" : [ "/home/zhiiw/QT/ParkingLot/images/car.jpg" ],
 	"LOCK_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot_autogen.dir/AutoRcc_test_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,
 	"OPTIONS" : [ "-name", "test" ],

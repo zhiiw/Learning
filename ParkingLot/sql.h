@@ -9,11 +9,11 @@ using namespace std;
 class sql{
 public:
     QSqlDatabase db;
-    QSqlQuery qry;
 
     sql();
     ~sql();
     bool execSql(QString str){
+        QSqlQuery qry;
         qry.prepare(str);
         if(!qry.exec()){
             cout<<"the query have mistakes."<<endl;

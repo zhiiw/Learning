@@ -1,0 +1,1 @@
+/usr/bin/g++  -std=c++11 -pthread -g CMakeFiles/parkingLot.dir/parkingLot_autogen/mocs_compilation.cpp.o CMakeFiles/parkingLot.dir/main.cpp.o CMakeFiles/parkingLot.dir/parkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o -o parkingLot 
