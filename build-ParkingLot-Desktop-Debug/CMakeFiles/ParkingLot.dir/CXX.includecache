@@ -14,6 +14,10 @@ random
 string
 -
 
+/home/zhiiw/QT/ParkingLot/consumerThread.cpp
+consumerThread.h
+/home/zhiiw/QT/ParkingLot/consumerThread.h
+
 /home/zhiiw/QT/ParkingLot/consumerThread.h
 parkinglot.h
 /home/zhiiw/QT/ParkingLot/parkinglot.h
@@ -24,6 +28,12 @@ car.h
 QThread
 -
 QMutex
+-
+
+/home/zhiiw/QT/ParkingLot/main.cpp
+mainwindow.h
+/home/zhiiw/QT/ParkingLot/mainwindow.h
+QApplication
 -
 
 /home/zhiiw/QT/ParkingLot/mainwindow.cpp
@@ -129,6 +139,44 @@ QString
 -
 
 /home/zhiiw/QT/ParkingLot/worker.h
+
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_consumerThread.cpp
+memory
+-
+../../../ParkingLot/consumerThread.h
+/home/zhiiw/QT/ParkingLot/consumerThread.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_mainwindow.cpp
+memory
+-
+../../../ParkingLot/mainwindow.h
+/home/zhiiw/QT/ParkingLot/mainwindow.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_producerThread.cpp
+memory
+-
+../../../ParkingLot/producerThread.h
+/home/zhiiw/QT/ParkingLot/producerThread.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/mocs_compilation.cpp
+EWIEGA46WW/moc_consumerThread.cpp
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_consumerThread.cpp
+EWIEGA46WW/moc_mainwindow.cpp
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_mainwindow.cpp
+EWIEGA46WW/moc_producerThread.cpp
+/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/moc_producerThread.cpp
 
 /usr/include/qt/QtCore/QDebug
 qdebug.h
