@@ -25,6 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(pro,&produceThread::addLabel,this,&MainWindow::addImage);
     connect(pro,&produceThread::addSql,this,&MainWindow::runSql);
     connect(pro,&produceThread::appendText,this,&MainWindow::appendTextEdit);
+    connect(pro,&produceThread::showQueueNumber,this,&MainWindow::showNumberInLabel);
 
     con = new consumerThread();
     connect(con,&consumerThread::deleteLabel,this,&MainWindow::deleteImage);
@@ -37,6 +38,12 @@ MainWindow::~MainWindow()
 {
     delete ui;
 
+}
+void MainWindow::showNumberInLabel(int i ){
+    ui->label_24->clear();
+    QString x = "the carqueue have ";
+    x.append(QString::fromStdString(to_string(i)));
+    ui->label_24->setText(x);
 }
 void MainWindow::addImage(int i){
     int c=i+4;

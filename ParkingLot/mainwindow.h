@@ -29,11 +29,12 @@ private slots:
     void addImage(int);
     void deleteImage(int);
     void runSql(QString);
+    void showNumberInLabel(int);
 private:
     Ui::MainWindow *ui;
-    parkinglot<int> *pl;
+    parkinglot<int> *pl;//
     sql *db;
-    produceThread *pro;
+    produceThread *pro;//define the pro
     consumerThread *con;
 
 };

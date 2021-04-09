@@ -20,9 +20,9 @@ public:
 signals:
 
     void appendText(QString);
-    void addSql(QString);
-    void addLabel(int);
-
+    void addSql(QString);//add
+    void addLabel(int);//add the car image
+    void showQueueNumber(int);
 
 private:
     parkinglot<int>* pl;

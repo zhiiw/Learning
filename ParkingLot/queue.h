@@ -23,6 +23,7 @@ public:
     car<T> Last();
     void EnQueue(car<T> x);
     void DeQueue();
+    int size();
 };
 
 template<class T>
@@ -42,7 +43,10 @@ car<T> queue<T>::First(){
     }
     return array[(front+1)%MaxSize];
 }
-
+template<class T>
+int queue<T>::size() {
+    return (rear-front)%MaxSize;
+}
 template<class T>
 car<T> queue<T>::Last(){
     if(IsEmpty()){

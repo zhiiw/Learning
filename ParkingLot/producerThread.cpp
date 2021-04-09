@@ -71,6 +71,7 @@ void produceThread::run(){
                     double enterTime = (double)std::chrono::duration_cast<std::chrono::milliseconds>(pl->tp.time_since_epoch()).count() - pl->initialTime;
                        cout<<"the enter time is  "<<enterTime/1000<<endl;
                     car<int> temp(enterTime/2000);
+
                     ++item_counter;
                     emit appendText("A car is dequeue from the queue.");
 
@@ -93,9 +94,10 @@ void produceThread::run(){
                     double enterTime = (double)std::chrono::duration_cast<std::chrono::milliseconds>(pl->tp.time_since_epoch()).count() - pl->initialTime;
                     cout<<"the enter time is  "<<enterTime/1000<<endl;
                     emit appendText("\nA car is enqueue to the waitinglist.");
-
                     car<int> temp(enterTime/2000);
                     pl->wait->EnQueue(temp);
+                    emit showQueueNumber(pl->wait->size());
+
                     ++item_counter;
                 }
                 else{

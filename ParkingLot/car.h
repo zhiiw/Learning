@@ -73,7 +73,7 @@ double car<T>::getParkTime(){
 template<class T>
 int car<T>::randomParkingTime(){
     random_device rd;
-    default_random_engine random(rd());
+    default_random_engine random(rd());//get the random plates
     parkingTime = 15+random()%465;
     return parkingTime;
 }
@@ -89,8 +89,7 @@ string car<T>::randomGetPlate(){
     char tmp;
     
     random_device rd;
-    default_random_engine random(rd());
-    plate+="京";
+      plate+="京";
     plate+="A";
     
     for (int i = 0; i < 5; i++) {

@@ -74,7 +74,7 @@ parkinglot<T>::parkinglot(int parkingNumber,int queueNumber){
     parkNumber=parkingNumber;
     tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
 
-    initialTime= (double)std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()).count();
+    initialTime= (double)std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()).count();//according to the now time to get the initial time
     for (int i= 0 ; i<parkingNumber;i++){
         carInParkingLot.existence[i]=false;
         carInParkingLot.carSpace[i]=car<T>(initialTime);

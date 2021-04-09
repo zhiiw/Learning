@@ -22,9 +22,9 @@ public:
     QMutex mutex;
 
 signals:
-    void appendText(QString);
-    void addSql(QString);
-    void deleteLabel(int);
+    void appendText(QString);//show the dynamic
+    void addSql(QString);//add the sql
+    void deleteLabel(int);//delete car image
 private:
 
     parkinglot<int>* pl;

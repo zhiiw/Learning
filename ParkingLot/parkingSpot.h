@@ -16,8 +16,8 @@ public:
 
 template<class T>
 parkingSpot<T>::parkingSpot(int number){
-    existence= new bool[number];
-    carSpace=new car<T>[number];
+    existence= new bool[number];//set the bool to judge the existence
+    carSpace=new car<T>[number];//set it to own car
 }
 template<class T>
 parkingSpot<T>::parkingSpot(){
