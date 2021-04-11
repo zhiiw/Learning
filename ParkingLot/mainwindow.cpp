@@ -21,12 +21,16 @@ MainWindow::MainWindow(QWidget *parent)
     db->execSql("UPDATE judgeExist SET existence=0");
 
 
-    pro = new produceThread();
-    connect(pro,&produceThread::addLabel,this,&MainWindow::addImage);
-    connect(pro,&produceThread::addSql,this,&MainWindow::runSql);
-    connect(pro,&produceThread::appendText,this,&MainWindow::appendTextEdit);
-    connect(pro,&produceThread::showQueueNumber,this,&MainWindow::showNumberInLabel);
-
+    pro1 = new produceThread();
+    connect(pro1,&produceThread::addLabel,this,&MainWindow::addImage);
+    connect(pro1,&produceThread::addSql,this,&MainWindow::runSql);
+    connect(pro1,&produceThread::appendText,this,&MainWindow::appendTextEdit);
+    connect(pro1,&produceThread::showQueueNumber,this,&MainWindow::showNumberInLabel);
+    pro2 = new produceThread();
+    connect(pro2,&produceThread::addLabel,this,&MainWindow::addImage);
+    connect(pro2,&produceThread::addSql,this,&MainWindow::runSql);
+    connect(pro2,&produceThread::appendText,this,&MainWindow::appendTextEdit);
+    connect(pro2,&produceThread::showQueueNumber,this,&MainWindow::showNumberInLabel);
     con = new consumerThread();
     connect(con,&consumerThread::deleteLabel,this,&MainWindow::deleteImage);
     connect(con,&consumerThread::addSql,this,&MainWindow::runSql);
@@ -84,11 +88,17 @@ void MainWindow::on_pushButton_clicked()
           return;
     }
     pl =new parkinglot<int> (n.toInt(),m.toInt());
-    pro->setParkinglot(pl);
-    con->setParkinglot(pl);
-    pro->start();
-    con->start();
+    pro1->setParkinglot(pl);
+    pro2->setParkinglot(pl);
+    pro1->setName(" 1");
+    pro2->setName(" 2");
 
+    con->setParkinglot(pl);
+    pro1->start();
+
+    con->start();
+    sleep(2);
+    pro2->start();
 
 }
 

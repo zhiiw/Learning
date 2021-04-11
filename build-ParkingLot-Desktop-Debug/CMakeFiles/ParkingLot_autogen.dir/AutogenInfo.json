@@ -7,22 +7,80 @@
 	"CMAKE_LIST_FILES" : 
 	[
 		"/home/zhiiw/QT/ParkingLot/CMakeLists.txt",
-		"/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/3.19.7/CMakeSystem.cmake",
-		"/usr/share/cmake-3.19/Modules/CMakeSystemSpecificInitialize.cmake",
-		"/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/3.19.7/CMakeCXXCompiler.cmake",
-		"/usr/share/cmake-3.19/Modules/CMakeSystemSpecificInformation.cmake",
-		"/usr/share/cmake-3.19/Modules/CMakeGenericSystem.cmake",
-		"/usr/share/cmake-3.19/Modules/CMakeInitializeConfigs.cmake",
-		"/usr/share/cmake-3.19/Modules/Platform/Linux.cmake",
-		"/usr/share/cmake-3.19/Modules/Platform/UnixPaths.cmake",
-		"/usr/share/cmake-3.19/Modules/CMakeCXXInformation.cmake",
-		"/usr/share/cmake-3.19/Modules/CMakeLanguageInformation.cmake",
-		"/usr/share/cmake-3.19/Modules/Compiler/GNU-CXX.cmake",
-		"/usr/share/cmake-3.19/Modules/Compiler/GNU.cmake",
-		"/usr/share/cmake-3.19/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
-		"/usr/share/cmake-3.19/Modules/Platform/Linux-GNU-CXX.cmake",
-		"/usr/share/cmake-3.19/Modules/Platform/Linux-GNU.cmake",
-		"/usr/share/cmake-3.19/Modules/CMakeCommonLanguageInclude.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeDetermineSystem.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeSystem.cmake.in",
+		"/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/3.20.0/CMakeSystem.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeSystemSpecificInitialize.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeDetermineCXXCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeDetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Platform/Linux-Determine-CXX.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeDetermineCompilerId.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeCompilerIdDetection.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/ADSP-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/ARMCC-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/ARMClang-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/AppleClang-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/Borland-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/Clang-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/Cray-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/Embarcadero-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/Fujitsu-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/GHS-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/HP-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/IAR-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/Intel-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/MSVC-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/NVHPC-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/NVIDIA-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/PGI-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/PathScale-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/SCO-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/TI-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/Watcom-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/XL-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeFindBinUtils.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/GNU-FindBinUtils.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeCXXCompiler.cmake.in",
+		"/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/3.20.0/CMakeCXXCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeSystemSpecificInformation.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeGenericSystem.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeInitializeConfigs.cmake",
+		"/usr/share/cmake-3.20/Modules/Platform/Linux.cmake",
+		"/usr/share/cmake-3.20/Modules/Platform/UnixPaths.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeCXXInformation.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeLanguageInformation.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/GNU-CXX.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/GNU.cmake",
+		"/usr/share/cmake-3.20/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"/usr/share/cmake-3.20/Modules/Platform/Linux-GNU-CXX.cmake",
+		"/usr/share/cmake-3.20/Modules/Platform/Linux-GNU.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeTestCXXCompiler.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeTestCompilerCommon.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeDetermineCompilerABI.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeParseImplicitIncludeInfo.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeParseImplicitLinkInfo.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeParseLibraryArchitecture.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeTestCompilerCommon.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp",
+		"/usr/share/cmake-3.20/Modules/CMakeDetermineCompileFeatures.cmake",
+		"/usr/share/cmake-3.20/Modules/Internal/FeatureTesting.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeCXXCompiler.cmake.in",
+		"/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/3.20.0/CMakeCXXCompiler.cmake",
 		"/usr/lib64/cmake/Qt5/Qt5ConfigVersion.cmake",
 		"/usr/lib64/cmake/Qt5/Qt5Config.cmake",
 		"/usr/lib64/cmake/Qt5/Qt5ConfigVersion.cmake",
@@ -35,7 +93,7 @@
 		"/usr/lib64/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
 		"/usr/lib64/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
 		"/usr/lib64/cmake/Qt5Core/Qt5CoreMacros.cmake",
-		"/usr/share/cmake-3.19/Modules/CMakeParseArguments.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeParseArguments.cmake",
 		"/usr/lib64/cmake/Qt5Sql/Qt5Sql_QIBaseDriverPlugin.cmake",
 		"/usr/lib64/cmake/Qt5Sql/Qt5Sql_QMYSQLDriverPlugin.cmake",
 		"/usr/lib64/cmake/Qt5Sql/Qt5Sql_QODBCDriverPlugin.cmake",
@@ -94,7 +152,7 @@
 		"/usr/lib64/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
 		"/usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
 		"/usr/lib64/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
-		"/usr/share/cmake-3.19/Modules/CMakeParseArguments.cmake",
+		"/usr/share/cmake-3.20/Modules/CMakeParseArguments.cmake",
 		"/home/zhiiw/QT/ParkingLot/test.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/zhiiw/QT/ParkingLot",
@@ -102,43 +160,65 @@
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
-		[ "/home/zhiiw/QT/ParkingLot/car.h", "MU", "EWIEGA46WW/moc_car.cpp" ],
+		[
+			"/home/zhiiw/QT/ParkingLot/car.h",
+			"MU",
+			"EWIEGA46WW/moc_car.cpp",
+			null
+		],
 		[
 			"/home/zhiiw/QT/ParkingLot/consumerThread.h",
 			"MU",
-			"EWIEGA46WW/moc_consumerThread.cpp"
+			"EWIEGA46WW/moc_consumerThread.cpp",
+			null
 		],
 		[
 			"/home/zhiiw/QT/ParkingLot/mainwindow.h",
 			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp"
+			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
 		],
 		[
 			"/home/zhiiw/QT/ParkingLot/myExceptions.h",
 			"MU",
-			"EWIEGA46WW/moc_myExceptions.cpp"
+			"EWIEGA46WW/moc_myExceptions.cpp",
+			null
 		],
 		[
 			"/home/zhiiw/QT/ParkingLot/parkingSpot.h",
 			"MU",
-			"EWIEGA46WW/moc_parkingSpot.cpp"
+			"EWIEGA46WW/moc_parkingSpot.cpp",
+			null
 		],
 		[
 			"/home/zhiiw/QT/ParkingLot/parkinglot.h",
 			"MU",
-			"EWIEGA46WW/moc_parkinglot.cpp"
+			"EWIEGA46WW/moc_parkinglot.cpp",
+			null
 		],
 		[
 			"/home/zhiiw/QT/ParkingLot/producerThread.h",
 			"MU",
-			"EWIEGA46WW/moc_producerThread.cpp"
+			"EWIEGA46WW/moc_producerThread.cpp",
+			null
 		],
-		[ "/home/zhiiw/QT/ParkingLot/queue.h", "MU", "EWIEGA46WW/moc_queue.cpp" ],
-		[ "/home/zhiiw/QT/ParkingLot/sql.h", "MU", "EWIEGA46WW/moc_sql.cpp" ],
+		[
+			"/home/zhiiw/QT/ParkingLot/queue.h",
+			"MU",
+			"EWIEGA46WW/moc_queue.cpp",
+			null
+		],
+		[
+			"/home/zhiiw/QT/ParkingLot/sql.h",
+			"MU",
+			"EWIEGA46WW/moc_sql.cpp",
+			null
+		],
 		[
 			"/home/zhiiw/QT/ParkingLot/worker.h",
 			"MU",
-			"EWIEGA46WW/moc_worker.cpp"
+			"EWIEGA46WW/moc_worker.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -179,7 +259,7 @@
 		"-dM",
 		"-E",
 		"-c",
-		"/usr/share/cmake-3.19/Modules/CMakeCXXCompilerABI.cpp"
+		"/usr/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp"
 	],
 	"MOC_PREDEFS_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
@@ -194,12 +274,12 @@
 	"SETTINGS_FILE" : "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/zhiiw/QT/ParkingLot/consumerThread.cpp", "MU" ],
-		[ "/home/zhiiw/QT/ParkingLot/main.cpp", "MU" ],
-		[ "/home/zhiiw/QT/ParkingLot/mainwindow.cpp", "MU" ],
-		[ "/home/zhiiw/QT/ParkingLot/producerThread.cpp", "MU" ],
-		[ "/home/zhiiw/QT/ParkingLot/sql.cpp", "MU" ],
-		[ "/home/zhiiw/QT/ParkingLot/work.cpp", "MU" ]
+		[ "/home/zhiiw/QT/ParkingLot/consumerThread.cpp", "MU", null ],
+		[ "/home/zhiiw/QT/ParkingLot/main.cpp", "MU", null ],
+		[ "/home/zhiiw/QT/ParkingLot/mainwindow.cpp", "MU", null ],
+		[ "/home/zhiiw/QT/ParkingLot/producerThread.cpp", "MU", null ],
+		[ "/home/zhiiw/QT/ParkingLot/sql.cpp", "MU", null ],
+		[ "/home/zhiiw/QT/ParkingLot/work.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

@@ -34,7 +34,9 @@ private:
     Ui::MainWindow *ui;
     parkinglot<int> *pl;//
     sql *db;
-    produceThread *pro;//define the pro
+    produceThread *pro1;//define the pro
+    produceThread *pro2;//define the pro
+
     consumerThread *con;
 
 };

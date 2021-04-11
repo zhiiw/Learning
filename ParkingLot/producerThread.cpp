@@ -49,7 +49,10 @@ void produceThread::produceCar(car<int> x){
             query+=")";
             emit addSql(QString::fromStdString(query));
             cout<<query<<endl;
-            QString tempp= "\nwe have produced one car and the plate is ";
+            QString tempp= "entrance ";
+            tempp.append(QString::fromStdString(name));
+
+            tempp.append("\nwe have produced one car and the plate is ");
             tempp.append(QString::fromStdString(pl->carInParkingLot.carSpace[i].getPlate()));
 
             emit appendText(tempp);
@@ -67,6 +70,7 @@ void produceThread::run(){
         if(item_counter<item_total){
             if(!pl->isParkinglotFull()){
                 if(!pl->isQueueEmpty()){
+
                     pl->tp = std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::system_clock::now());
                     double enterTime = (double)std::chrono::duration_cast<std::chrono::milliseconds>(pl->tp.time_since_epoch()).count() - pl->initialTime;
                        cout<<"the enter time is  "<<enterTime/1000<<endl;
@@ -117,4 +121,7 @@ void produceThread::run(){
 
 void produceThread::setParkinglot(parkinglot<int>* p){
     pl = p;
+}
+void produceThread::setName(string x){
+    name=x;
 }

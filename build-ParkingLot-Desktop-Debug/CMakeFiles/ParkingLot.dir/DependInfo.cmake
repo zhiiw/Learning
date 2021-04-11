@@ -1,39 +1,21 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o"
-  "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/mocs_compilation.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o"
-  "/home/zhiiw/QT/ParkingLot/consumerThread.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/consumerThread.cpp.o"
-  "/home/zhiiw/QT/ParkingLot/main.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/main.cpp.o"
-  "/home/zhiiw/QT/ParkingLot/mainwindow.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/mainwindow.cpp.o"
-  "/home/zhiiw/QT/ParkingLot/producerThread.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/producerThread.cpp.o"
-  "/home/zhiiw/QT/ParkingLot/sql.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/sql.cpp.o"
-  "/home/zhiiw/QT/ParkingLot/work.cpp" "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/CMakeFiles/ParkingLot.dir/work.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "QT_CORE_LIB"
-  "QT_GUI_LIB"
-  "QT_SQL_LIB"
-  "QT_WIDGETS_LIB"
   )
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "."
-  "/home/zhiiw/QT/ParkingLot"
-  "ParkingLot_autogen/include"
-  "/usr/include/qt"
-  "/usr/include/qt/QtWidgets"
-  "/usr/include/qt/QtGui"
-  "/usr/include/qt/QtCore"
-  "/usr/lib/qt/mkspecs/linux-g++"
-  "/usr/include/qt/QtSql"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp" "CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o" "gcc" "CMakeFiles/ParkingLot.dir/ParkingLot_autogen/EWIEGA46WW/qrc_test.cpp.o.d"
+  "/home/zhiiw/QT/build-ParkingLot-Desktop-Debug/ParkingLot_autogen/mocs_compilation.cpp" "CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/ParkingLot.dir/ParkingLot_autogen/mocs_compilation.cpp.o.d"
+  "/home/zhiiw/QT/ParkingLot/consumerThread.cpp" "CMakeFiles/ParkingLot.dir/consumerThread.cpp.o" "gcc" "CMakeFiles/ParkingLot.dir/consumerThread.cpp.o.d"
+  "/home/zhiiw/QT/ParkingLot/main.cpp" "CMakeFiles/ParkingLot.dir/main.cpp.o" "gcc" "CMakeFiles/ParkingLot.dir/main.cpp.o.d"
+  "/home/zhiiw/QT/ParkingLot/mainwindow.cpp" "CMakeFiles/ParkingLot.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/ParkingLot.dir/mainwindow.cpp.o.d"
+  "/home/zhiiw/QT/ParkingLot/producerThread.cpp" "CMakeFiles/ParkingLot.dir/producerThread.cpp.o" "gcc" "CMakeFiles/ParkingLot.dir/producerThread.cpp.o.d"
+  "/home/zhiiw/QT/ParkingLot/sql.cpp" "CMakeFiles/ParkingLot.dir/sql.cpp.o" "gcc" "CMakeFiles/ParkingLot.dir/sql.cpp.o.d"
+  "/home/zhiiw/QT/ParkingLot/work.cpp" "CMakeFiles/ParkingLot.dir/work.cpp.o" "gcc" "CMakeFiles/ParkingLot.dir/work.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -15,6 +15,7 @@ public:
     void produceCar(car<int> x);
     QMutex mutex;
     void setParkinglot(parkinglot<int>*);
+    void setName(string);
 
 
 signals:
@@ -26,6 +27,7 @@ signals:
 
 private:
     parkinglot<int>* pl;
+    string name;
 };
 
 #endif // PRODUCERTHREAD_H
