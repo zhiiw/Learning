@@ -6,6 +6,7 @@ class compress
 {
 public:
     compress();
+    ~compress();
 };
 
 #endif // COMPRESS_H

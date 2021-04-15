@@ -8,6 +8,8 @@ public:
     HuffmanTree();
     ~HuffmanTree();
 
+    node
+
 
 };
 
