@@ -1,0 +1,4 @@
+#ifndef HUFFMANNODE_H
+#define HUFFMANNODE_H
+
+#endif // HUFFMANNODE_H

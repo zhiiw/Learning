@@ -11,7 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/HuffmanCode_autogen/mocs_compilation.cpp" "CMakeFiles/HuffmanCode.dir/HuffmanCode_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/HuffmanCode.dir/HuffmanCode_autogen/mocs_compilation.cpp.o.d"
   "/home/zhiiw/QT/HuffmanCode/compress.cpp" "CMakeFiles/HuffmanCode.dir/compress.cpp.o" "gcc" "CMakeFiles/HuffmanCode.dir/compress.cpp.o.d"
   "/home/zhiiw/QT/HuffmanCode/decompress.cpp" "CMakeFiles/HuffmanCode.dir/decompress.cpp.o" "gcc" "CMakeFiles/HuffmanCode.dir/decompress.cpp.o.d"
-  "/home/zhiiw/QT/HuffmanCode/huffmantree.cpp" "CMakeFiles/HuffmanCode.dir/huffmantree.cpp.o" "gcc" "CMakeFiles/HuffmanCode.dir/huffmantree.cpp.o.d"
+  "/home/zhiiw/QT/HuffmanCode/huffmanNode.cpp" "CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o" "gcc" "CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o.d"
   "/home/zhiiw/QT/HuffmanCode/main.cpp" "CMakeFiles/HuffmanCode.dir/main.cpp.o" "gcc" "CMakeFiles/HuffmanCode.dir/main.cpp.o.d"
   "/home/zhiiw/QT/HuffmanCode/mainwindow.cpp" "CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o.d"
   )

@@ -30,14 +30,15 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 set(PROJECT_SOURCES
         decompress.cpp
         decompress.h
+        huffmanNode.cpp
+        huffmanNode.h
         main.cpp
         mainwindow.cpp
-        huffmantree.cpp
-        huffmantree.h
         compress.cpp
         compress.h
         mainwindow.h
         mainwindow.ui
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

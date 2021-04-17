@@ -97,10 +97,24 @@ CMakeFiles/HuffmanCode.dir/decompress.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanCode.dir/decompress.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhiiw/QT/HuffmanCode/decompress.cpp -o CMakeFiles/HuffmanCode.dir/decompress.cpp.s
 
+CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o: CMakeFiles/HuffmanCode.dir/flags.make
+CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o: /home/zhiiw/QT/HuffmanCode/huffmanNode.cpp
+CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o: CMakeFiles/HuffmanCode.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o -MF CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o.d -o CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o -c /home/zhiiw/QT/HuffmanCode/huffmanNode.cpp
+
+CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhiiw/QT/HuffmanCode/huffmanNode.cpp > CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.i
+
+CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhiiw/QT/HuffmanCode/huffmanNode.cpp -o CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.s
+
 CMakeFiles/HuffmanCode.dir/main.cpp.o: CMakeFiles/HuffmanCode.dir/flags.make
 CMakeFiles/HuffmanCode.dir/main.cpp.o: /home/zhiiw/QT/HuffmanCode/main.cpp
 CMakeFiles/HuffmanCode.dir/main.cpp.o: CMakeFiles/HuffmanCode.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HuffmanCode.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HuffmanCode.dir/main.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HuffmanCode.dir/main.cpp.o -MF CMakeFiles/HuffmanCode.dir/main.cpp.o.d -o CMakeFiles/HuffmanCode.dir/main.cpp.o -c /home/zhiiw/QT/HuffmanCode/main.cpp
 
 CMakeFiles/HuffmanCode.dir/main.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/HuffmanCode.dir/main.cpp.s: cmake_force
 CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o: CMakeFiles/HuffmanCode.dir/flags.make
 CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o: /home/zhiiw/QT/HuffmanCode/mainwindow.cpp
 CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o: CMakeFiles/HuffmanCode.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o -MF CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o.d -o CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o -c /home/zhiiw/QT/HuffmanCode/mainwindow.cpp
 
 CMakeFiles/HuffmanCode.dir/mainwindow.cpp.i: cmake_force
@@ -124,20 +138,6 @@ CMakeFiles/HuffmanCode.dir/mainwindow.cpp.i: cmake_force
 CMakeFiles/HuffmanCode.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanCode.dir/mainwindow.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhiiw/QT/HuffmanCode/mainwindow.cpp -o CMakeFiles/HuffmanCode.dir/mainwindow.cpp.s
-
-CMakeFiles/HuffmanCode.dir/huffmantree.cpp.o: CMakeFiles/HuffmanCode.dir/flags.make
-CMakeFiles/HuffmanCode.dir/huffmantree.cpp.o: /home/zhiiw/QT/HuffmanCode/huffmantree.cpp
-CMakeFiles/HuffmanCode.dir/huffmantree.cpp.o: CMakeFiles/HuffmanCode.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HuffmanCode.dir/huffmantree.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HuffmanCode.dir/huffmantree.cpp.o -MF CMakeFiles/HuffmanCode.dir/huffmantree.cpp.o.d -o CMakeFiles/HuffmanCode.dir/huffmantree.cpp.o -c /home/zhiiw/QT/HuffmanCode/huffmantree.cpp
-
-CMakeFiles/HuffmanCode.dir/huffmantree.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HuffmanCode.dir/huffmantree.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhiiw/QT/HuffmanCode/huffmantree.cpp > CMakeFiles/HuffmanCode.dir/huffmantree.cpp.i
-
-CMakeFiles/HuffmanCode.dir/huffmantree.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanCode.dir/huffmantree.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhiiw/QT/HuffmanCode/huffmantree.cpp -o CMakeFiles/HuffmanCode.dir/huffmantree.cpp.s
 
 CMakeFiles/HuffmanCode.dir/compress.cpp.o: CMakeFiles/HuffmanCode.dir/flags.make
 CMakeFiles/HuffmanCode.dir/compress.cpp.o: /home/zhiiw/QT/HuffmanCode/compress.cpp
@@ -157,9 +157,9 @@ CMakeFiles/HuffmanCode.dir/compress.cpp.s: cmake_force
 HuffmanCode_OBJECTS = \
 "CMakeFiles/HuffmanCode.dir/HuffmanCode_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/HuffmanCode.dir/decompress.cpp.o" \
+"CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o" \
 "CMakeFiles/HuffmanCode.dir/main.cpp.o" \
 "CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o" \
-"CMakeFiles/HuffmanCode.dir/huffmantree.cpp.o" \
 "CMakeFiles/HuffmanCode.dir/compress.cpp.o"
 
 # External object files for target HuffmanCode
@@ -167,9 +167,9 @@ HuffmanCode_EXTERNAL_OBJECTS =
 
 HuffmanCode: CMakeFiles/HuffmanCode.dir/HuffmanCode_autogen/mocs_compilation.cpp.o
 HuffmanCode: CMakeFiles/HuffmanCode.dir/decompress.cpp.o
+HuffmanCode: CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o
 HuffmanCode: CMakeFiles/HuffmanCode.dir/main.cpp.o
 HuffmanCode: CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o
-HuffmanCode: CMakeFiles/HuffmanCode.dir/huffmantree.cpp.o
 HuffmanCode: CMakeFiles/HuffmanCode.dir/compress.cpp.o
 HuffmanCode: CMakeFiles/HuffmanCode.dir/build.make
 HuffmanCode: /usr/lib/libQt5Widgets.so.5.15.2

@@ -103,9 +103,9 @@
 			null
 		],
 		[
-			"/home/zhiiw/QT/HuffmanCode/huffmantree.h",
+			"/home/zhiiw/QT/HuffmanCode/huffmanNode.h",
 			"MU",
-			"EWIEGA46WW/moc_huffmantree.cpp",
+			"EWIEGA46WW/moc_huffmanNode.cpp",
 			null
 		],
 		[
@@ -169,7 +169,7 @@
 	[
 		[ "/home/zhiiw/QT/HuffmanCode/compress.cpp", "MU", null ],
 		[ "/home/zhiiw/QT/HuffmanCode/decompress.cpp", "MU", null ],
-		[ "/home/zhiiw/QT/HuffmanCode/huffmantree.cpp", "MU", null ],
+		[ "/home/zhiiw/QT/HuffmanCode/huffmanNode.cpp", "MU", null ],
 		[ "/home/zhiiw/QT/HuffmanCode/main.cpp", "MU", null ],
 		[ "/home/zhiiw/QT/HuffmanCode/mainwindow.cpp", "MU", null ]
 	],
