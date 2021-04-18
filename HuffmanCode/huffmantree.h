@@ -2,14 +2,16 @@
 #define HUFFMANTREE_H
 #include <iostream>
 #include <string>
-#include <string.h>
 #include <vector>
-
+using namespace std;
 class HuffmanTree
 {
+private:
+
 public:
     HuffmanTree();
     ~HuffmanTree();
+
 
 
 

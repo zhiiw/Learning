@@ -1,6 +1,7 @@
-CMakeFiles/HuffmanCode.dir/decompress.cpp.o: \
- /home/zhiiw/QT/HuffmanCode/decompress.cpp /usr/include/stdc-predef.h \
- /home/zhiiw/QT/HuffmanCode/decompress.h /usr/include/c++/10.2.0/iostream \
+CMakeFiles/HuffmanCode.dir/huffmanNode.cpp.o: \
+ /home/zhiiw/QT/HuffmanCode/huffmanNode.cpp /usr/include/stdc-predef.h \
+ /home/zhiiw/QT/HuffmanCode/huffmantree.h \
+ /usr/include/c++/10.2.0/iostream \
  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/sys/cdefs.h \
@@ -126,27 +127,8 @@ CMakeFiles/HuffmanCode.dir/decompress.cpp.o: \
  /usr/include/c++/10.2.0/bits/locale_facets.tcc \
  /usr/include/c++/10.2.0/bits/basic_ios.tcc \
  /usr/include/c++/10.2.0/bits/ostream.tcc /usr/include/c++/10.2.0/istream \
- /usr/include/c++/10.2.0/bits/istream.tcc /usr/include/c++/10.2.0/fstream \
- /usr/include/c++/10.2.0/bits/codecvt.h \
- /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/basic_file.h \
- /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/10.2.0/bits/fstream.tcc \
- /home/zhiiw/QT/HuffmanCode/huffmanNode.h /usr/include/c++/10.2.0/queue \
- /usr/include/c++/10.2.0/deque \
+ /usr/include/c++/10.2.0/bits/istream.tcc /usr/include/c++/10.2.0/vector \
  /usr/include/c++/10.2.0/bits/stl_uninitialized.h \
- /usr/include/c++/10.2.0/bits/stl_deque.h \
- /usr/include/c++/10.2.0/bits/deque.tcc /usr/include/c++/10.2.0/vector \
  /usr/include/c++/10.2.0/bits/stl_vector.h \
  /usr/include/c++/10.2.0/bits/stl_bvector.h \
- /usr/include/c++/10.2.0/bits/vector.tcc \
- /usr/include/c++/10.2.0/bits/stl_heap.h \
- /usr/include/c++/10.2.0/bits/stl_queue.h \
- /usr/include/c++/10.2.0/bits/uses_allocator.h \
- /usr/include/c++/10.2.0/map /usr/include/c++/10.2.0/bits/stl_tree.h \
- /usr/include/c++/10.2.0/ext/aligned_buffer.h \
- /usr/include/c++/10.2.0/bits/stl_map.h /usr/include/c++/10.2.0/tuple \
- /usr/include/c++/10.2.0/utility \
- /usr/include/c++/10.2.0/bits/stl_relops.h /usr/include/c++/10.2.0/array \
- /usr/include/c++/10.2.0/bits/invoke.h \
- /usr/include/c++/10.2.0/bits/stl_multimap.h \
- /usr/include/c++/10.2.0/bits/erase_if.h
+ /usr/include/c++/10.2.0/bits/vector.tcc

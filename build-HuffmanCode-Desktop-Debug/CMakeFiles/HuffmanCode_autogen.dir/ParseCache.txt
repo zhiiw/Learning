@@ -307,4 +307,6 @@
  mdp:/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stdint.h
 /home/zhiiw/QT/HuffmanCode/decompress.cpp
 /home/zhiiw/QT/HuffmanCode/huffmantree.cpp
+/home/zhiiw/QT/HuffmanCode/huffmanNode.h
 /home/zhiiw/QT/HuffmanCode/main.cpp
+/home/zhiiw/QT/HuffmanCode/huffmanNode.cpp

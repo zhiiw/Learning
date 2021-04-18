@@ -1,6 +1,6 @@
-CMakeFiles/HuffmanCode.dir/decompress.cpp.o: \
- /home/zhiiw/QT/HuffmanCode/decompress.cpp /usr/include/stdc-predef.h \
- /home/zhiiw/QT/HuffmanCode/decompress.h /usr/include/c++/10.2.0/iostream \
+CMakeFiles/HuffmanCode.dir/compress.cpp.o: \
+ /home/zhiiw/QT/HuffmanCode/compress.cpp /usr/include/stdc-predef.h \
+ /home/zhiiw/QT/HuffmanCode/compress.h /usr/include/c++/10.2.0/iostream \
  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/sys/cdefs.h \
