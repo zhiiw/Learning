@@ -1,8 +1,9 @@
 #include "compress.h"
 
-compress::compress(string filename,string zipname){
+compress::compress(string filename,string zipname,bool encryption,string x ){
     this->fileName=filename;
     this->zipName = zipname;
+    this->encryption= encryption;
 
 }
 void compress::generateHuffmanCode(huffmanNode *node,string str){
@@ -24,7 +25,11 @@ void compress::huffmanForEnglish(){
     }
     cout<<"compressing files "<<endl;
     int startTime = time(0);
-    fstream fout(zipName + ".huffman", ios::binary);
+    ofstream fout(zipName+".huffman" , ios::binary);
+    if (!fout) {
+        cout << "file open error!" << endl;
+        exit(1);
+    }
     long fbeg = fin.tellg();
 
     fin.seekg(0, ios::end);

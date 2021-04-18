@@ -172,6 +172,7 @@ HuffmanCode: CMakeFiles/HuffmanCode.dir/main.cpp.o
 HuffmanCode: CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o
 HuffmanCode: CMakeFiles/HuffmanCode.dir/compress.cpp.o
 HuffmanCode: CMakeFiles/HuffmanCode.dir/build.make
+HuffmanCode: /usr/lib/libKF5WidgetsAddons.so.5.81.0
 HuffmanCode: /usr/lib/libQt5Widgets.so.5.15.2
 HuffmanCode: /usr/lib/libQt5Gui.so.5.15.2
 HuffmanCode: /usr/lib/libQt5Core.so.5.15.2

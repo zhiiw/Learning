@@ -314,7 +314,43 @@ CMakeFiles/HuffmanCode.dir/HuffmanCode_autogen/mocs_compilation.cpp.o: HuffmanCo
   /usr/include/qt/QtGui/qcursor.h \
   /usr/include/qt/QtGui/qkeysequence.h \
   /usr/include/qt/QtWidgets/qtabwidget.h \
-  /usr/include/qt/QtGui/qicon.h
+  /usr/include/qt/QtGui/qicon.h \
+  /home/zhiiw/QT/HuffmanCode/compress.h \
+  /usr/include/c++/10.2.0/iostream \
+  /usr/include/c++/10.2.0/ostream \
+  /usr/include/c++/10.2.0/ios \
+  /usr/include/c++/10.2.0/bits/basic_ios.h \
+  /usr/include/c++/10.2.0/bits/locale_facets.h \
+  /usr/include/c++/10.2.0/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/bits/wctype-wchar.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+  /usr/include/c++/10.2.0/bits/locale_facets.tcc \
+  /usr/include/c++/10.2.0/bits/basic_ios.tcc \
+  /usr/include/c++/10.2.0/bits/ostream.tcc \
+  /usr/include/c++/10.2.0/istream \
+  /usr/include/c++/10.2.0/bits/istream.tcc \
+  /usr/include/c++/10.2.0/fstream \
+  /usr/include/c++/10.2.0/bits/codecvt.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/basic_file.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++io.h \
+  /usr/include/c++/10.2.0/bits/fstream.tcc \
+  /home/zhiiw/QT/HuffmanCode/huffmanNode.h \
+  /usr/include/c++/10.2.0/queue \
+  /usr/include/c++/10.2.0/deque \
+  /usr/include/c++/10.2.0/bits/stl_deque.h \
+  /usr/include/c++/10.2.0/bits/deque.tcc \
+  /usr/include/c++/10.2.0/bits/stl_queue.h \
+  /home/zhiiw/QT/HuffmanCode/decompress.h \
+  /usr/include/c++/10.2.0/iomanip \
+  /usr/include/c++/10.2.0/locale \
+  /usr/include/c++/10.2.0/bits/locale_facets_nonio.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/10.2.0/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/10.2.0/bits/locale_conv.h
 
 CMakeFiles/HuffmanCode.dir/compress.cpp.o: /home/zhiiw/QT/HuffmanCode/compress.cpp \
   /usr/include/stdc-predef.h \
@@ -1229,6 +1265,42 @@ CMakeFiles/HuffmanCode.dir/main.cpp.o: /home/zhiiw/QT/HuffmanCode/main.cpp \
   /usr/include/qt/QtGui/qkeysequence.h \
   /usr/include/qt/QtWidgets/qtabwidget.h \
   /usr/include/qt/QtGui/qicon.h \
+  /home/zhiiw/QT/HuffmanCode/compress.h \
+  /usr/include/c++/10.2.0/iostream \
+  /usr/include/c++/10.2.0/ostream \
+  /usr/include/c++/10.2.0/ios \
+  /usr/include/c++/10.2.0/bits/basic_ios.h \
+  /usr/include/c++/10.2.0/bits/locale_facets.h \
+  /usr/include/c++/10.2.0/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/bits/wctype-wchar.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+  /usr/include/c++/10.2.0/bits/locale_facets.tcc \
+  /usr/include/c++/10.2.0/bits/basic_ios.tcc \
+  /usr/include/c++/10.2.0/bits/ostream.tcc \
+  /usr/include/c++/10.2.0/istream \
+  /usr/include/c++/10.2.0/bits/istream.tcc \
+  /usr/include/c++/10.2.0/fstream \
+  /usr/include/c++/10.2.0/bits/codecvt.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/basic_file.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++io.h \
+  /usr/include/c++/10.2.0/bits/fstream.tcc \
+  /home/zhiiw/QT/HuffmanCode/huffmanNode.h \
+  /usr/include/c++/10.2.0/queue \
+  /usr/include/c++/10.2.0/deque \
+  /usr/include/c++/10.2.0/bits/stl_deque.h \
+  /usr/include/c++/10.2.0/bits/deque.tcc \
+  /usr/include/c++/10.2.0/bits/stl_queue.h \
+  /home/zhiiw/QT/HuffmanCode/decompress.h \
+  /usr/include/c++/10.2.0/iomanip \
+  /usr/include/c++/10.2.0/locale \
+  /usr/include/c++/10.2.0/bits/locale_facets_nonio.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/10.2.0/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/10.2.0/bits/locale_conv.h \
   /usr/include/qt/QtWidgets/QApplication \
   /usr/include/qt/QtWidgets/qapplication.h \
   /usr/include/qt/QtCore/qcoreapplication.h \
@@ -1553,66 +1625,7 @@ CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o: /home/zhiiw/QT/HuffmanCode/mainwind
   /usr/include/qt/QtGui/qkeysequence.h \
   /usr/include/qt/QtWidgets/qtabwidget.h \
   /usr/include/qt/QtGui/qicon.h \
-  HuffmanCode_autogen/include/ui_mainwindow.h \
-  /usr/include/qt/QtCore/QVariant \
-  /usr/include/qt/QtCore/qvariant.h \
-  /usr/include/qt/QtCore/qmap.h \
-  /usr/include/qt/QtWidgets/QApplication \
-  /usr/include/qt/QtWidgets/qapplication.h \
-  /usr/include/qt/QtCore/qcoreapplication.h \
-  /usr/include/qt/QtCore/qcoreevent.h \
-  /usr/include/qt/QtCore/qeventloop.h \
-  /usr/include/qt/QtGui/qguiapplication.h \
-  /usr/include/qt/QtGui/qinputmethod.h \
-  /usr/include/qt/QtCore/qlocale.h \
-  /usr/include/qt/QtCore/qvariant.h \
-  /usr/include/qt/QtWidgets/QGridLayout \
-  /usr/include/qt/QtWidgets/qgridlayout.h \
-  /usr/include/qt/QtWidgets/qlayout.h \
-  /usr/include/qt/QtWidgets/qlayoutitem.h \
-  /usr/include/qt/QtWidgets/qboxlayout.h \
-  /usr/include/qt/QtWidgets/qgridlayout.h \
-  /usr/include/qt/QtWidgets/QLabel \
-  /usr/include/qt/QtWidgets/qlabel.h \
-  /usr/include/qt/QtWidgets/qframe.h \
-  /usr/include/qt/QtWidgets/QLineEdit \
-  /usr/include/qt/QtWidgets/qlineedit.h \
-  /usr/include/qt/QtGui/qtextcursor.h \
-  /usr/include/qt/QtGui/qtextformat.h \
-  /usr/include/qt/QtGui/qpen.h \
-  /usr/include/qt/QtGui/qtextoption.h \
-  /usr/include/qt/QtWidgets/QMainWindow \
-  /usr/include/qt/QtWidgets/QMenuBar \
-  /usr/include/qt/QtWidgets/qmenubar.h \
-  /usr/include/qt/QtWidgets/qmenu.h \
-  /usr/include/qt/QtWidgets/qaction.h \
-  /usr/include/qt/QtWidgets/qactiongroup.h \
-  /usr/include/qt/QtWidgets/QProgressBar \
-  /usr/include/qt/QtWidgets/qprogressbar.h \
-  /usr/include/qt/QtWidgets/QPushButton \
-  /usr/include/qt/QtWidgets/qpushbutton.h \
-  /usr/include/qt/QtWidgets/qabstractbutton.h \
-  /usr/include/qt/QtWidgets/QStatusBar \
-  /usr/include/qt/QtWidgets/qstatusbar.h \
-  /usr/include/qt/QtWidgets/QTextEdit \
-  /usr/include/qt/QtWidgets/qtextedit.h \
-  /usr/include/qt/QtWidgets/qabstractscrollarea.h \
-  /usr/include/qt/QtGui/qtextdocument.h \
-  /usr/include/qt/QtCore/qurl.h \
-  /usr/include/qt/QtWidgets/QVBoxLayout \
-  /usr/include/qt/QtWidgets/qboxlayout.h \
-  /usr/include/qt/QtWidgets/QWidget \
-  /usr/include/qt/QtWidgets/qwidget.h \
-  /usr/include/qt/QtWidgets/QFileDialog \
-  /usr/include/qt/QtWidgets/qfiledialog.h \
-  /usr/include/qt/QtCore/qdir.h \
-  /usr/include/qt/QtCore/qfileinfo.h \
-  /usr/include/qt/QtCore/qfile.h \
-  /usr/include/qt/QtCore/qfiledevice.h \
-  /usr/include/qt/QtWidgets/qdialog.h \
-  /usr/include/qt/QtWidgets/QMessageBox \
-  /usr/include/qt/QtWidgets/qmessagebox.h \
-  /home/zhiiw/QT/HuffmanCode/decompress.h \
+  /home/zhiiw/QT/HuffmanCode/compress.h \
   /usr/include/c++/10.2.0/iostream \
   /usr/include/c++/10.2.0/ostream \
   /usr/include/c++/10.2.0/ios \
@@ -1639,7 +1652,81 @@ CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o: /home/zhiiw/QT/HuffmanCode/mainwind
   /usr/include/c++/10.2.0/bits/stl_deque.h \
   /usr/include/c++/10.2.0/bits/deque.tcc \
   /usr/include/c++/10.2.0/bits/stl_queue.h \
-  /home/zhiiw/QT/HuffmanCode/compress.h
+  /home/zhiiw/QT/HuffmanCode/decompress.h \
+  /usr/include/c++/10.2.0/iomanip \
+  /usr/include/c++/10.2.0/locale \
+  /usr/include/c++/10.2.0/bits/locale_facets_nonio.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/10.2.0/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/10.2.0/bits/locale_conv.h \
+  HuffmanCode_autogen/include/ui_mainwindow.h \
+  /usr/include/qt/QtCore/QVariant \
+  /usr/include/qt/QtCore/qvariant.h \
+  /usr/include/qt/QtCore/qmap.h \
+  /usr/include/qt/QtWidgets/QApplication \
+  /usr/include/qt/QtWidgets/qapplication.h \
+  /usr/include/qt/QtCore/qcoreapplication.h \
+  /usr/include/qt/QtCore/qcoreevent.h \
+  /usr/include/qt/QtCore/qeventloop.h \
+  /usr/include/qt/QtGui/qguiapplication.h \
+  /usr/include/qt/QtGui/qinputmethod.h \
+  /usr/include/qt/QtCore/qlocale.h \
+  /usr/include/qt/QtCore/qvariant.h \
+  /usr/include/qt/QtWidgets/QCheckBox \
+  /usr/include/qt/QtWidgets/qcheckbox.h \
+  /usr/include/qt/QtWidgets/qabstractbutton.h \
+  /usr/include/qt/QtWidgets/QGridLayout \
+  /usr/include/qt/QtWidgets/qgridlayout.h \
+  /usr/include/qt/QtWidgets/qlayout.h \
+  /usr/include/qt/QtWidgets/qlayoutitem.h \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qgridlayout.h \
+  /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/qlabel.h \
+  /usr/include/qt/QtWidgets/qframe.h \
+  /usr/include/qt/QtWidgets/QLineEdit \
+  /usr/include/qt/QtWidgets/qlineedit.h \
+  /usr/include/qt/QtGui/qtextcursor.h \
+  /usr/include/qt/QtGui/qtextformat.h \
+  /usr/include/qt/QtGui/qpen.h \
+  /usr/include/qt/QtGui/qtextoption.h \
+  /usr/include/qt/QtWidgets/QMainWindow \
+  /usr/include/qt/QtWidgets/QMenuBar \
+  /usr/include/qt/QtWidgets/qmenubar.h \
+  /usr/include/qt/QtWidgets/qmenu.h \
+  /usr/include/qt/QtWidgets/qaction.h \
+  /usr/include/qt/QtWidgets/qactiongroup.h \
+  /usr/include/qt/QtWidgets/QProgressBar \
+  /usr/include/qt/QtWidgets/qprogressbar.h \
+  /usr/include/qt/QtWidgets/QPushButton \
+  /usr/include/qt/QtWidgets/qpushbutton.h \
+  /usr/include/qt/QtWidgets/QStatusBar \
+  /usr/include/qt/QtWidgets/qstatusbar.h \
+  /usr/include/qt/QtWidgets/QTextEdit \
+  /usr/include/qt/QtWidgets/qtextedit.h \
+  /usr/include/qt/QtWidgets/qabstractscrollarea.h \
+  /usr/include/qt/QtGui/qtextdocument.h \
+  /usr/include/qt/QtCore/qurl.h \
+  /usr/include/qt/QtWidgets/QVBoxLayout \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/QWidget \
+  /usr/include/qt/QtWidgets/qwidget.h \
+  /usr/include/KF5/KWidgetsAddons/kpasswordlineedit.h \
+  /usr/include/qt/QtWidgets/QLineEdit \
+  /usr/include/qt/QtWidgets/QWidget \
+  /usr/include/KF5/KWidgetsAddons/kwidgetsaddons_export.h \
+  /usr/include/qt/QtWidgets/QFileDialog \
+  /usr/include/qt/QtWidgets/qfiledialog.h \
+  /usr/include/qt/QtCore/qdir.h \
+  /usr/include/qt/QtCore/qfileinfo.h \
+  /usr/include/qt/QtCore/qfile.h \
+  /usr/include/qt/QtCore/qfiledevice.h \
+  /usr/include/qt/QtWidgets/qdialog.h \
+  /usr/include/qt/QtWidgets/QMessageBox \
+  /usr/include/qt/QtWidgets/qmessagebox.h \
+  /home/zhiiw/QT/HuffmanCode/decompress.h
 
 
 /usr/include/qt/QtWidgets/qmessagebox.h:
@@ -1659,8 +1746,6 @@ CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o: /home/zhiiw/QT/HuffmanCode/mainwind
 /usr/include/qt/QtWidgets/qtextedit.h:
 
 /usr/include/qt/QtWidgets/QStatusBar:
-
-/usr/include/qt/QtWidgets/qabstractbutton.h:
 
 /usr/include/qt/QtWidgets/qpushbutton.h:
 
@@ -1686,6 +1771,8 @@ CMakeFiles/HuffmanCode.dir/mainwindow.cpp.o: /home/zhiiw/QT/HuffmanCode/mainwind
 
 /usr/include/qt/QtWidgets/QGridLayout:
 
+/usr/include/qt/QtWidgets/qabstractbutton.h:
+
 /usr/include/qt/QtCore/QVariant:
 
 HuffmanCode_autogen/include/ui_mainwindow.h:
@@ -1707,6 +1794,14 @@ HuffmanCode_autogen/include/ui_mainwindow.h:
 /usr/include/qt/QtWidgets/qapplication.h:
 
 /home/zhiiw/QT/HuffmanCode/main.cpp:
+
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/messages_members.h:
+
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/time_members.h:
+
+/usr/include/c++/10.2.0/bits/locale_facets_nonio.h:
+
+/usr/include/c++/10.2.0/locale:
 
 /usr/include/qt/QtWidgets/qdialog.h:
 
@@ -1906,6 +2001,8 @@ HuffmanCode_autogen/include/ui_mainwindow.h:
 
 /usr/include/bits/types/struct_sched_param.h:
 
+/usr/include/libintl.h:
+
 /usr/include/bits/endianness.h:
 
 /usr/include/bits/types/time_t.h:
@@ -2040,6 +2137,8 @@ HuffmanCode_autogen/include/ui_mainwindow.h:
 
 /usr/include/c++/10.2.0/bits/cpp_type_traits.h:
 
+/usr/include/c++/10.2.0/bits/locale_facets_nonio.tcc:
+
 /usr/include/c++/10.2.0/bits/stl_pair.h:
 
 /usr/include/c++/10.2.0/bits/exception_defines.h:
@@ -2050,6 +2149,8 @@ HuffmanCode_autogen/include/ui_mainwindow.h:
 
 /usr/include/c++/10.2.0/ext/type_traits.h:
 
+/usr/include/KF5/KWidgetsAddons/kwidgetsaddons_export.h:
+
 /usr/include/bits/posix1_lim.h:
 
 /usr/include/wchar.h:
@@ -2057,6 +2158,8 @@ HuffmanCode_autogen/include/ui_mainwindow.h:
 /usr/include/qt/QtWidgets/qtwidgetsglobal.h:
 
 /usr/include/qt/QtCore/qglobal.h:
+
+/usr/include/c++/10.2.0/iomanip:
 
 /usr/include/c++/10.2.0/bits/functexcept.h:
 
@@ -2280,6 +2383,8 @@ HuffmanCode_autogen/mocs_compilation.cpp:
 
 /usr/include/qt/QtCore/qsysinfo.h:
 
+/usr/include/c++/10.2.0/bits/locale_conv.h:
+
 /usr/include/c++/10.2.0/bits/uniform_int_dist.h:
 
 /usr/include/qt/QtCore/qlogging.h:
@@ -2306,6 +2411,10 @@ HuffmanCode_autogen/mocs_compilation.cpp:
 
 /usr/include/qt/QtCore/qversiontagging.h:
 
+/usr/include/qt/QtWidgets/qcheckbox.h:
+
+/usr/include/qt/QtWidgets/QCheckBox:
+
 /usr/include/qt/QtCore/qvector.h:
 
 /usr/include/qt/QtGui/qtgui-config.h:
@@ -2329,6 +2438,8 @@ HuffmanCode_autogen/mocs_compilation.cpp:
 /usr/include/qt/QtCore/qnamespace.h:
 
 /usr/include/qt/QtCore/qobjectdefs_impl.h:
+
+/usr/include/KF5/KWidgetsAddons/kpasswordlineedit.h:
 
 /usr/include/qt/QtCore/qchar.h:
 

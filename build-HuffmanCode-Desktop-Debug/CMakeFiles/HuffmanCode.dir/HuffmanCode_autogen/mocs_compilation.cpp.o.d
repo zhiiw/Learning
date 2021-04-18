@@ -226,4 +226,33 @@ CMakeFiles/HuffmanCode.dir/HuffmanCode_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtGui/qfontinfo.h \
  /usr/include/qt/QtWidgets/qsizepolicy.h /usr/include/qt/QtGui/qcursor.h \
  /usr/include/qt/QtGui/qkeysequence.h \
- /usr/include/qt/QtWidgets/qtabwidget.h /usr/include/qt/QtGui/qicon.h
+ /usr/include/qt/QtWidgets/qtabwidget.h /usr/include/qt/QtGui/qicon.h \
+ /home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/HuffmanCode_autogen/EWIEGA46WW/../../../HuffmanCode/compress.h \
+ /usr/include/c++/10.2.0/iostream /usr/include/c++/10.2.0/ostream \
+ /usr/include/c++/10.2.0/ios /usr/include/c++/10.2.0/bits/basic_ios.h \
+ /usr/include/c++/10.2.0/bits/locale_facets.h \
+ /usr/include/c++/10.2.0/cwctype /usr/include/wctype.h \
+ /usr/include/bits/wctype-wchar.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+ /usr/include/c++/10.2.0/bits/locale_facets.tcc \
+ /usr/include/c++/10.2.0/bits/basic_ios.tcc \
+ /usr/include/c++/10.2.0/bits/ostream.tcc /usr/include/c++/10.2.0/istream \
+ /usr/include/c++/10.2.0/bits/istream.tcc /usr/include/c++/10.2.0/fstream \
+ /usr/include/c++/10.2.0/bits/codecvt.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/10.2.0/bits/fstream.tcc \
+ /home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/HuffmanCode_autogen/EWIEGA46WW/../../../HuffmanCode/huffmanNode.h \
+ /usr/include/c++/10.2.0/queue /usr/include/c++/10.2.0/deque \
+ /usr/include/c++/10.2.0/bits/stl_deque.h \
+ /usr/include/c++/10.2.0/bits/deque.tcc \
+ /usr/include/c++/10.2.0/bits/stl_queue.h \
+ /home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/HuffmanCode_autogen/EWIEGA46WW/../../../HuffmanCode/decompress.h \
+ /usr/include/c++/10.2.0/iomanip /usr/include/c++/10.2.0/locale \
+ /usr/include/c++/10.2.0/bits/locale_facets_nonio.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+ /usr/include/libintl.h \
+ /usr/include/c++/10.2.0/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/10.2.0/bits/locale_conv.h

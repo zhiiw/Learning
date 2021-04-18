@@ -25,40 +25,64 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString targetFileName = QFileDialog::getOpenFileName(this, "open Target File");
+    QString targetFileName = QFileDialog::getSaveFileName(this, "open Target File");
     ui->targetFileEdit->setText(targetFileName);
 }
 
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    if(ui->souceFileEdit->text()!=""&&ui->targetFileEdit->text()!=""&&ui->souceFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=ui->targetFileEdit->text()&&ui->souceFileEdit->text()!=ui->souceFileEdit_2->text()){
-        compress *c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString());
-        compress *c2 = new compress(ui->souceFileEdit_2->text().toStdString(),ui->targetFileEdit_2->text().toStdString());
-        c1->huffmanForEnglish();
-        c2->huffmanForEnglish();
+    if (ui->checkBox->isChecked()){
+        if(ui->souceFileEdit->text()!=""&&ui->targetFileEdit->text()!=""&&ui->souceFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=ui->targetFileEdit->text()&&ui->souceFileEdit->text()!=ui->souceFileEdit_2->text()){
+            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),false,"eee");
+            c2 = new compress(ui->souceFileEdit_2->text().toStdString(),ui->targetFileEdit_2->text().toStdString(),false,"eee");
+            c1->huffmanForEnglish();
+            c2->huffmanForEnglish();
+    
+        }else if(ui->souceFileEdit->text()!=""&&ui->targetFileEdit->text()!="") {
+            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),false,"eee");
+            c1->huffmanForEnglish();
+    
+        }
+        else {
+            QMessageBox *msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
+                  "Error Input",            ///--这里是设置消息框显示的内容
+                  QMessageBox::Critical,              ///--这里是在消息框显示的图标
+                  QMessageBox::Ok | QMessageBox::Default,    ///---这里是显示消息框上的按钮情况
+                  QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
+                  0);
+            msgBox->show();
+        }
+    }else{
+        if(ui->souceFileEdit->text()!=""&&ui->targetFileEdit->text()!=""&&ui->souceFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=ui->targetFileEdit->text()&&ui->souceFileEdit->text()!=ui->souceFileEdit_2->text()){
+            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),false,"eee");
+            c2 = new compress(ui->souceFileEdit_2->text().toStdString(),ui->targetFileEdit_2->text().toStdString(),false,"eee");
+            c1->huffmanForEnglish();
+            c2->huffmanForEnglish();
 
-    }else if(ui->souceFileEdit->text()!=""&&ui->targetFileEdit->text()!="") {
-        compress *c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString());
-        c1->huffmanForEnglish();
+        }else if(ui->souceFileEdit->text()!=""&&ui->targetFileEdit->text()!="") {
+            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),false,"eee");
+            c1->huffmanForEnglish();
 
+        }
+        else {
+            QMessageBox *msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
+                  "Error Input",            ///--这里是设置消息框显示的内容
+                  QMessageBox::Critical,              ///--这里是在消息框显示的图标
+                  QMessageBox::Ok | QMessageBox::Default,    ///---这里是显示消息框上的按钮情况
+                  QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
+                  0);
+            msgBox->show();
+        }
     }
-    else {
-        QMessageBox *msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
-              "Error Input",            ///--这里是设置消息框显示的内容
-              QMessageBox::Critical,              ///--这里是在消息框显示的图标
-              QMessageBox::Ok | QMessageBox::Default,    ///---这里是显示消息框上的按钮情况
-              QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
-              0);
-        msgBox->show();
-    }
+    
 }
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    if(ui->souceFileEdit->text()!="") {
-           decompress *c1 = new decompress(ui->souceFileEdit->text().toStdString());
-           c1->unCompressHuffmanForEnglish();
+    if(ui->targetFileEdit->text()!="") {
+           d1 = new decompress(ui->targetFileEdit->text().toStdString());
+           d1->unCompressHuffmanForEnglish();
 
     }
     else {
@@ -70,4 +94,26 @@ void MainWindow::on_pushButton_4_clicked()
               0);
         msgBox->show();
     }
+
+
+
+    ifstream srcfin(ui->targetFileEdit->text().toStdString()+".dehuff");
+    ifstream zipfin(ui->targetFileEdit->text().toStdString()+".huffman");
+    long fbeg1 = srcfin.tellg();
+    srcfin.seekg(0, ios::end);
+    long fend1 = srcfin.tellg();
+
+    long fbeg2 = zipfin.tellg();
+    zipfin.seekg(0, ios::end);
+    long fend2 = zipfin.tellg();
+
+    cout << ui->targetFileEdit->text().toStdString()+"dehuff" << "大小：" << (fend1 - fbeg1)*1.0 / 1024 << "kb" << endl;
+    cout << ui->targetFileEdit->text().toStdString()+"huffman" << "大小：" << (fend2 - fbeg2)*1.0 / 1024 << "kb" << endl;
+    cout << setiosflags(ios::fixed) << setprecision(2);
+    cout << "压缩率：" << (fend2 - fbeg2+7) *1.0 / (fend1 - fbeg1) * 100 << "%" << endl;
+
+    srcfin.close();
+    zipfin.close();
+
 }
+

@@ -17,10 +17,10 @@ void decompress::generateHuffmanCode(huffmanNode *node,string str){
 }
 
 void decompress::unCompressHuffmanForEnglish(){
-    cout << "正在解压……" << endl;
+    cout << "depressing" << endl;
         int start = time(0);
-        ifstream fin(fileName, ios::binary);
-        ofstream fout(fileName + ".unzip", ios::binary);
+        ifstream fin(fileName+".huffman", ios::binary);
+        ofstream fout(fileName + ".dehuff", ios::binary);
         long fbeg, fend;
         fbeg = fin.tellg();
         int wordsum = 0;

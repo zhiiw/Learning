@@ -1,4 +1,5 @@
 /home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/CMakeFiles/edit_cache.dir
 /home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/CMakeFiles/rebuild_cache.dir
 /home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/CMakeFiles/HuffmanCode.dir
+/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/CMakeFiles/KF5WidgetsAddons_QCH.dir
 /home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/CMakeFiles/HuffmanCode_autogen.dir

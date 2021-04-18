@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
 
-CXX_INCLUDES = -I/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug -I/home/zhiiw/QT/HuffmanCode -I/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/HuffmanCode_autogen/include -isystem /usr/include/qt -isystem /usr/include/qt/QtWidgets -isystem /usr/include/qt/QtGui -isystem /usr/include/qt/QtCore -isystem /usr/lib/qt/mkspecs/linux-g++
+CXX_INCLUDES = -I/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug -I/home/zhiiw/QT/HuffmanCode -I/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug/HuffmanCode_autogen/include -isystem /usr/include/KF5/KWidgetsAddons -isystem /usr/include/KF5 -isystem /usr/include/qt -isystem /usr/include/qt/QtWidgets -isystem /usr/include/qt/QtGui -isystem /usr/include/qt/QtCore -isystem /usr/lib/qt/mkspecs/linux-g++
 
 CXX_FLAGS = -g -fPIC -std=gnu++11
 

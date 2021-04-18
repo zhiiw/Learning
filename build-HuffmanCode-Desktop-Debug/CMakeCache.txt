@@ -194,6 +194,9 @@ HuffmanCode_BINARY_DIR:STATIC=/home/zhiiw/QT/build-HuffmanCode-Desktop-Debug
 //Value Computed by CMake
 HuffmanCode_SOURCE_DIR:STATIC=/home/zhiiw/QT/HuffmanCode
 
+//The directory containing a CMake configuration file for KF5WidgetsAddons.
+KF5WidgetsAddons_DIR:PATH=/usr/lib64/cmake/KF5WidgetsAddons
+
 //The directory containing a CMake configuration file for QT.
 QT_DIR:PATH=/usr/lib64/cmake/Qt5
 
@@ -228,7 +231,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=20
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=0
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.

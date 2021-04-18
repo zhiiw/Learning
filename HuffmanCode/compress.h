@@ -17,9 +17,11 @@ private:
     map<string, int> wordMap;
     string fileName;
     string zipName;
+    bool encryption;
+    string password;
 public:
     compress()=default;
-    compress(string fileName , string zipName);
+    compress(string fileName , string zipName,bool encryption,string password);
     ~compress();
     void generateHuffmanCode(huffmanNode *node,string str);
     void huffmanForEnglish();

@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "compress.h"
+#include "decompress.h"
+#include<iomanip>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,6 +17,10 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    compress *c1;
+    compress *c2;
+    decompress *d1;
+    decompress *d2;
 
 private slots:
     void on_pushButton_2_clicked();
@@ -23,6 +30,8 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
 
 private:
     Ui::MainWindow *ui;
