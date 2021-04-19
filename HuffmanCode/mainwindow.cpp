@@ -34,13 +34,12 @@ void MainWindow::on_pushButton_3_clicked()
 {
     if (ui->checkBox->isChecked()){
         if(ui->souceFileEdit->text()!=""&&ui->targetFileEdit->text()!=""&&ui->souceFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=ui->targetFileEdit->text()&&ui->souceFileEdit->text()!=ui->souceFileEdit_2->text()){
-            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),false,"eee");
-            c2 = new compress(ui->souceFileEdit_2->text().toStdString(),ui->targetFileEdit_2->text().toStdString(),false,"eee");
+            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),true,ui->kpasswordlineedit->password().toStdString());
+            c2 = new compress(ui->souceFileEdit_2->text().toStdString(),ui->targetFileEdit_2->text().toStdString(),false,"");
             c1->huffmanForEnglish();
             c2->huffmanForEnglish();
-    
         }else if(ui->souceFileEdit->text()!=""&&ui->targetFileEdit->text()!="") {
-            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),false,"eee");
+            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),true,ui->kpasswordlineedit->password().toStdString());
             c1->huffmanForEnglish();
     
         }
@@ -55,13 +54,13 @@ void MainWindow::on_pushButton_3_clicked()
         }
     }else{
         if(ui->souceFileEdit->text()!=""&&ui->targetFileEdit->text()!=""&&ui->souceFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=ui->targetFileEdit->text()&&ui->souceFileEdit->text()!=ui->souceFileEdit_2->text()){
-            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),false,"eee");
-            c2 = new compress(ui->souceFileEdit_2->text().toStdString(),ui->targetFileEdit_2->text().toStdString(),false,"eee");
+            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),false,"");
+            c2 = new compress(ui->souceFileEdit_2->text().toStdString(),ui->targetFileEdit_2->text().toStdString(),false,"");
             c1->huffmanForEnglish();
             c2->huffmanForEnglish();
 
         }else if(ui->souceFileEdit->text()!=""&&ui->targetFileEdit->text()!="") {
-            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),false,"eee");
+            c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),false,"");
             c1->huffmanForEnglish();
 
         }
@@ -80,21 +79,55 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    if(ui->targetFileEdit->text()!="") {
-           d1 = new decompress(ui->targetFileEdit->text().toStdString());
-           d1->unCompressHuffmanForEnglish();
+    ifstream fin(ui->targetFileEdit->text().toStdString()+".huffman", ios::binary);
+    int passNumber = 0;
+    fin.read((char*)&passNumber, sizeof(int));
+    string passwordUser = "";
+    if(passNumber>0){
+        bool ok;
+        QString text = QInputDialog::getText(this, tr("PASSWORD"),tr("Please enter password"), QLineEdit::Password,0, &ok);
+        if (ok && !text.isEmpty())
+        {
+            passwordUser+=text.toStdString();
+        }
+        for (int x= 0 ;x<passNumber ;x++ ) {
 
+        }
+        char ch;
+        string passwordTrue;
+        while (true)
+        {
+            fin.read(&ch, sizeof(char));
+            if ((ch >= 'a'&&ch <= 'z') || (ch >= 'A'&&ch <= 'Z')) {
+                passwordTrue += ch;
+            }
+            else {
+                if (passwordTrue == "") {
+                    passwordTrue += ch;
+                    continue;
+                }
+                if (ch == ',') //读到分隔符（逗号）//
+                    break;
+            }
+        }
+        cout<<"the passwordUser is"<<passwordUser<<"the oteher is"<<passwordTrue<<endl;
+        if(passwordTrue!=passwordUser&&ui->targetFileEdit->text()!=""&&passNumber>0){
+            QMessageBox *msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
+                  "password wrong",            ///--这里是设置消息框显示的内容
+                  QMessageBox::Critical,              ///--这里是在消息框显示的图标
+                  QMessageBox::Ok | QMessageBox::Default,    ///---这里是显示消息框上的按钮情况
+                  QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
+                  0);
+            msgBox->show();
+            return;
+        }else{
+            d1 = new decompress(ui->targetFileEdit->text().toStdString());
+            d1->unCompressHuffmanForEnglish();
+        }
+    }else{
+        d1 = new decompress(ui->targetFileEdit->text().toStdString());
+        d1->unCompressHuffmanForEnglish();
     }
-    else {
-        QMessageBox *msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
-              "Error Input",            ///--这里是设置消息框显示的内容
-              QMessageBox::Critical,              ///--这里是在消息框显示的图标
-              QMessageBox::Ok | QMessageBox::Default,    ///---这里是显示消息框上的按钮情况
-              QMessageBox::Cancel | QMessageBox::Escape,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
-              0);
-        msgBox->show();
-    }
-
 
 
     ifstream srcfin(ui->targetFileEdit->text().toStdString()+".dehuff");

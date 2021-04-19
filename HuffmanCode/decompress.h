@@ -13,13 +13,14 @@ class decompress
 private:
     ifstream in;
     ofstream out;
+    string password;
     map<string, int> wordMap;
     string fileName;
     string zipName;
 public:
     decompress()=default;
     decompress(string fileName );
-    void unCompressHuffmanForEnglish();
+    int unCompressHuffmanForEnglish();
     void generateHuffmanCode(huffmanNode *node,string str);
 };
 

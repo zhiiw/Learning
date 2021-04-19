@@ -4,7 +4,7 @@ compress::compress(string filename,string zipname,bool encryption,string x ){
     this->fileName=filename;
     this->zipName = zipname;
     this->encryption= encryption;
-
+    this->password= x;
 }
 void compress::generateHuffmanCode(huffmanNode *node,string str){
     node->huffcode+=str;
@@ -76,12 +76,18 @@ void compress::huffmanForEnglish(){
         wordstr = "";
         wordsum++;
     }
+    char spacech = ','; //分隔符
 
+    int size= password.length();
+    fout.write((char*)&size, sizeof(int));//向压缩文件写入单词种类数
+    if(encryption){
+        fout<<password;
+        fout.write((char*)&spacech, sizeof(char));//写一个spacech作为分隔符
+    }
     fout.write((char*)&wordsum, sizeof(int)); //向压缩文件写入单词总数
     int wordNum = wordMap.size(); //获取单词种类
     fout.write((char*)&wordNum, sizeof(int));//向压缩文件写入单词种类数
 
-    char spacech = ','; //分隔符
     //获取最小优先队列
     map<string, huffmanNode*> huffmanWordMap;
     map<string, int>::iterator iter;

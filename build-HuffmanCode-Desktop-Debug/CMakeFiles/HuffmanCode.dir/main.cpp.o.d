@@ -1,8 +1,8 @@
 CMakeFiles/HuffmanCode.dir/main.cpp.o: \
  /home/zhiiw/QT/HuffmanCode/main.cpp /usr/include/stdc-predef.h \
  /home/zhiiw/QT/HuffmanCode/mainwindow.h \
- /usr/include/qt/QtWidgets/QMainWindow \
- /usr/include/qt/QtWidgets/qmainwindow.h \
+ /usr/include/qt/QtWidgets/QInputDialog \
+ /usr/include/qt/QtWidgets/qinputdialog.h \
  /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
  /usr/include/qt/QtGui/qtguiglobal.h /usr/include/qt/QtCore/qglobal.h \
  /usr/include/c++/10.2.0/type_traits \
@@ -86,12 +86,9 @@ CMakeFiles/HuffmanCode.dir/main.cpp.o: \
  /usr/include/qt/QtCore/qversiontagging.h \
  /usr/include/qt/QtGui/qtgui-config.h \
  /usr/include/qt/QtWidgets/qtwidgets-config.h \
- /usr/include/qt/QtWidgets/qwidget.h /usr/include/qt/QtGui/qwindowdefs.h \
- /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \
- /usr/include/qt/QtCore/qobjectdefs_impl.h \
- /usr/include/qt/QtCore/qobject.h /usr/include/qt/QtCore/qstring.h \
- /usr/include/qt/QtCore/qchar.h /usr/include/qt/QtCore/qbytearray.h \
- /usr/include/qt/QtCore/qrefcount.h /usr/include/qt/QtCore/qarraydata.h \
+ /usr/include/qt/QtCore/qstring.h /usr/include/qt/QtCore/qchar.h \
+ /usr/include/qt/QtCore/qbytearray.h /usr/include/qt/QtCore/qrefcount.h \
+ /usr/include/qt/QtCore/qnamespace.h /usr/include/qt/QtCore/qarraydata.h \
  /usr/include/string.h /usr/include/strings.h \
  /usr/include/c++/10.2.0/stdlib.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stdarg.h \
@@ -159,7 +156,12 @@ CMakeFiles/HuffmanCode.dir/main.cpp.o: \
  /usr/include/c++/10.2.0/bits/streambuf.tcc \
  /usr/include/qt/QtCore/qstringliteral.h \
  /usr/include/qt/QtCore/qstringalgorithms.h \
- /usr/include/qt/QtCore/qstringview.h /usr/include/qt/QtCore/qlist.h \
+ /usr/include/qt/QtCore/qstringview.h \
+ /usr/include/qt/QtWidgets/qlineedit.h /usr/include/qt/QtWidgets/qframe.h \
+ /usr/include/qt/QtWidgets/qwidget.h /usr/include/qt/QtGui/qwindowdefs.h \
+ /usr/include/qt/QtCore/qobjectdefs.h \
+ /usr/include/qt/QtCore/qobjectdefs_impl.h \
+ /usr/include/qt/QtCore/qobject.h /usr/include/qt/QtCore/qlist.h \
  /usr/include/qt/QtCore/qalgorithms.h /usr/include/qt/QtCore/qiterator.h \
  /usr/include/qt/QtCore/qhashfunctions.h /usr/include/qt/QtCore/qpair.h \
  /usr/include/c++/10.2.0/numeric \
@@ -225,7 +227,12 @@ CMakeFiles/HuffmanCode.dir/main.cpp.o: \
  /usr/include/qt/QtGui/qfont.h /usr/include/qt/QtGui/qfontmetrics.h \
  /usr/include/qt/QtGui/qfontinfo.h \
  /usr/include/qt/QtWidgets/qsizepolicy.h /usr/include/qt/QtGui/qcursor.h \
- /usr/include/qt/QtGui/qkeysequence.h \
+ /usr/include/qt/QtGui/qkeysequence.h /usr/include/qt/QtGui/qtextcursor.h \
+ /usr/include/qt/QtGui/qtextformat.h /usr/include/qt/QtCore/qvariant.h \
+ /usr/include/qt/QtCore/qmap.h /usr/include/qt/QtGui/qpen.h \
+ /usr/include/qt/QtGui/qtextoption.h /usr/include/qt/QtWidgets/qdialog.h \
+ /usr/include/qt/QtWidgets/QMainWindow \
+ /usr/include/qt/QtWidgets/qmainwindow.h \
  /usr/include/qt/QtWidgets/qtabwidget.h /usr/include/qt/QtGui/qicon.h \
  /home/zhiiw/QT/HuffmanCode/compress.h /usr/include/c++/10.2.0/iostream \
  /usr/include/c++/10.2.0/ostream /usr/include/c++/10.2.0/ios \
@@ -260,5 +267,4 @@ CMakeFiles/HuffmanCode.dir/main.cpp.o: \
  /usr/include/qt/QtCore/qcoreapplication.h \
  /usr/include/qt/QtCore/qcoreevent.h /usr/include/qt/QtCore/qeventloop.h \
  /usr/include/qt/QtGui/qguiapplication.h \
- /usr/include/qt/QtGui/qinputmethod.h /usr/include/qt/QtCore/qlocale.h \
- /usr/include/qt/QtCore/qvariant.h /usr/include/qt/QtCore/qmap.h
+ /usr/include/qt/QtGui/qinputmethod.h /usr/include/qt/QtCore/qlocale.h
