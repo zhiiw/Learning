@@ -26,22 +26,25 @@ int decompress::unCompressHuffmanForEnglish(){
     int passNumber;
     fin.read((char*)&passNumber, sizeof(int));
     char ch;
-    string passwordTrue;
-    while (true)
-    {
-        fin.read(&ch, sizeof(char));
-        if ((ch >= 'a'&&ch <= 'z') || (ch >= 'A'&&ch <= 'Z')) {
-            passwordTrue += ch;
-        }
-        else {
-            if (passwordTrue == "") {
+    if(passNumber!=0){
+        string passwordTrue;
+        while (true)
+        {
+            fin.read(&ch, sizeof(char));
+            if ((ch >= 'a'&&ch <= 'z') || (ch >= 'A'&&ch <= 'Z')) {
                 passwordTrue += ch;
-                continue;
             }
-            if (passwordTrue != ""&&ch == ',') //读到分隔符（逗号）//
-                break;
+            else {
+                if (passwordTrue == "") {
+                    passwordTrue += ch;
+                    continue;
+                }
+                if (passwordTrue != ""&&ch == ',') //读到分隔符（逗号）//
+                    break;
+            }
         }
     }
+
     fin.read((char*)&wordsum, sizeof(int));
     int wordNum = 0;
     fin.read((char*)&wordNum, sizeof(int));

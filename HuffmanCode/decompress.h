@@ -10,6 +10,7 @@
 
 class decompress
 {
+
 private:
     ifstream in;
     ofstream out;

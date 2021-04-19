@@ -19,6 +19,8 @@ private:
     string zipName;
     bool encryption;
     string password;
+
+
 public:
     compress()=default;
     compress(string fileName , string zipName,bool encryption,string password);

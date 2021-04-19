@@ -3,6 +3,7 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <decompress.h>
+#include <time.h>
 #include "compress.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -32,6 +33,8 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
+    int startTime = time(0);
+    ui->textEdit->append("compressing files ");
     if (ui->checkBox->isChecked()){
         if(ui->souceFileEdit->text()!=""&&ui->targetFileEdit->text()!=""&&ui->souceFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=ui->targetFileEdit->text()&&ui->souceFileEdit->text()!=ui->souceFileEdit_2->text()){
             c1 = new compress(ui->souceFileEdit->text().toStdString(),ui->targetFileEdit->text().toStdString(),true,ui->kpasswordlineedit->password().toStdString());
@@ -74,11 +77,21 @@ void MainWindow::on_pushButton_3_clicked()
             msgBox->show();
         }
     }
+    ui->textEdit->append("compress successfully");
+    int endTime = time(0);
+    string x="time ";
+    x+=endTime-startTime;
+    x+="s";
+    ui->textEdit->append(QString::fromStdString(x));
+
+
     
 }
 
 void MainWindow::on_pushButton_4_clicked()
 {
+    ui->textEdit->append("depressing");
+    int startTime = time(0);
     ifstream fin(ui->targetFileEdit->text().toStdString()+".huffman", ios::binary);
     int passNumber = 0;
     fin.read((char*)&passNumber, sizeof(int));
@@ -140,13 +153,32 @@ void MainWindow::on_pushButton_4_clicked()
     zipfin.seekg(0, ios::end);
     long fend2 = zipfin.tellg();
 
-    cout << ui->targetFileEdit->text().toStdString()+"dehuff" << "大小：" << (fend1 - fbeg1)*1.0 / 1024 << "kb" << endl;
-    cout << ui->targetFileEdit->text().toStdString()+"huffman" << "大小：" << (fend2 - fbeg2)*1.0 / 1024 << "kb" << endl;
+    cout << ui->targetFileEdit->text().toStdString()+".dehuff" << "大小：" << (fend1 - fbeg1)*1.0 / 1024 << "kb" << endl;
+    cout << ui->targetFileEdit->text().toStdString()+".huffman" << "大小：" << (fend2 - fbeg2)*1.0 / 1024 << "kb" << endl;
     cout << setiosflags(ios::fixed) << setprecision(2);
     cout << "压缩率：" << (fend2 - fbeg2+7) *1.0 / (fend1 - fbeg1) * 100 << "%" << endl;
 
     srcfin.close();
     zipfin.close();
+    ui->textEdit->append("Depress Successfully");
+    int endTime = time(0);
+    string x="time ";
+    x+=endTime-startTime;
+    x+="s";
+    ui->textEdit->append(QString::fromStdString(x));
+
+    string temp=ui->targetFileEdit->text().toStdString();
+    temp+=".dehuff 大小： ";
+    temp+=(fend1 - fbeg1)*1.0 / 1024 ;
+    temp+="kb";
+    ui->textEdit->append(QString::fromStdString(temp));
+
+    string temp2=ui->targetFileEdit->text().toStdString();
+    temp2+=".huffman 大小： ";
+    temp2+=(fend2 - fbeg2)*1.0 / 1024 ;
+    temp2+="kb";
+    ui->textEdit->append(QString::fromStdString(temp));
+
 
 }
 

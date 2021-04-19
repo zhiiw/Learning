@@ -17,6 +17,7 @@ static std::size_t write_position = 0;
 static std::size_t  item_counter = 0;//消费者消费产品计数器
 template<class T>
 class parkinglot{
+
 private:
 
 

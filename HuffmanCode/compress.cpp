@@ -84,6 +84,7 @@ void compress::huffmanForEnglish(){
         fout<<password;
         fout.write((char*)&spacech, sizeof(char));//写一个spacech作为分隔符
     }
+
     fout.write((char*)&wordsum, sizeof(int)); //向压缩文件写入单词总数
     int wordNum = wordMap.size(); //获取单词种类
     fout.write((char*)&wordNum, sizeof(int));//向压缩文件写入单词种类数
