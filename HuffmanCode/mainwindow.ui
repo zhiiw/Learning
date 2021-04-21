@@ -17,8 +17,8 @@
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>210</y>
+      <x>80</x>
+      <y>220</y>
       <width>471</width>
       <height>241</height>
      </rect>
@@ -146,13 +146,27 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>340</y>
-      <width>131</width>
-      <height>121</height>
+      <x>580</x>
+      <y>310</y>
+      <width>161</width>
+      <height>134</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>CompressNormal</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="text">
+        <string>UnCompressNormal</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QPushButton" name="pushButton_3">
        <property name="font">

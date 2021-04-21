@@ -16,59 +16,47 @@ void compress::generateHuffmanCode(huffmanNode *node,string str){
         generateHuffmanCode(node->right,node->huffcode+"1");
     }
 }
-
-void compress::huffmanForEnglish(){
-    ifstream fin(fileName, ios::binary);
-    if (!fin) {
+void compress::huffmanNormal(){
+    ifstream in(fileName, ios::binary);
+    if (!in) {
         cout << "file open error!" << endl;
         exit(1);
     }
-    cout<<"compressing files "<<endl;
-    int startTime = time(0);
-    ofstream fout(zipName+".huffman" , ios::binary);
-    if (!fout) {
+
+    ofstream out(zipName+".huffman" , ios::binary);
+    if (!out) {
         cout << "file open error!" << endl;
         exit(1);
     }
-    long fbeg = fin.tellg();
+    long beginNumeber = in.tellg();
 
-    fin.seekg(0, ios::end);
-    long fend = fin.tellg();
-    long filelength = fend - fbeg;
+    in.seekg(0, ios::end);
+    long endNumber = in.tellg();
+    long filelength = endNumber - beginNumeber;
 
-    fin.seekg(0, ios::beg);
+    in.seekg(0, ios::beg);
 
     map<string, int> wordMap;
-    char ch;
+    char temp;
     string wordstr = "";
-    string chstr = "";
+    string tempstr = "";
     int wordsum = 0;
-    for (long fp = fbeg; fp<fend; fp++)
+    for (long fp = beginNumeber; fp<endNumber; fp++)
     {
-        fin.read(&ch, sizeof(char));
-        //cout << ch;
-        if ((ch >= 'a'&&ch <= 'z') || (ch >= 'A'&&ch <= 'Z'))
-            wordstr += ch;
-        else {
-            //cout << "字符：" << ch << endl;
-            if (wordstr != "") {
-                if (wordMap.find(wordstr) == wordMap.end())
-                    wordMap[wordstr] = 1;
-                else wordMap[wordstr]++;
-                wordstr = "";
-                wordsum++;
-            }
-            chstr = "";   //非字母类型入map
-            chstr += ch;
-            if (wordMap.find(chstr) == wordMap.end())
-                wordMap[chstr] = 1;
-            else wordMap[chstr]++;
-            wordsum++;
-        }
+        in.read(&temp, sizeof(char));
+        //cout << temp;
+
+        tempstr = "";   //非字母类型入map
+        tempstr += temp;
+        if (wordMap.find(tempstr) == wordMap.end())
+            wordMap[tempstr] = 1;
+        else wordMap[tempstr]++;
+        wordsum++;
+
     }
-    fin.close();
+    in.close();
     //最后一个字符的处理
-    if ((ch >= 'a'&&ch <= 'z') || (ch >= 'A'&&ch <= 'Z')) //如果最后一个字符是字母
+    if ((temp >= 'a'&&temp <= 'z') || (temp >= 'A'&&temp <= 'Z'))
     {
         if (wordMap.find(wordstr) == wordMap.end())
             wordMap[wordstr] = 1;
@@ -76,18 +64,162 @@ void compress::huffmanForEnglish(){
         wordstr = "";
         wordsum++;
     }
-    char spacech = ','; //分隔符
+    char spacetemp = ','; //space temp
 
     int size= password.length();
-    fout.write((char*)&size, sizeof(int));//向压缩文件写入单词种类数
+    out.write((char*)&size, sizeof(int));//write the password length
     if(encryption){
-        fout<<password;
-        fout.write((char*)&spacech, sizeof(char));//写一个spacech作为分隔符
+        out<<password;
+        out.write((char*)&spacetemp, sizeof(char));
     }
 
-    fout.write((char*)&wordsum, sizeof(int)); //向压缩文件写入单词总数
+    out.write((char*)&wordsum, sizeof(int)); //char sum
+
+    int wordNum = wordMap.size();
+
+    out.write((char*)&wordNum, sizeof(int));//char type sum
+
+
+    map<string, huffmanNode*> huffmanWordMap;
+    map<string, int>::iterator iter;
+    priority_queue<huffmanNode*, vector<huffmanNode*>, cmp> min_queue;
+    for (iter = wordMap.begin(); iter != wordMap.end(); iter++)
+    {
+        huffmanNode *huffNode = new huffmanNode();
+        huffNode->left = NULL; huffNode->right = NULL;
+        huffNode->value = iter->first;
+        huffNode->freque = iter->second;
+        min_queue.push(huffNode);
+        huffmanWordMap[huffNode->value] = huffNode;
+        out.write((char*)&huffNode->freque, sizeof(int));
+        out.write((char*)&spacetemp, sizeof(char));
+
+    }
+
+    //construct huffman tree
+    huffmanNode *node1, *node2, *root = NULL;
+    for (int i = 0; i < wordNum - 1; i++) {	//n-1次
+            huffmanNode *newNode = new huffmanNode();
+            if (min_queue.size() == 2)
+                root = newNode; //
+            node1 = min_queue.top(); min_queue.pop();
+            node2 = min_queue.top(); min_queue.pop();
+            newNode->left = node1;
+            newNode->right = node2;
+            newNode->freque = node1->freque + node2->freque;
+
+            min_queue.push(newNode);
+        }
+        if (root == NULL)
+            return;
+    generateHuffmanCode(root, "");
+    wordstr = "";
+    int length = 8; char tempchar = 0;
+    ifstream infile(fileName, ios::binary);
+    string codestr;
+    for (long fp = beginNumeber; fp<endNumber; fp++)
+    {
+        infile.read(&temp, sizeof(char));
+
+
+        tempstr = ""; tempstr += temp;
+        codestr = huffmanWordMap[tempstr]->huffcode;
+        for (int i = 0; i < codestr.size(); i++) {
+            length--;
+            if (codestr[i] == '0')
+                tempchar = tempchar | (0 << length);
+            else tempchar = tempchar | (1 << length);
+            if (length == 0) {
+                out.write(&tempchar, sizeof(char));
+                length = 8;
+                tempchar = 0;
+            }
+        }
+
+    }
+
+    if (length != 0)
+    {
+
+        out.write(&tempchar, sizeof(char));
+    }
+    cout << "compress successfully" << endl;
+
+    infile.close();
+    out.close();
+}
+void compress::huffmanForEnglish(){
+    ifstream in(fileName, ios::binary);
+    if (!in) {
+        cout << "file open error!" << endl;
+        exit(1);
+    }
+
+    int startTime = time(0);
+    ofstream out(zipName+".huffman" , ios::binary);
+    if (!out) {
+        cout << "file open error!" << endl;
+        exit(1);
+    }
+    long beginNumeber = in.tellg();
+
+    in.seekg(0, ios::end);
+    long endNumber = in.tellg();
+    long filelength = endNumber - beginNumeber;
+
+    in.seekg(0, ios::beg);
+
+    map<string, int> wordMap;
+    char temp;
+    string wordstr = "";
+    string tempstr = "";
+    int wordsum = 0;
+    for (long fp = beginNumeber; fp<endNumber; fp++)
+    {
+        in.read(&temp, sizeof(char));
+                //cout << ch;
+                if ((temp >= 'a'&&temp <= 'z') || (temp >= 'A'&&temp <= 'Z'))
+                    wordstr += temp;
+                else {
+                    //cout << "字符：" << ch << endl;
+                    if (wordstr != "") {
+                        if (wordMap.find(wordstr) == wordMap.end())
+                            wordMap[wordstr] = 1;
+                        else wordMap[wordstr]++;
+                        wordstr = "";
+                        wordsum++;
+                    }
+                    tempstr = "";   //非字母类型入map
+                    tempstr += temp;
+                    if (wordMap.find(tempstr) == wordMap.end())
+                        wordMap[tempstr] = 1;
+                    else wordMap[tempstr]++;
+                    wordsum++;
+                }
+
+    }
+    in.close();
+    //最后一个字符的处理
+    if ((temp >= 'a'&&temp <= 'z') || (temp >= 'A'&&temp <= 'Z'))
+    {
+        if (wordMap.find(wordstr) == wordMap.end())
+            wordMap[wordstr] = 1;
+        else wordMap[wordstr]++;
+        wordstr = "";
+        wordsum++;
+    }
+    char spacetemp = ','; //分隔符
+
+    int size= password.length();
+    out.write((char*)&size, sizeof(int));//向压缩文件写入单词种类数
+    if(encryption){
+        out<<password;
+        out.write((char*)&spacetemp, sizeof(char));//写一个spacetemp作为分隔符
+    }
+
+    out.write((char*)&wordsum, sizeof(int)); //向压缩文件写入单词总数
     int wordNum = wordMap.size(); //获取单词种类
-    fout.write((char*)&wordNum, sizeof(int));//向压缩文件写入单词种类数
+    out.write((char*)&wordNum, sizeof(int));//向压缩文件写入单词种类数
 
     //获取最小优先队列
     map<string, huffmanNode*> huffmanWordMap;
@@ -102,19 +234,17 @@ void compress::huffmanForEnglish(){
         min_queue.push(huffNode);
         huffmanWordMap[huffNode->value] = huffNode;
         //cout << huffNode->value << " : " << huffNode->freq << endl;
-        fout.write((char*)&huffNode->freque, sizeof(int)); //写入单词-频率对
-        //fout.write((char*)&huffNode->value,huffNode->value.size());		//注意不能用sizeof(string)
-        //fout.write(string)这种方式当字符串很长的时候也会发生乱码错误
-        fout << huffNode->value;
-        fout.write((char*)&spacech, sizeof(char));//写一个spacech作为分隔符
+        out.write((char*)&huffNode->freque, sizeof(int)); //写入单词-频率对
+
+        out << huffNode->value;
+        out.write((char*)&spacetemp, sizeof(char));//写一个spacetemp作为分隔符
 
     }
-
-    //构造哈夫曼树
+    //construct the huffman tree
     huffmanNode *node1, *node2, *root = NULL;
     for (int i = 0; i < wordNum - 1; i++) {	//n-1次
             huffmanNode *newNode = new huffmanNode();
-            if (min_queue.size() == 2)	//为了避免每次循环都要判断，可以先循环处理n-2次，最后一次再单独处理
+            if (min_queue.size() == 2)	//to avoid juedge so do it n-2 ,do last one only
                 root = newNode; //
             node1 = min_queue.top(); min_queue.pop();
             node2 = min_queue.top(); min_queue.pop();
@@ -127,20 +257,20 @@ void compress::huffmanForEnglish(){
         if (root == NULL)
             return;
     generateHuffmanCode(root, ""); //生成各个字符的Huffman编码串
-    //写入Huffman编码到压缩文件
+    //write it the zip file
     wordstr = "";
     int length = 8; char tempchar = 0;
     ifstream infile(fileName, ios::binary);
     string codestr;
     //while (!infile.eof())
-    for (long fp = fbeg; fp<fend; fp++)
+    for (long fp = beginNumeber; fp<endNumber; fp++)
     {
-        infile.read(&ch, sizeof(char));
-        //cout << "字符："<<ch << endl;
-        if ((ch >= 'a'&&ch <= 'z') || (ch >= 'A'&&ch <= 'Z'))
-            wordstr += ch;
+        infile.read(&temp, sizeof(char));
+        //cout << "字符："<<temp << endl;
+        if ((temp >= 'a'&&temp <= 'z') || (temp >= 'A'&&temp <= 'Z'))
+            wordstr += temp;
         else {
-            //cout << "字符：" << ch << endl;
+            //cout << "字符：" << temp << endl;
             if (wordstr != ""){
                 codestr = huffmanWordMap[wordstr]->huffcode;
                 //cout << wordstr<<" : "<<codestr << endl;
@@ -150,9 +280,9 @@ void compress::huffmanForEnglish(){
                         tempchar = tempchar | (0 << length);
                     else tempchar = tempchar | (1 << length);
                     if (length == 0) {
-                        fout.write(&tempchar, sizeof(char));
+                        out.write(&tempchar, sizeof(char));
                         //写入Huffman编码串到压缩文件
-                        //printCharToBin(tempchar);
+                        //printcharToBin(tempchar);
                         length = 8;
                         tempchar = 0;
                     }
@@ -160,16 +290,16 @@ void compress::huffmanForEnglish(){
                 wordstr = "";
             }
             //非字母类型
-            chstr = ""; chstr += ch;
-            codestr = huffmanWordMap[chstr]->huffcode;
+            tempstr = ""; tempstr += temp;
+            codestr = huffmanWordMap[tempstr]->huffcode;
             for (int i = 0; i < codestr.size(); i++) {
                 length--;
                 if (codestr[i] == '0')
                     tempchar = tempchar | (0 << length);
                 else tempchar = tempchar | (1 << length);
                 if (length == 0) {
-                    fout.write(&tempchar, sizeof(char));
-                //	printCharToBin(tempchar);
+                    out.write(&tempchar, sizeof(char));
+                //	printcharToBin(tempchar);
                     //写入Huffman编码串到压缩文件
                     length = 8;
                     tempchar = 0;
@@ -178,7 +308,7 @@ void compress::huffmanForEnglish(){
         }
     }
     //如果最后一个字符是字母
-    if ((ch >= 'a'&&ch <= 'z') || (ch >= 'A'&&ch <= 'Z')) {
+    if ((temp >= 'a'&&temp <= 'z') || (temp >= 'A'&&temp <= 'Z')) {
         codestr = huffmanWordMap[wordstr]->huffcode;
         for (int i = 0; i < codestr.size(); i++) {
             length--;
@@ -186,9 +316,9 @@ void compress::huffmanForEnglish(){
                 tempchar = tempchar | (0 << length);
             else tempchar = tempchar | (1 << length);
             if (length == 0) {
-                fout.write(&tempchar, sizeof(char));
+                out.write(&tempchar, sizeof(char));
                 //写入Huffman编码串到压缩文件
-                //printCharToBin(tempchar);
+                //printcharToBin(tempchar);
                 length = 8;
                 tempchar = 0;
             }
@@ -196,8 +326,8 @@ void compress::huffmanForEnglish(){
     }
     if (length != 0) //最后一个字节的处理，防止写入压缩文件的时候长度未写满8位的倍数
     {
-        //printCharToBin(tempchar);
-        fout.write(&tempchar, sizeof(char));
+        //printcharToBin(tempchar);
+        out.write(&tempchar, sizeof(char));
     }
     int end = time(0);
     cout << "compress successfully" << endl;
@@ -205,13 +335,13 @@ void compress::huffmanForEnglish(){
     //释放内存，清除Huffman树每个节点
     //destroy(root);
     infile.close();
-    fout.close();
+    out.close();
 
 }
 void compress::constructHuffmantree(huffmanNode *node1,huffmanNode *node2,huffmanNode *root,int wordNum,priority_queue<huffmanNode*, vector<huffmanNode*>, cmp> *min_queue){
     for (int i = 0; i < wordNum - 1; i++) {	//n-1次
             huffmanNode *newNode = new huffmanNode();
-            if (min_queue->size() == 2)	//为了避免每次循环都要判断，可以先循环处理n-2次，最后一次再单独处理
+            if (min_queue->size() == 2)
                 root = newNode; //
             node1 = min_queue->top(); min_queue->pop();
             node2 = min_queue->top(); min_queue->pop();
@@ -221,4 +351,6 @@ void compress::constructHuffmantree(huffmanNode *node1,huffmanNode *node2,huffma
 
             min_queue->push(newNode);
         }
+
 }
+

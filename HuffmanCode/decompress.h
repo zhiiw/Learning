@@ -22,6 +22,8 @@ public:
     decompress()=default;
     decompress(string fileName );
     int unCompressHuffmanForEnglish();
+    int unCompressHuffmanNormal();
+
     void generateHuffmanCode(huffmanNode *node,string str);
 };
 

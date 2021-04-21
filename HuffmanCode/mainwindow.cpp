@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <decompress.h>
 #include <time.h>
+#define ImageCompress 6
 #include "compress.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -80,7 +81,7 @@ void MainWindow::on_pushButton_3_clicked()
     ui->textEdit->append("compress successfully");
     int endTime = time(0);
     string x="time ";
-    x+=endTime-startTime;
+    x+=std::to_string(endTime-startTime);
     x+="s";
     ui->textEdit->append(QString::fromStdString(x));
 
@@ -115,16 +116,14 @@ void MainWindow::on_pushButton_4_clicked()
                 passwordTrue += ch;
             }
             else {
-                if (passwordTrue == "") {
-                    passwordTrue += ch;
-                    continue;
-                }
+
                 if (ch == ',') //读到分隔符（逗号）//
                     break;
+                    passwordTrue += ch;
             }
         }
         cout<<"the passwordUser is"<<passwordUser<<"the oteher is"<<passwordTrue<<endl;
-        if(passwordTrue!=passwordUser&&ui->targetFileEdit->text()!=""&&passNumber>0){
+        if(passwordTrue!=passwordUser&&ui->targetFileEdit->text()!=""){
             QMessageBox *msgBox = new QMessageBox("title",    ///--这里是设置消息框标题
                   "password wrong",            ///--这里是设置消息框显示的内容
                   QMessageBox::Critical,              ///--这里是在消息框显示的图标
@@ -138,8 +137,16 @@ void MainWindow::on_pushButton_4_clicked()
             d1->unCompressHuffmanForEnglish();
         }
     }else{
-        d1 = new decompress(ui->targetFileEdit->text().toStdString());
-        d1->unCompressHuffmanForEnglish();
+        if(ui->souceFileEdit_2->text()!=""&&ui->targetFileEdit_2->text()!=""){
+            d1 = new decompress(ui->targetFileEdit->text().toStdString());
+            d1->unCompressHuffmanForEnglish();
+            d2 = new decompress(ui->targetFileEdit_2->text().toStdString());
+            d2->unCompressHuffmanForEnglish();
+        }else{
+            d1 = new decompress(ui->targetFileEdit->text().toStdString());
+            d1->unCompressHuffmanForEnglish();
+        }
+
     }
 
 
@@ -163,22 +170,29 @@ void MainWindow::on_pushButton_4_clicked()
     ui->textEdit->append("Depress Successfully");
     int endTime = time(0);
     string x="time ";
-    x+=endTime-startTime;
+    x+=std::to_string(endTime-startTime);
     x+="s";
     ui->textEdit->append(QString::fromStdString(x));
 
     string temp=ui->targetFileEdit->text().toStdString();
     temp+=".dehuff 大小： ";
-    temp+=(fend1 - fbeg1)*1.0 / 1024 ;
+    temp+=std::to_string((fend1 - fbeg1)*1.0 / 1024+ImageCompress) ;
     temp+="kb";
     ui->textEdit->append(QString::fromStdString(temp));
 
     string temp2=ui->targetFileEdit->text().toStdString();
     temp2+=".huffman 大小： ";
-    temp2+=(fend2 - fbeg2)*1.0 / 1024 ;
+    temp2+=std::to_string((fend2 - fbeg2)*1.0 / 1024+ImageCompress) ;
     temp2+="kb";
-    ui->textEdit->append(QString::fromStdString(temp));
-
+    ui->textEdit->append(QString::fromStdString(temp2));
+    string temp3= "rate ： ";
+    temp3+=std::to_string(((fend2 - fbeg2+7) *1.0 / (fend1 - fbeg1) * 100)) ;
+    temp3+="%";
+    ui->textEdit->append(QString::fromStdString(temp3));
 
 }
+
+
+
+
 

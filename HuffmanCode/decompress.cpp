@@ -39,7 +39,7 @@ int decompress::unCompressHuffmanForEnglish(){
                     passwordTrue += ch;
                     continue;
                 }
-                if (passwordTrue != ""&&ch == ',') //读到分隔符（逗号）//
+                if (passwordTrue != ""&&ch == ',')
                     break;
             }
         }
@@ -67,7 +67,7 @@ int decompress::unCompressHuffmanForEnglish(){
                     wordstr += ch;
                     continue;
                 }
-                if (wordstr != ""&&ch == ',') //读到分隔符（逗号）//
+                if (wordstr != ""&&ch == ',')
                     break;
             }
         }
@@ -79,6 +79,137 @@ int decompress::unCompressHuffmanForEnglish(){
         //入队列
         min_queue.push(huffnode);
     }
+
+    fend = fin.tellg();
+    cout << "哈夫曼树大小：" << (fend - fbeg)*1.0 / 1024 << "kB" << endl;
+    fbeg = fend;
+    fin.seekg(0, ios::end);
+    fend = fin.tellg();
+    fin.seekg(fbeg, ios::beg);
+    cout << "Huffman编码大小：" << (fend - fbeg)*1.0 / 1024 << "kB" << endl;
+
+    //construct the huffman tree
+    huffmanNode *node1, *node2, *root = NULL;
+    for (int i = 0; i < wordNum - 1; i++) {
+        huffmanNode *newNode = new huffmanNode();
+        if (min_queue.size() == 2)
+            root = newNode; //
+        node1 = min_queue.top(); min_queue.pop();
+        node2 = min_queue.top(); min_queue.pop();
+        newNode->left = node1;
+        newNode->right = node2;
+        newNode->freque = node1->freque + node2->freque;
+
+        min_queue.push(newNode);
+    }
+    if (root == NULL)
+        return 0;
+    generateHuffmanCode(root, "");
+    //decode
+    char tempchar = 0;
+    huffmanNode *tempNode = root;
+    while (!fin.eof())
+    {
+        fin.read(&ch, sizeof(char));
+        for (int i = sizeof(char)* 8 - 1; i >= 0; i--)
+        {
+            if (tempNode->left != NULL)
+            {
+                if ((ch >> i) & 1)
+                    tempNode = tempNode->right;
+                else tempNode = tempNode->left;
+            }
+            if (tempNode->left == NULL) //write it to file
+            {
+                if (wordsum == 0)
+                    break;
+                wordsum--;
+                wordstr = tempNode->value;
+                fout << wordstr;
+                tempNode = root;
+            }
+
+        }
+    }
+
+    int end = time(0);
+    cout << "解压完成！" << endl;
+    cout << "用时 " << end - start << " 秒" << endl;
+
+    fin.close();
+    fout.close();
+    return 1;
+}
+int decompress::unCompressHuffmanNormal(){
+    cout << "depressing" << endl;
+    int start = time(0);
+     cout<<"male";
+    ifstream fin(fileName+".huffman", ios::binary);
+    ofstream fout(fileName + ".dehuff", ios::binary);
+    long fbeg, fend;
+    fbeg = fin.tellg();
+    int wordsum = 0;
+    int passNumber;
+    fin.read((char*)&passNumber, sizeof(int)); cout<<"male";
+    char ch;
+    if(passNumber!=0){
+        string passwordTrue;
+        while (true)
+        {
+            fin.read(&ch, sizeof(char));
+            if ((ch >= 'a'&&ch <= 'z') || (ch >= 'A'&&ch <= 'Z')) {
+                passwordTrue += ch;
+            }
+            else {
+                if (passwordTrue == "") {
+                    passwordTrue += ch;
+                    continue;
+                }
+                if (passwordTrue != ""&&ch == ',') //读到分隔符（逗号）//
+                    break;
+            }
+        }
+    }
+
+    fin.read((char*)&wordsum, sizeof(int));
+    int wordNum = 0;
+    fin.read((char*)&wordNum, sizeof(int));
+    string wordstr; int freq;  int spaceflag = 0;
+    //最小优先队列 priority_queue
+    cout<<"the word number is "<<wordNum;
+    cout<<"male";
+    priority_queue<huffmanNode*, vector<huffmanNode*>, cmp> min_queue;
+    for (int i = 0; i < wordNum-1; i++)
+    {
+        fin.read((char*)&freq, sizeof(int));
+        wordstr = "";
+        spaceflag = 0;
+        while (true)
+        {
+            fin.read(&ch, sizeof(char));
+            if ((ch >= 'a'&&ch <= 'z') || (ch >= 'A'&&ch <= 'Z')) {
+                wordstr += ch;
+            }
+            else {
+                if (wordstr == "") {
+                    wordstr += ch;
+                    continue;
+                }
+                if (wordstr != ""&&ch == ',') //读到分隔符（逗号）//
+                    break;
+            }
+        }
+        //cout << wordstr << " : " << freq << endl;
+        huffmanNode *huffnode = new huffmanNode();
+        huffnode->left = NULL; huffnode->right = NULL;
+        huffnode->value = wordstr;
+        huffnode->freque = freq;
+        //入队列
+        min_queue.push(huffnode);
+
+
+    }    cout<<"male"<<endl;
+
 
     fend = fin.tellg();
     cout << "哈夫曼树大小：" << (fend - fbeg)*1.0 / 1024 << "kB" << endl;
@@ -105,12 +236,12 @@ int decompress::unCompressHuffmanForEnglish(){
     if (root == NULL)
         return 0;
     generateHuffmanCode(root, "");
-    //printLeaf(root);
-    //开始解码
     char tempchar = 0;
+    cout<<"male"<<endl;
     huffmanNode *tempNode = root;
     while (!fin.eof())
     {
+        cout<<"male"<<endl;
         fin.read(&ch, sizeof(char));
         for (int i = sizeof(char)* 8 - 1; i >= 0; i--)
         {
@@ -120,7 +251,7 @@ int decompress::unCompressHuffmanForEnglish(){
                     tempNode = tempNode->right;
                 else tempNode = tempNode->left;
             }
-            if (tempNode->left == NULL) //找到叶节点则将单词写入文件
+            if (tempNode->left == NULL)
             {
                 if (wordsum == 0)
                     break;

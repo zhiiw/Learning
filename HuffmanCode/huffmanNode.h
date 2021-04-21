@@ -14,7 +14,7 @@ public:
 };
 
 struct cmp {
-    cmp() {}
+    cmp()=default;
     bool operator()(const huffmanNode *node1, const huffmanNode *node2)const {
             return node1->freque > node2->freque;//根据字符频率最小值优先
     }

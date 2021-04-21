@@ -1,5 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#define ImageCompress 6
 #include <QInputDialog>
 #include <QMainWindow>
 #include "compress.h"
@@ -31,7 +32,7 @@ private slots:
 
     void on_pushButton_4_clicked();
 
-    void on_pushButton_5_clicked();
+
 
 private:
     Ui::MainWindow *ui;

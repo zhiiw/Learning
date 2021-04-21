@@ -29,6 +29,7 @@ public:
     void huffmanForEnglish();
     void constructHuffmantree(huffmanNode *node1,huffmanNode *node2,huffmanNode *root,int wordNum,priority_queue<huffmanNode*, vector<huffmanNode*>, cmp> *min_queue);
     void unCompressHuffmanForEnglish();
+    void huffmanNormal();
 
 };
 
