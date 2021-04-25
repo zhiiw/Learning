@@ -1,0 +1,4 @@
+/home/zhiiw/QT/build-GraphOfBJTU-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/zhiiw/QT/build-GraphOfBJTU-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/zhiiw/QT/build-GraphOfBJTU-Desktop-Debug/CMakeFiles/GraphOfBJTU.dir
+/home/zhiiw/QT/build-GraphOfBJTU-Desktop-Debug/CMakeFiles/GraphOfBJTU_autogen.dir
