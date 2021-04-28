@@ -33,6 +33,7 @@ set(PROJECT_SOURCES
         mainwindow.h
         mainwindow.ui
         graph.h
+        myException.h
         graph.cpp
         arrayQueue.h
 )

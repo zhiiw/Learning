@@ -107,6 +107,12 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"/home/zhiiw/QT/GraphOfBJTU/myException.h",
+			"MU",
+			"EWIEGA46WW/moc_myException.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],

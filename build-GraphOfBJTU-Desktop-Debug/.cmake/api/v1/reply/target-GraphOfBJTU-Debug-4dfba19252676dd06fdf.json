@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 50,
+				"line" : 51,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 56,
+				"line" : 57,
 				"parent" : 0
 			}
 		]
@@ -119,7 +119,7 @@
 				0,
 				1,
 				2,
-				6
+				7
 			]
 		}
 	],
@@ -175,7 +175,7 @@
 				0,
 				1,
 				2,
-				6
+				7
 			]
 		},
 		{
@@ -184,7 +184,8 @@
 			[
 				3,
 				5,
-				7
+				6,
+				8
 			]
 		},
 		{
@@ -229,6 +230,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "graph.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "myException.h",
 			"sourceGroupIndex" : 1
 		},
 		{

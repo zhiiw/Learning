@@ -3,7 +3,6 @@
 
 #include <stdlib.h>
 #include <iostream>
-#include "myExceptions.h"
 
 template<class T>
 class arrayQueue {
