@@ -1,0 +1,4 @@
+/home/zhiiw/CLionProjects/Learning/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zhiiw/CLionProjects/Learning/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zhiiw/CLionProjects/Learning/cmake-build-debug/CMakeFiles/Alarms.dir
+/home/zhiiw/CLionProjects/Learning/cmake-build-debug/CMakeFiles/Alarms_autogen.dir
