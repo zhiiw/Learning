@@ -1,7 +1,6 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-#include "arrayQueue.h"
 #include <string.h>
 #include <vector>
 #include <iostream>
