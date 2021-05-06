@@ -58,6 +58,7 @@ void MainWindow::addImage(int i){
     myPix.scaled(bl->size(),Qt::KeepAspectRatio);
     bl->setScaledContents(true);
     bl->setPixmap(myPix);
+
 }
 void MainWindow::deleteImage(int i){
     int c=i+4;
